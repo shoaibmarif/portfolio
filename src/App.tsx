@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Wrapper} from "./shared/Wrapper"
+import {navigationLinks} from "./config/data";
+import Typewriter from 'typewriter-effect';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () =>{
+  return(
+    
+    <div>
+    
 
-  return (
-    <>
-    <p className='text-8xl'>Hello World</p>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
+    <section className="h-dvh w-full bg-[#2E2E2E] text-white relative" style={{background: "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)"}}>
+      {/* Social ICONS Here  */}
+      <Wrapper classes="flex items-center flex-col ">
+          <h1>Shoaib Arif</h1>
+          <h2>React Developer | Frontend Developer | Full Stack Developer</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum, quidem rem architecto non tempora enim soluta quia dolores molestias molestiae reiciendis, labore reprehenderit perspiciatis quisquam itaque quos, odio quas.</p>
+          <div>
+            <button>Download Resume</button>
+            <button>Hire Me</button>
+          </div>
+      </Wrapper>
+      
+    </section>
+    </div>
   )
 }
 
