@@ -1,0 +1,71 @@
+.toggler{
+    width: 60px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background: #535353;
+}
+.toggler input{
+    border: none;
+    outline:none;
+    box-shadow: none;
+    appearance: none; /* Removes default appearance */
+    -webkit-appearance: none; /* Removes default appearance for Safari */
+    -moz-appearance: none; 
+}
+
+.toggler .sun{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    left: 20%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    outline: 3px dotted #ffb950;
+    outline-offset: 1px;
+    background-color: #FFCC33;
+    transition: 0.2s ease-in-out;
+}
+.toggler .moon{
+    position: absolute;
+    top: 22%;
+    transform: translateY(-50%);
+    right: 12%;
+    width: 16px; 
+    height: 16px;
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    transform: rotate(-50deg);
+    transition: 0.2s ease-in-out;
+}
+
+.toggler .moon::after{
+    width: 14px;
+    height: 14px;
+    background-color: #535353;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 7px;
+    top: 3px;
+    transition: 0.2s ease-in-out;
+}
+.toggler input::after{
+    position: absolute;
+    background-color: #FFCC33;
+    width: 24px;
+    height: 24px;
+    content: "";
+    border-radius: 50%;
+    top: 10%;
+    left: 8%;
+    transition: 0.2s ease-in-out;
+}
+.toggler input:checked::after {
+    left: 52%;
+    transition: 0.2s ease-in-out;
+}
