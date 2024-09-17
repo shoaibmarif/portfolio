@@ -1,16 +1,17 @@
 import {Wrapper} from "./shared/Wrapper"
-import {Navigation,About,ContactUs,Homepage,Pricing,Testimonials,Project} from "./sections/index.js";
+import {Navigation,About,ContactUs,Homepage,Pricing,Testimonials,Project , Services} from "./sections/index.js";
 
 const App = () =>{
   return(
     <div>
       <Navigation/>
       <Homepage/>
-      {/* <About/> */}
+      <Services />
+      <About/>
       {/* <ContactUs/> */}
       {/* <Pricing/> */}
       {/* <Testimonials/> */}
-      {/* <Project/> */}
+      <Project/>
     </div>
   )
 }
