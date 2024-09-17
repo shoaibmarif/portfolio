@@ -17,8 +17,8 @@ export const Homepage = () => {
     <div className="relative h-dvh ">
       <Wrapper classes="text-white flex flex-col items-center justify-center h-full">
           <p className="text-start font-semibold tracking-[4px] text-xl">Hi, I'm</p>
-          <h1 className="font-extrabold uppercase leading-[7rem] text-[7rem] text-white inline-block text-transparent bg-clip-text ">
-            Shoaib <span className="text-stroke">Arif</span>
+          <h1 data-aos="fade-up" className="font-extrabold uppercase leading-[7rem] text-[7rem] text-white inline-block text-transparent bg-clip-text ">
+            Shoaib <span className="">Arif</span>
           </h1>
           <h2 className="font-bold text-[3rem]">
             <Typewriter
