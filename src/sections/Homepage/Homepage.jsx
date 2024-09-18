@@ -17,8 +17,7 @@ export const Homepage = () => {
     <div className="relative h-dvh ">
       <Wrapper classes="text-white flex flex-col items-center justify-center h-full">
           <p className="text-start font-semibold tracking-[4px] text-xl">Hi, I'm</p>
-          <h1 data-aos="fade-up" className="font-extrabold uppercase leading-[7rem] text-[7rem] text-white inline-block text-transparent bg-clip-text ">
-            Shoaib <span className="">Arif</span>
+          <h1 data-aos="fade-up" className="font-extrabold  uppercase leading-[7rem] text-[7rem]  inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-[#E4405F] text-transparent bg-clip-text ">Shoaib Arif
           </h1>
           <h2 className="font-bold text-[3rem]">
             <Typewriter
@@ -42,22 +41,25 @@ export const Homepage = () => {
             focussed solutions that connect billions of people I break down complex user experinece problems to create integritiy
             focussed solutions that connect billions of people
           </p>
-            <div className="absolute top-1/2 translate-y-[-70%] left-14">
-            <span className="mt-3 block rounded-full p-2  border-2 cursor-pointer">
-              <FaFacebookF className="text-white text-xl" />
-            </span>
-            <span className="mt-3 block rounded-full p-2  border-2 cursor-pointer">
-              <FaLinkedinIn className="text-white text-xl" />
-            </span>
-            <span className="mt-3 block rounded-full p-2  border-2 cursor-pointer">
-              <FaGithub className="text-white text-xl" />
-            </span>
-            <span className="mt-3 block rounded-full p-2  border-2 cursor-pointer">
-              <FaTwitter className="text-white text-xl" />
-            </span>
-            <span className="mt-3 block rounded-full p-2  border-2 cursor-pointer">
-              <FaInstagram className="text-white text-xl" />
-            </span>
+          
+            <div className="absolute top-1/2 translate-y-[-70%] left-14 flex flex-col items-start">
+              <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300 bg-[#1877F2]">
+                <FaFacebookF className="text-white " />
+              </span>
+              <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300  bg-[#0A66C2]">
+                <FaLinkedinIn className="text-white " />
+              </span>
+              <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300  bg-[#fff]">
+                <FaGithub className="text-black " />
+              </span>
+              <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300  bg-[#1DA1F2]">
+                <FaTwitter className="text-white" />
+              </span>
+              <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300  bg-[#E4405F]">
+                <FaInstagram className="text-white" />
+              </span>
+
+
           </div>
           
           <div className="mt-10">
