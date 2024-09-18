@@ -61,3 +61,52 @@ div {
     }
     
 }
+
+
+.line-border{
+    box-shadow: 0 0 0px 0.3px white;
+    opacity: 0.3;
+}
+.line-border-ver{
+    box-shadow: 0 0 0px 0.3px white;
+    opacity: 0.3;
+}
+
+.circle-fire-left{
+    z-index: 999;
+    box-shadow: 0 0 20px 5px white;
+    animation: 10s  drop-right  infinite;
+}
+
+.circle-fire-top{
+    z-index: 999;
+    box-shadow: 0 0 20px 5px white;
+    animation: 20s  drop  infinite;
+}
+@keyframes drop {
+    from{top:0%}
+    to{top: 100%;}
+}
+@keyframes drop-right {
+    0%{left:1%}
+    50%{left: 99%;}
+    100%{left: 1%;}
+}
+
+.test{
+    min-width: 200px;
+    border: 2px solid white;
+    padding: 20px;
+    position: relative;
+}
+
+.test::after{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px ;
+    width: 20px;
+    background: orange;
+    content:"";
+    transition: 1s ease;
+}
