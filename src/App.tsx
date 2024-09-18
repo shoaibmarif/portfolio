@@ -7,12 +7,12 @@ const App = () => {
     <div>
       <Navigation />
       <Homepage />
-      <Services />
+      <Services /> 
       <About />
-      {/* <ContactUs /> */}
-      {/* <Pricing /> */}
-      {/* <Testimonials /> */}
       <Project />
+      {/* <ContactUs /> */}
+      {/* <Testimonials /> */}
+      {/* <Pricing /> */}
     </div>
   );
 }

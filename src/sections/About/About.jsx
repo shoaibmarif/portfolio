@@ -55,59 +55,66 @@ export const About = () => {
 
   const education = [
     {
-        name: "Karachi Institute of Economics & Technology (KIET)",
-        redirectLink: "#",
-        startDate: "Aug 2016",
-        endDate: "Dec 2020",
-        position: "Bechelor's in Computer Sciences",
-      },
-      {
-        name: "Islamia Govt Arts & Commerce College",
-        redirectLink: "#",
-        startDate: "May 2013",
-        endDate: "June 2015",
-        position: "Intermediate Qualification",
-      },
+      name: "Karachi Institute of Economics & Technology (KIET)",
+      redirectLink: "#",
+      startDate: "Aug 2016",
+      endDate: "Dec 2020",
+      position: "Bechelor's in Computer Sciences",
+    },
+    {
+      name: "Islamia Govt Arts & Commerce College",
+      redirectLink: "#",
+      startDate: "May 2013",
+      endDate: "June 2015",
+      position: "Intermediate Qualification",
+    },
   ]
   return (
     <Wrapper>
-      <div className="text-center mt-16 uppercase flex flex-col items-center justify-center text-white">
-            <h2 className="text-4xl font-bold">About</h2>
-            <p className="text-base mt-2">I Provide Service Based on Your Requirements</p>
-            </div>
+      <div className="text-center mt-16 uppercase flex flex-col items-center justify-center text-white py-10">
+        <h2 className="text-8xl  font-bold text-stroke ">About</h2>
+      </div>
       <div className="grid grid-cols-2">
         <div className="col-span-1">
-          <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          <ol class="relative border-s border-white ">
             {experience.map((exp, index) => {
               return (
-                <li class="mb-10 ms-4">
-                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  <h2 class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                <li class="mb-10 ms-4 bg-white max-w-[450px] rounded-md  p-5 ">
+                  <div className=" relative left-0 top-0 overflow-hidden">
+                    <div className="absolute size-[100px] border-[1.5rem] rounded-full border-[#a37eff] top-[-50px] right-[-50px] opacity-20"></div>
+                    <div className="absolute size-[200px] border-[1.5rem] rounded-full border-[#a37eff] top-[-100px] right-[-100px] opacity-20"></div>
+                  </div>
+                  <div class="absolute w-3 h-3 bg-white rounded-full mt-6 -start-1.5 border border-white "></div>
+                  <h5 className="text-xs text-white font-semibold bg-green-500 inline-block px-3 py-1 rounded-md mb-1">{exp.startDate} - {exp.endDate}</h5>
+                  <h2 class="mb-1 text-xl dark:text-gray-500 font-bold">
                     {exp.name}
                   </h2>
-                  <h3 class="text-white ">
+                  <h3 class=" text-gray-600 text-sm">
                     {exp.position}
                   </h3>
-                  <p className="text-white">{exp.startDate} - {exp.endDate} - <span>{exp.experience}</span></p>
+                  <p className="text-gray-600  text-sm ">{exp.experience}</p>
                 </li>
               );
             })}
           </ol>
         </div>
         <div className="col-span-1">
-         There will be some text here related to about section
-          <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          <div className="text-base text-white  leading-8">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis mollitia nam minus accusamus laboriosam, accusantium fugit enim dolorum neque dolores molestiae omnis. Neque dolorem sed eius veniam quae aut non.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut vero nemo dignissimos, harum at quas fuga atque doloribus error, fugiat voluptatem voluptates rem sit? Quia dicta nobis facilis dolorem.</p>
+          </div>
+          <ol class="relative border-s border-white mt-8">
             {education.map((edu, index) => {
               return (
-                <li class="mb-10 ms-4">
-                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  <h2 class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                <li class="mb-10 ms-4 bg-white max-w-[450px] rounded-md  p-5">
+                  <div class="absolute w-3 h-3 bg-white rounded-full mt-6 -start-1.5 border border-white "></div>
+                  <h5 className="text-xs text-white font-semibold bg-green-500 inline-block px-3 py-1 rounded-md mb-1">{edu.startDate} - {edu.endDate}</h5>
+                  <h2 class="mb-1 text-xl dark:text-gray-500 font-bold">
                     {edu.name}
                   </h2>
-                  <h3 class="text-white ">
+                  <h3 class=" text-gray-600 text-sm">
                     {edu.position}
                   </h3>
-                  <p className="text-white">{edu.startDate} - {edu.endDate}</p>
                 </li>
               );
             })}
