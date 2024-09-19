@@ -17,12 +17,11 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "react-parallax": "^3.5.1",
     "react-router": "^6.26.2",
     "react-router-dom": "^6.26.2",
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.2",
-    "slick-slider": "^1.8.2",
+    "slick-carousel": "^1.8.1",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
