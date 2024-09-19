@@ -1,12 +1,13 @@
-import {Wrapper} from "../../shared/Wrapper"
-import React, { useState } from "react";
+import { Wrapper } from "../../shared/Wrapper";
+import React from "react";
 import Horeca from "../../../public/images/companies/horeca.png";
 import CC from "../../../public/images/companies/CC.png";
 import Daraz from "../../../public/images/companies/Daraz.png";
 import manhattan from "../../../public/images/companies/manhattan.png";
 import softtech from "../../../public/images/companies/softect.png";
 import cipher from "../../../public/images/companies/cipher.png";
-import Slider from "react-slick"
+import Slider from "react-slick";
+import { ContentWrapper } from "../../shared/ContentWrapper";
 
 export const About = () => {
   const experience = [
@@ -63,66 +64,95 @@ export const About = () => {
       position: "Frontend Developer (Intern)",
       imgSrc: cipher,
       description: "Worked on small-scale web projects as part of a team, gaining valuable industry experience."
-    },
+    }
   ];
-  var settings = {
+
+  const settings = {
     dots: true,
     infinite: true,
-    speed: 1500,
-    slidesToShow: 1,
+    speed: 1000,
+    slidesToShow: 4,
     slidesToScroll: 1,
-  };  
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
-    <Wrapper>
-  <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
-    </Wrapper>
-    // <div className="py-10 px-6 bg-gray-50">
-    //   <h2 className="text-4xl text-center font-bold mb-10">Professional Experience Timeline</h2>
+    <ContentWrapper>
+      <Wrapper>
+      <div className="text-center  uppercase flex flex-col items-center justify-center pt-5 pb-10 text-white" data-aos="fade-up">
+            <h2 className="text-5xl  font-bold text-stroke" >Professional Experience</h2>
+        </div>        
+      <Slider {...settings}>
+          {experience.map((exp) => (
+            <div key={exp.id} className="px-4">
+              <div className="bg-white shadow-md rounded-lg p-4 text-center">
+                <img src={exp.imgSrc} alt={exp.name} className="mx-auto mb-4 w-24 h-24 object-cover rounded-full" />
+                <h3 className="font-semibold text-lg mb-2">{exp.name}</h3>
+                <p className="text-sm text-gray-500">{exp.startDate} - {exp.endDate}</p>
+                <p className="text-sm font-medium text-gray-700">{exp.position}</p>
+                <p className="text-sm text-gray-600 mt-2">{exp.description}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </Wrapper>
+    </ContentWrapper>
+  );
+};
 
-    //   <div className="relative flex items-center justify-between w-full max-w-screen-xl mx-auto">
-    //     {/* Horizontal Timeline Line */}
-    //     <div className="absolute w-full h-1 bg-gray-300 top-1/2 left-0 transform -translate-y-1/2 z-0"></div>
 
-    //     {/* Timeline Items */}
-    //     {experience.map((exp, index) => (
-    //       <div key={exp.id} className="relative z-10 flex flex-col items-center text-center w-1/6">
-    //         {/* Circle Icon with Colors */}
-    //         <div
-    //           className={`w-12 h-12 rounded-full mb-3 ${index % 2 === 0 ? 'bg-yellow-500' : 'bg-red-500'} flex items-center justify-center shadow-lg`}
-    //         >
-    //           <img className="w-8 h-8 rounded-full" src={exp.imgSrc} alt={exp.name} />
-    //         </div>
+const CustomNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow custom-next-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-right w-6 h-6">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </div>
+  );
+};
 
-    //         {/* Experience Details */}
-    //         <div className="bg-white p-4 rounded-lg shadow-md">
-    //           <h3 className="font-semibold text-lg">{exp.name}</h3>
-    //           <p className="text-xs text-gray-500 mb-2">{exp.startDate} - {exp.endDate}</p>
-    //           <p className="text-sm text-gray-600">{exp.position}</p>
-    //           <p className="text-xs text-gray-400 mt-2">{exp.description}</p>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
+const CustomPrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow custom-prev-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-left w-6 h-6">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </div>
   );
 };
