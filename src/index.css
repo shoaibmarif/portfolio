@@ -75,38 +75,48 @@ div {
 .circle-fire-left{
     z-index: 999;
     box-shadow: 0 0 20px 5px white;
-    animation: 10s  drop-right  infinite;
+    animation: 8s  drop-right  infinite;
 }
 
 .circle-fire-top{
     z-index: 999;
     box-shadow: 0 0 20px 5px white;
-    animation: 20s  drop  infinite;
+    animation: 4s  drop  infinite;
 }
+
+.circle-fire-left-2{
+    z-index: 999;
+    box-shadow: 0 0 20px 5px white;
+    animation: 4s  drop-right-2  infinite;
+}
+
+.circle-fire-top-2{
+    z-index: 999;
+    box-shadow: 0 0 20px 5px white;
+    animation: 8s  drop2  infinite;
+}
+
 @keyframes drop {
-    from{top:0%}
-    to{top: 100%;}
+    0%{top:12%}
+    50%{top: 99%;}
+    100%{top: 12%;}
 }
+@keyframes drop2 {
+    0%{top:20%}
+    50%{top: 90%;}
+    100%{top: 20%;}
+}
+
 @keyframes drop-right {
     0%{left:1%}
     50%{left: 99%;}
     100%{left: 1%;}
 }
-
-.test{
-    min-width: 200px;
-    border: 2px solid white;
-    padding: 20px;
-    position: relative;
+@keyframes drop-right-2 {
+    0%{left:10%}
+    50%{left: 90%;}
+    100%{left: 10%;}
 }
 
-.test::after{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 20px ;
-    width: 20px;
-    background: orange;
-    content:"";
-    transition: 1s ease;
-}
+
+

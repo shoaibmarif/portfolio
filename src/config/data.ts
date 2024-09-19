@@ -67,4 +67,61 @@ const navLinks = [
         href:"contact-us"
     }
 ]
-export {navigationLinks , servicesData , navLinks}
+
+const pricing = [
+  {
+    "plan": "Basic",
+    "price": "$500",
+    "features": [
+      "Delivery Time: 1 - 2 Weeks",
+      "Revisions: 1 - 2 Revisions",
+      "Up to 5 Pages",
+      "Responsive Design",
+      "Basic SEO",
+      "Contact Form Integration",
+      "Social Media Links Integration",
+      "Basic Security Setup",
+      "Cross-Browser Compatibility",
+      "Free Hosting for 1 Year",
+      "Content Upload"
+    ]
+  },
+  {
+    "plan": "Standard",
+    "price": "$1,000",
+    "features": [
+      "Delivery Time: 2 - 4 Weeks",
+      "Revisions: 2 - 3 Revisions",
+      "Up to 10 Pages",
+      "Custom Design",
+      "Advanced SEO Setup",
+      "CMS Integration",
+      "E-Commerce Functionality",
+      "Social Media Feed Integration",
+      "Advanced Security Setup",
+      "1 Year Free Maintenance",
+      "3rd Party Integrations"
+    ]
+  },
+  {
+    "plan": "Premium",
+    "price": "$2,000",
+    "features": [
+      "Delivery Time: 4 - 6 Weeks",
+      "Revisions: Unlimited Revisions",
+      "Unlimited Pages",
+      "Fully Custom Design",
+      "Full E-Commerce Integration",
+      "Custom Plugin Development",
+      "Performance Optimization",
+      "Advanced Security Features",
+      "API Integration",
+      "1 Year Free Hosting & Domain",
+      "Multi-language Support",
+    ]
+  }
+]
+
+
+  
+export {navigationLinks , servicesData , navLinks,pricing}
