@@ -1,8 +1,7 @@
 import { Wrapper } from "./shared/Wrapper";
-import { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Project, Services } from "./sections/index.js";
+import { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Project, Services , Footer } from "./sections/index.js";
 import React, { useEffect, useState } from "react";
 import { createPortal } from 'react-dom';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -25,6 +24,7 @@ const App = () => {
         {/* <ContactUs /> */}
         {/* <Testimonials /> */}
         <Pricing />
+        <Footer/>
       </div>
     </React.Fragment>
   );

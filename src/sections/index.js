@@ -6,6 +6,7 @@ import {Pricing} from "./Pricing/Pricing";
 import {Testimonials} from "./Testimonial/Testimonials";
 import {Project} from "./Project/Projects";
 import {Services} from "./Services/Services";
+import {Footer} from "./Footer/Footer"
 
 
-export {Navigation,About,ContactUs,Homepage,Pricing,Testimonials,Project, Services}
+export {Navigation,About,ContactUs,Homepage,Pricing,Testimonials,Project, Services,Footer}
