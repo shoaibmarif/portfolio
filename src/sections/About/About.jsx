@@ -8,6 +8,14 @@ import softtech from "../../../public/images/companies/softect.png";
 import cipher from "../../../public/images/companies/cipher.png";
 import Slider from "react-slick";
 import { ContentWrapper } from "../../shared/ContentWrapper";
+import Badge1 from "../../../public/images/badges/badge-1.png"
+import Badge2 from "../../../public/images/badges/badge-2.png"
+import Badge3 from "../../../public/images/badges/badge-3.png"
+import Badge4 from "../../../public/images/badges/badge-4.png"
+import Badge5 from "../../../public/images/badges/badge-5.png"
+import Badge6 from "../../../public/images/badges/badge-6.png"
+import Badge7 from "../../../public/images/badges/badge-7.png"
+import Badge8 from "../../../public/images/badges/badge-8.png"
 
 export const About = () => {
   const experience = [
@@ -121,6 +129,33 @@ export const About = () => {
             </div>
           ))}
         </Slider>
+        
+        <div className="text-center  uppercase flex flex-col items-center justify-center pt-5 pb-10 text-white" data-aos="fade-up">
+            <h2 className="text-5xl  font-bold text-stroke" >Education & Certifications</h2>
+        </div>  
+
+            <div className="grid grid-cols-12 gap-8 text-white">
+              <div className="col-span-6">
+                I have completed my Backelors in COmputer Science
+                <p>I have completed my Backelors in COmputer Science</p>
+                <p>I have completed my Backelors in COmputer Science</p>
+                <h2>Credly Earn Badges</h2>
+
+              <div className="flex items-center flex-wrap">
+                    <img className="size-[100px]" src={Badge1} alt="" />
+                    <img className="size-[100px]" src={Badge2} alt="" />
+                    <img className="size-[100px]" src={Badge3} alt="" />
+                    <img className="size-[100px]" src={Badge4} alt="" />
+                    <img className="size-[100px]" src={Badge5} alt="" />
+                    <img className="size-[100px]" src={Badge6} alt="" />
+                    <img className="size-[100px]" src={Badge7} alt="" />
+                    <img className="size-[100px]" src={Badge8} alt="" />
+              </div>
+              </div>
+              <div className="col-span-6">
+                <h1>Certificates</h1>
+              </div>
+            </div>
       </Wrapper>
     </ContentWrapper>
   );
