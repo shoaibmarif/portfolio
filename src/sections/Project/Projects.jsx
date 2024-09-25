@@ -52,7 +52,7 @@ export const Project = () => {
                         </div>
                         <div className='relative col-span-1 max-h-[300px] overflow-hidden group ' >
                             {/* <div className='absolute top-0 left-0 w-full h-full bg-black opacity-30 z-20'></div> */}
-                            <img src={Project2} alt="" className='absolute top-[0px] group-hover:top-[-100vh] transition-all' />
+                            <img src={Project2} alt="" className='absolute top-[0px] group-hover:top-[-] transition-all' />
                         </div>
                         <div className='relative col-span-1 max-h-[300px] overflow-hidden ' >
                             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-30 z-20'></div>
