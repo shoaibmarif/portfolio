@@ -101,7 +101,7 @@ export const Homepage = () => {
                 className="relative mr-4 border-2 border-[#8524ac] text-white min-w-48 px-14 py-4 rounded-full font-semibold
                 after:absolute after:w-0 after:h-full transition-all after:duration-300 after:transition-all
                  hover:after:w-[105%] hover:after:h-[105%] after:bg-[#9d4ebd] after:left-[-1%] after:top-[-1%] after:-z-10 overflow-hidden after:rounded-full 
-                shadow-[1px_1px_10px_0px_#8524ac] 
+                shadow-[1px_1px_5px_0px_#8524ac] 
                 ">
                 Hire Me
               </button>
@@ -109,14 +109,14 @@ export const Homepage = () => {
               <button
                 data-aos="fade-left" data-aos-duration="1000"
                 className="flex items-center justify-center mr-4 border-2 border-[#8524ac] text-white min-w-48 px-14 py-4 rounded-full font-semibold bg-[#8524ac] 
-                shadow-[1px_1px_10px_0px_#8524ac] 
+                shadow-[1px_1px_5px_0px_#8524ac] 
                 ">
                 <LuDownload size={15} /> <span className="ml-1">Resume</span>
               </button>
             </div>
           </Wrapper>
           <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%]  ">
-            <div className="shadow-[inset_0px_0px_100px_0px_#8524ac]   flex items-center justify-between px-24 bg-[#2e0b3c] py-10 rounded-xl bg-gradient-to-r dark:bg-[#150e24] dark:from-[#26012b] dark:via-[#0f0720] dark:to-[#26012b] transition-all  from-red-50 to-orange-50  ">
+            <div className="shadow-[inset_0px_0px_20px_0px_#b090ffAF]   flex items-center justify-between px-24 bg-[#2e0b3c] py-10 rounded-xl bg-gradient-to-r dark:bg-[#150e24] dark:from-[#26012b] dark:via-[#0f0720] dark:to-[#26012b] transition-all  from-red-50 to-orange-50  ">
               <div className="text-white flex items-center flex-col ">
                 <span className="font-extrabold text-5xl mb-3 ">
                   <CountUp
