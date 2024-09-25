@@ -19,10 +19,10 @@ const App = () => {
         <Homepage />
         <Services /> 
         <About />
-        {/* <Project /> */}
+        <Project />
         {/* <ContactUs /> */}
         {/* <Testimonials /> */}
-        <Pricing />
+        {/* <Pricing /> */}
         <Footer/>
       </div>
     </React.Fragment>
