@@ -13,9 +13,8 @@ const App = () => {
   },[])
   return (
     <React.Fragment>
-
+      {/* <div className="left-lines absolute top-0 left-10 bg-white">asd</div> */}
       <div className={`${darkMode ? "dark" : ""}  `}>
- 
         <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
         <Homepage />
         <Services /> 

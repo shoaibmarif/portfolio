@@ -9,16 +9,17 @@ import {
   FaGithub,
   FaTwitter,
   FaInstagram,
+  FaStackOverflow
 } from "react-icons/fa";
+import { LuDownload } from "react-icons/lu";
+
 import CountUp from "react-countup";
 export const Homepage = () => {
   return (
     <React.Fragment>
-      
       <ContentWrapper>
-        
         <div className="relative h-full w-full">
-  
+
           <Wrapper classes="text-white flex items-center h-[100vh] justify-center flex-col">
             <p
               className="text-start font-semibold tracking-[4px] text-xl"
@@ -88,26 +89,34 @@ export const Homepage = () => {
                   <FaInstagram className="text-white" />
                 </span>
               </span>
+              <span data-aos="fade-right" data-aos-duration="1200">
+                <span className="mt-3 block rounded-full p-2 cursor-pointer text-xl hover:text-3xl transition-all duration-300  bg-[#E7700D]">
+                  <FaStackOverflow className="text-white" />
+                </span>
+              </span>
             </div>
-            <div className="mt-10">
-              <button 
-               data-aos="fade-right" data-aos-duration="1000"
+            <div className="mt-10 flex items-center ">
+              <button
+                data-aos="fade-right" data-aos-duration="1000"
                 className="relative mr-4 border-2 border-[#8524ac] text-white min-w-48 px-14 py-4 rounded-full font-semibold
-                after:absolute after:w-0 after:h-full transition-all after:duration-300 after:transition-all hover:after:w-[105%] hover:after:h-[105%] after:bg-[#9d4ebd] after:left-[-1%] after:top-[-1%] after:-z-10 overflow-hidden after:rounded-full 
+                after:absolute after:w-0 after:h-full transition-all after:duration-300 after:transition-all
+                 hover:after:w-[105%] hover:after:h-[105%] after:bg-[#9d4ebd] after:left-[-1%] after:top-[-1%] after:-z-10 overflow-hidden after:rounded-full 
+                shadow-[1px_1px_10px_0px_#8524ac] 
                 ">
                 Hire Me
               </button>
 
-              <button 
-              data-aos="fade-left" data-aos-duration="1000"
-                className="relative mr-4 border-2 border-[#8524ac] text-white min-w-48 px-14 py-4 rounded-full font-semibold
-                after:absolute after:w-0 after:h-full transition-all after:duration-300 after:transition-all hover:after:w-[105%] hover:after:h-[105%] after:bg-[#9d4ebd] after:left-[-1%] after:top-[-1%] after:-z-10 overflow-hidden after:rounded-full 
-                ">Resume
+              <button
+                data-aos="fade-left" data-aos-duration="1000"
+                className="flex items-center justify-center mr-4 border-2 border-[#8524ac] text-white min-w-48 px-14 py-4 rounded-full font-semibold bg-[#8524ac] 
+                shadow-[1px_1px_10px_0px_#8524ac] 
+                ">
+                <LuDownload size={15} /> <span className="ml-1">Resume</span>
               </button>
             </div>
           </Wrapper>
           <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%]  ">
-            <div className="flex items-center justify-between px-24 bg-[#2e0b3c] py-10 rounded-xl  shadow-[#26012b] shadow-inner bg-gradient-to-r dark:bg-[#150e24] dark:from-[#26012b] dark:via-[#0f0720] dark:to-[#26012b] transition-all  from-red-50 to-orange-50  ">
+            <div className="shadow-[inset_0px_0px_100px_0px_#8524ac]   flex items-center justify-between px-24 bg-[#2e0b3c] py-10 rounded-xl bg-gradient-to-r dark:bg-[#150e24] dark:from-[#26012b] dark:via-[#0f0720] dark:to-[#26012b] transition-all  from-red-50 to-orange-50  ">
               <div className="text-white flex items-center flex-col ">
                 <span className="font-extrabold text-5xl mb-3 ">
                   <CountUp

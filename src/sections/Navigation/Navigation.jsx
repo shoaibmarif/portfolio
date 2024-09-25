@@ -8,7 +8,7 @@ import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 
 export const Navigation = ({ darkMode, setDarkMode }) => {
   return (
-    <ContentWrapper classes="fixed w-full z-[9999]   ">
+    <ContentWrapper classes="fixed w-full z-[9999]  ">
       <Wrapper classes="flex items-center justify-between text-white py-5">
         <div className=" bg-red-500 rounded-full" >
           <img

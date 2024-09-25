@@ -16,6 +16,11 @@ import Badge5 from "../../../public/images/badges/badge-5.png"
 import Badge6 from "../../../public/images/badges/badge-6.png"
 import Badge7 from "../../../public/images/badges/badge-7.png"
 import Badge8 from "../../../public/images/badges/badge-8.png"
+import { HiArrowLongLeft } from "react-icons/hi2";
+import { HiArrowLongRight } from "react-icons/hi2";
+
+
+
 
 export const About = () => {
   const experience = [
@@ -79,10 +84,10 @@ export const About = () => {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    nextArrow: <HiArrowLongRight color="white" />,
+    prevArrow: <HiArrowLongLeft color="white" />,
     responsive: [
       {
         breakpoint: 1024,
@@ -113,81 +118,62 @@ export const About = () => {
   return (
     <ContentWrapper>
       <Wrapper>
-      <div className="text-center  uppercase flex flex-col items-center justify-center pt-5 pb-10 text-white" data-aos="fade-up">
-            <h2 className="text-5xl  font-bold text-stroke" >Professional Experience</h2>
-        </div>        
-      <Slider {...settings}>
+        <div className="text-center  uppercase pt-8 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
+          <h2 className="text-5xl  font-bold  " >Professional Experience</h2>
+          <span className="w-64 bg-[#ef4444] absolute top-[60%] left-[50%] translate-x-[-50%] h-[3px]"></span>
+        </div>
+        <Slider {...settings} className="">
           {experience.map((exp) => (
-            <div key={exp.id} className="px-4">
-              <div className="bg-white shadow-md rounded-lg p-4 text-center">
-                <img src={exp.imgSrc} alt={exp.name} className="mx-auto mb-4 w-24 h-24 object-cover rounded-full" />
-                <h3 className="font-semibold text-lg mb-2">{exp.name}</h3>
+            <div key={exp.id} className="px-4 group ">
+              <div className="bg-white shadow-md rounded-lg p-4  text-start min-h-[250px] flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
+                <img src={exp.imgSrc}
+                  style={{
+                    backgroundImage: `url(${exp.imgSrc})`,
+                    opacity: 0.15,
+                  }}
+                  alt={exp.name} className="mx-auto mb-4  size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]" />
+                <div className="absolute size-[100px] right-[-50px] top-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#a37eff] group-hover:size-[120px] transition-all duration-500"></div>
+                <div className="absolute size-[100px] bottom-[-50px] left-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#a37eff] group-hover:size-[120px] transition-all duration-500"></div>
+
+                <h3 className="font-bold uppercase text-lg  text-[#a37eff]">{exp.name}</h3>
+                <p className="text-md font-semibold text-gray-700 ">{exp.position}</p>
                 <p className="text-sm text-gray-500">{exp.startDate} - {exp.endDate}</p>
-                <p className="text-sm font-medium text-gray-700">{exp.position}</p>
-                <p className="text-sm text-gray-600 mt-2">{exp.description}</p>
+                <p className="text-sm text-gray-600 mt-4">{exp.description}</p>
               </div>
             </div>
           ))}
         </Slider>
-        
-        <div className="text-center  uppercase flex flex-col items-center justify-center pt-5 pb-10 text-white" data-aos="fade-up">
-            <h2 className="text-5xl  font-bold text-stroke" >Education & Certifications</h2>
-        </div>  
 
-            <div className="grid grid-cols-12 gap-8 text-white">
-              <div className="col-span-6">
-                I have completed my Backelors in COmputer Science
-                <p>I have completed my Backelors in COmputer Science</p>
-                <p>I have completed my Backelors in COmputer Science</p>
-                <h2>Credly Earn Badges</h2>
+        <div className="text-center  uppercase pt-20 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
+          <h2 className="text-5xl  font-bold  " >Education & Certificates</h2>
+          <span className="w-64 bg-[#ef4444] absolute top-[70%] left-[50%] translate-x-[-50%] h-[3px]"></span>
+        </div>
 
-              <div className="flex items-center flex-wrap">
-                    <img className="size-[100px]" src={Badge1} alt="" />
-                    <img className="size-[100px]" src={Badge2} alt="" />
-                    <img className="size-[100px]" src={Badge3} alt="" />
-                    <img className="size-[100px]" src={Badge4} alt="" />
-                    <img className="size-[100px]" src={Badge5} alt="" />
-                    <img className="size-[100px]" src={Badge6} alt="" />
-                    <img className="size-[100px]" src={Badge7} alt="" />
-                    <img className="size-[100px]" src={Badge8} alt="" />
-              </div>
-              </div>
-              <div className="col-span-6">
-                <h1>Certificates</h1>
-              </div>
+        <div className="grid grid-cols-12 gap-8 text-white ">
+          <div className="col-span-6">
+            <h2 className="text-3xl uppercase font-bold">About</h2>
+            <p className="mt-8">As a seasoned WordPress developer, I specialize in crafting custom websites and building dynamic plugins tailored to the unique needs of businesses. </p>
+            <p className="mt-8">With extensive experience in Elementor and WooCommerce, I ensure that every website is designed to provide a seamless user experience, responsive across all devices. My development approach focuses on clean, efficient code, using PHP, HTML, CSS, and JavaScript to create high-performing sites. Whether it's customizing Elementor widgets or integrating complex WooCommerce functionalities, my goal is to enhance both user interaction and business operations.</p>
+
+            <h2 className="text-3xl uppercase font-bold mt-5">Credly badges</h2>
+            <div className="flex items-center flex-wrap">
+              <img className="size-[100px]" src={Badge1} alt="" />
+              <img className="size-[100px]" src={Badge2} alt="" />
+              <img className="size-[100px]" src={Badge3} alt="" />
+              <img className="size-[100px]" src={Badge4} alt="" />
+              <img className="size-[100px]" src={Badge5} alt="" />
+              <img className="size-[100px]" src={Badge6} alt="" />
+              <img className="size-[100px]" src={Badge7} alt="" />
+              <img className="size-[100px]" src={Badge8} alt="" />
             </div>
+          </div>
+          <div className="col-span-6">
+            <h1>Certificates</h1>
+          </div>
+        </div>
       </Wrapper>
     </ContentWrapper>
   );
 };
 
 
-const CustomNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} custom-arrow custom-next-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-right w-6 h-6">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </div>
-  );
-};
-
-const CustomPrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} custom-arrow custom-prev-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-left w-6 h-6">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </div>
-  );
-};
