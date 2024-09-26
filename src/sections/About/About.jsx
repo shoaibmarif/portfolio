@@ -251,61 +251,68 @@ export const About = () => {;
 </div>
 
 
-        {/* <div className="text-center  uppercase pt-20 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
-          <h2 className="text-5xl  font-bold  " >Education & Certificates</h2>
-          <span className="w-64 bg-[#ef4444] absolute top-[70%] left-[50%] translate-x-[-50%] h-[3px]"></span>
-        </div> */}
+      
 
-        <div className="grid grid-cols-12 gap-16 text-white ">
+        <div className="grid grid-cols-12 gap-12 text-white ">
+        <div className="col-span-7 mt-10">
+        <div className="relative flex items-start flex-col py-4">
+              <h2 className="text-white text-2xl uppercase font-bold">Certificates</h2>
+              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
+             </div>
+          <div className="h-[500px] overflow-y-auto rounded-lg shadow-inner	">
+            
+          {certificates.map((certificate, index) => {
+          return (
+          <div
+          key={index}
+          className={`flex flex-row items-center p-2  ${
+          index % 2 === 0 ? 'bg-[#1f1f1f]' : 'bg-[#1f1f1fa2]'
+          }`}
+          >
+            <img src={certificate.orgImg} className="w-[50px]" alt="" />
+            <div className="flex items-center justify-between w-full">
+            <div className="flex mx-4 flex-col">
+            <p className="text-sm">{certificate.name}</p>
+            <p className="font-semibold text-xs text-gray-300">{certificate.organization}</p>
+            <div className="text-xs text-gray-300">
+              {certificate.issueDate} Credentials
+          </div>
+          </div>
+          <div className="mr-6 border-[white] border-2 p-2 rounded-full">
+          <MdArrowForwardIos size={14} />
+          </div>
+          </div>
+          </div>
+          );
+          })}
+          </div>
+
+          </div>
           <div className="col-span-5 mt-10 ">
             {/* <h2 className="text-3xl uppercase font-bold">About</h2> */}
-            <p className="mt-8 leading-8">As a seasoned WordPress developer, I specialize in crafting custom websites and building dynamic plugins tailored to the unique needs of businesses. </p>
-            <p className="mt-8 leading-8">With extensive experience in Elementor and WooCommerce, I ensure that every website is designed to provide a seamless user experience, responsive across all devices. My development approach focuses on clean, efficient code, using PHP, HTML, CSS, and JavaScript to create high-performing sites. Whether it's customizing Elementor widgets or integrating complex WooCommerce functionalities, my goal is to enhance both user interaction and business operations.</p>
+            <div className="relative flex items-start flex-col py-4">
+              <h2 className="text-white text-2xl uppercase font-bold">Education</h2>
+              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
+             </div>
+            <p className="mt-4 leading-8">With extensive experience in Elementor and WooCommerce, I ensure that every website is designed to provide a seamless user experience, As a seasoned WordPress developer, I specialize in crafting custom websites and building dynamic plugins tailored to the unique needs of businesses. </p>
 
-            {/* <h2 className="text-3xl uppercase font-bold mt-8 mb-4">Credly badges</h2> */}
+            <div className="relative flex items-start flex-col py-4">
+              <h2 className="text-white text-2xl uppercase font-bold">Credly Badges</h2>
+              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
+             </div>
             <div className="flex flex-wrap justify-start">
-              <img className="w-[80px]  mt-5 mr-5" src={Badge1} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge2} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge3} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge4} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge5} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge6} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge7} alt="" />
-              <img className="w-[80px]  mt-5 mr-5" src={Badge8} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge1} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge2} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge3} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge4} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge5} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge6} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge7} alt="" />
+              <img className="w-[90px]  mt-5 mr-5" src={Badge8} alt="" />
             </div>
 
           </div>
-          <div className="col-span-7 mt-14 ">
-            {/* <h2 className="text-3xl uppercase font-bold">Certificates</h2> */}
-
-            <div className="h-[600px] overflow-y-scroll rounded-lg">
-  {certificates.map((certificate, index) => {
-    return (
-      <div
-        key={index}
-        className={`flex flex-row items-center p-5  ${
-          index % 2 === 0 ? 'bg-[#1f1f1f]' : 'bg-[#1f1f1fa2]'
-        }`}
-      >
-        <img src={certificate.orgImg} className="w-[70px]" alt="" />
-        <div className="flex items-center justify-between w-full">
-          <div className="flex mx-4 flex-col">
-            <p className="text-base">{certificate.name}</p>
-            <p className="font-semibold text-base">{certificate.organization}</p>
-            <div className="text-sm">
-              {certificate.issueDate} Credentials
-            </div>
-          </div>
-          <div className="mr-8 border-[white] border-2 p-3 rounded-full">
-            <MdArrowForwardIos size={20} />
-          </div>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
-          </div>
+         
         </div>
       </Wrapper>
     </ContentWrapper>
