@@ -24,6 +24,8 @@ import Udemy from "../../../public/images/certificates/udemy.jpg"
 import Ibm from "../../../public/images/certificates/ibm.jpg"
 import Linkedin from "../../../public/images/certificates/linkedin.jpg"
 import Pluralsight from "../../../public/images/certificates/pluralsight.png"
+import {TopHeading} from "../../shared/TopHeading";
+import { MdArrowForwardIos } from "react-icons/md";
 
 
 
@@ -86,7 +88,7 @@ export const About = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
@@ -217,44 +219,41 @@ export const About = () => {
   return (
     <ContentWrapper>
       <Wrapper>
-        <div className="text-center  uppercase pt-8 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
-          <h2 className="text-5xl  font-bold  " >Professional Experience</h2>
-          <span className="w-64 bg-[#ef4444] absolute top-[60%] left-[50%] translate-x-[-50%] h-[3px]"></span>
-        </div>
-        <Slider {...settings} className=" ">
+        <TopHeading title="About"/>
+        <Slider {...settings} className="">
           {experience.map((exp) => (
-            <div key={exp.id} className="px-4 group ">
-              <div className="bg-[#270d2e] shadow-[inset_0px_0px_10px_0px_#b090ffAF] rounded-lg p-4  text-start min-h-[250px] flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
+            <div key={exp.id} className="group px-2 ">
+              <div className="dark:bg-[#1f1f1f] rounded-lg p-4  text-start min-h-[250px] flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
                 <img src={exp.imgSrc}
                   style={{
                     backgroundImage: `url(${exp.imgSrc})`,
-                    opacity: 0.15,
+                    opacity: 0.30,
                   }}
                   alt={exp.name} className="mx-auto mb-4  size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]" />
-                <div className="absolute size-[100px] right-[-50px] top-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#b090ff] group-hover:size-[120px] transition-all duration-500"></div>
-                <div className="absolute size-[100px] bottom-[-50px] left-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#b090ff] group-hover:size-[120px] transition-all duration-500"></div>
+                {/* <div className="absolute size-[100px] right-[-50px] top-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#6666F1] group-hover:size-[120px] transition-all duration-500"></div>
+                <div className="absolute size-[100px] bottom-[-50px] left-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#6666F1] group-hover:size-[120px] transition-all duration-500"></div> */}
 
-                <h3 className="font-bold uppercase text-lg  text-[#a37eff]">{exp.name}</h3>
-                <p className="text-md font-semibold text-white ">{exp.position}</p>
+                <h3 className="font-bold uppercase text-lg mb-5  text-[#a37eff]">{exp.name}</h3>
+                <p className="text-md font-semibold  text-white ">{exp.position}</p>
                 <p className="text-sm text-white">{exp.startDate} - {exp.endDate}</p>
-                <p className="text-sm text-white  mt-4">{exp.description}</p>
+                <p className="text-sm text-white leading-6 mt-4">{exp.description}</p>
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className="text-center  uppercase pt-20 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
+        {/* <div className="text-center  uppercase pt-20 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
           <h2 className="text-5xl  font-bold  " >Education & Certificates</h2>
           <span className="w-64 bg-[#ef4444] absolute top-[70%] left-[50%] translate-x-[-50%] h-[3px]"></span>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-12 gap-12 text-white ">
-          <div className="col-span-6">
-            <h2 className="text-3xl uppercase font-bold">About</h2>
-            <p className="mt-8">As a seasoned WordPress developer, I specialize in crafting custom websites and building dynamic plugins tailored to the unique needs of businesses. </p>
-            <p className="mt-8">With extensive experience in Elementor and WooCommerce, I ensure that every website is designed to provide a seamless user experience, responsive across all devices. My development approach focuses on clean, efficient code, using PHP, HTML, CSS, and JavaScript to create high-performing sites. Whether it's customizing Elementor widgets or integrating complex WooCommerce functionalities, my goal is to enhance both user interaction and business operations.</p>
+        <div className="grid grid-cols-12 gap-16 text-white ">
+          <div className="col-span-5 mt-10 ">
+            {/* <h2 className="text-3xl uppercase font-bold">About</h2> */}
+            <p className="mt-8 leading-8">As a seasoned WordPress developer, I specialize in crafting custom websites and building dynamic plugins tailored to the unique needs of businesses. </p>
+            <p className="mt-8 leading-8">With extensive experience in Elementor and WooCommerce, I ensure that every website is designed to provide a seamless user experience, responsive across all devices. My development approach focuses on clean, efficient code, using PHP, HTML, CSS, and JavaScript to create high-performing sites. Whether it's customizing Elementor widgets or integrating complex WooCommerce functionalities, my goal is to enhance both user interaction and business operations.</p>
 
-            <h2 className="text-3xl uppercase font-bold mt-8 mb-4">Credly badges</h2>
+            {/* <h2 className="text-3xl uppercase font-bold mt-8 mb-4">Credly badges</h2> */}
             <div className="flex flex-wrap justify-start">
               <img className="w-[80px]  mt-5 mr-5" src={Badge1} alt="" />
               <img className="w-[80px]  mt-5 mr-5" src={Badge2} alt="" />
@@ -267,23 +266,36 @@ export const About = () => {
             </div>
 
           </div>
-          <div className="col-span-6">
-            <h2 className="text-3xl uppercase font-bold">Certificates</h2>
+          <div className="col-span-7 mt-14 ">
+            {/* <h2 className="text-3xl uppercase font-bold">Certificates</h2> */}
 
-            <div className="h-[600px] overflow-y-scroll ">
-              {certificates.map((certificate, index) => {
-                return (
-                  <div key={index} className="flex flex-row items-center  py-5 ">
-                    <img src={certificate.orgImg} className="w-[70px]" alt="" />
-                    <div className="flex  mx-4 flex-col">
-                      <p className="text-base">{certificate.name}</p>
-                      <p className="font-semibold text-base">{certificate.organization}</p>
-                      <div className="text-sm">{certificate.issueDate} Credentials</div>
-                    </div>
-                  </div>
-                )
-              })}
+            <div className="h-[600px] overflow-y-scroll rounded-lg">
+  {certificates.map((certificate, index) => {
+    return (
+      <div
+        key={index}
+        className={`flex flex-row items-center p-5  ${
+          index % 2 === 0 ? 'bg-[#1f1f1f]' : 'bg-[#1f1f1fa2]'
+        }`}
+      >
+        <img src={certificate.orgImg} className="w-[70px]" alt="" />
+        <div className="flex items-center justify-between w-full">
+          <div className="flex mx-4 flex-col">
+            <p className="text-base">{certificate.name}</p>
+            <p className="font-semibold text-base">{certificate.organization}</p>
+            <div className="text-sm">
+              {certificate.issueDate} Credentials
             </div>
+          </div>
+          <div className="mr-8 border-[white] border-2 p-3 rounded-full">
+            <MdArrowForwardIos size={20} />
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
           </div>
         </div>
       </Wrapper>

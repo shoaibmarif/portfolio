@@ -1,4 +1,11 @@
-
+import {
+    FaFacebookF,
+    FaLinkedinIn,
+    FaGithub,
+    FaTwitter,
+    FaInstagram,
+    FaStackOverflow,
+  } from "react-icons/fa";
 
 const navigationLinks = [
     "Home",
@@ -123,5 +130,11 @@ const pricing = [
 ]
 
 
-  
+const SocialDetails = [
+    {
+        redirectUrl : "#",
+        icon:FaFacebookF
+    }
+
+] 
 export {navigationLinks , servicesData , navLinks,pricing}

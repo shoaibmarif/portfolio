@@ -8,7 +8,7 @@ import Project5 from "../../../public/images/projects/Project-5.png"
 import Project6 from "../../../public/images/projects/Project-6.png"
 import Project7 from "../../../public/images/projects/Project-7.png"
 import { ContentWrapper } from '../../shared/ContentWrapper';
-
+import {TopHeading} from "../../shared/TopHeading"
 export const Project = () => {
     // const projectType = [
     //     "All",
@@ -32,7 +32,7 @@ export const Project = () => {
     // ]
     return (
         <ContentWrapper>
-            <div className='text-white pt-10'>
+            <TopHeading title="Project"/> 
                 {/* <h1>Project Heading</h1> */}
 
                 {/* Portfolio Showcase  */}
@@ -80,8 +80,6 @@ export const Project = () => {
                         </div>
                     </div>
                 </Wrapper>
-
-            </div>
         </ContentWrapper>
     )
 }
