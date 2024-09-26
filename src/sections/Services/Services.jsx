@@ -9,7 +9,7 @@ export const Services = () => {
             <ContentWrapper>
             <Wrapper>
             <TopHeading title="Services"/>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-3 gap-12">
                     {servicesData.map((service, index) => {
                         return (
                             <div className="col-span-1 " key={index}>

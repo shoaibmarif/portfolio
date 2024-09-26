@@ -1,16 +1,16 @@
 import React from 'react';
-import {Wrapper} from "../../shared/Wrapper"
+import {Wrapper} from "../../shared/Wrapper";
 import { pricing } from '../../config/data';
 import CheckMark from "../../../public/icons/check-mark.png";
-import {ContentWrapper} from "../../shared/ContentWrapper"
+import {ContentWrapper} from "../../shared/ContentWrapper";
+import {TopHeading} from "../../shared/TopHeading";
 
 export const Pricing = () => {
     return(
         <ContentWrapper>
         <Wrapper>
-            <div className="text-center  uppercase flex flex-col items-center justify-center text-white">
-                <h2 className="text-5xl  font-bold text-stroke mt-5 mb-12 ">Pricing</h2>
-            </div>
+          
+          <TopHeading title={"Pricing"}/>
 
             <div className='grid grid-cols-3 gap-8 '>
                 {pricing.map((price,index) =>{

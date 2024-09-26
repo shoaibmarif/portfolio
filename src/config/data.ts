@@ -129,12 +129,4 @@ const pricing = [
   }
 ]
 
-
-const SocialDetails = [
-    {
-        redirectUrl : "#",
-        icon:FaFacebookF
-    }
-
-] 
-export {navigationLinks , servicesData , navLinks,pricing}
+export {navigationLinks , servicesData , navLinks,pricing }

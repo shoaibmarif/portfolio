@@ -29,7 +29,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 
 
 
-export const About = () => {
+export const About = () => {;
   const experience = [
     {
       id: 1,
@@ -86,6 +86,8 @@ export const About = () => {
       description: "Worked on small-scale web projects as part of a team, gaining valuable industry experience."
     }
   ];
+  
+  
 
   const settings = {
     dots: false,
@@ -219,28 +221,35 @@ export const About = () => {
   return (
     <ContentWrapper>
       <Wrapper>
-        <TopHeading title="About"/>
-        <Slider {...settings} className="">
-          {experience.map((exp) => (
-            <div key={exp.id} className="group px-2 ">
-              <div className="dark:bg-[#1f1f1f] rounded-lg p-4  text-start min-h-[250px] flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
-                <img src={exp.imgSrc}
-                  style={{
-                    backgroundImage: `url(${exp.imgSrc})`,
-                    opacity: 0.30,
-                  }}
-                  alt={exp.name} className="mx-auto mb-4  size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]" />
-                {/* <div className="absolute size-[100px] right-[-50px] top-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#6666F1] group-hover:size-[120px] transition-all duration-500"></div>
-                <div className="absolute size-[100px] bottom-[-50px] left-[-50px] border-[1.5rem]  rounded-full opacity-30 border-[#6666F1] group-hover:size-[120px] transition-all duration-500"></div> */}
+      <TopHeading title="About"/>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-12 ">
+      {experience.map((exp) => (
+        <div key={exp.id} className="group"     
+>
+          <div className="dark:bg-[#1f1f1f] rounded-lg text-start min-h-[400px] p-10  flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
+            {/* <img
+              src={exp.imgSrc}
+              style={{
+                backgroundImage: `url(${exp.imgSrc})`,
+                opacity: 0.30,
+              }}
+              alt={exp.name}
+              className="mx-auto mb-4 size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+            /> */}
+            <img src={exp.imgSrc} className="size-[100px] mx-auto rounded-full" alt="" />
+            <h3 className="font-bold uppercase text-lg  text-[#a37eff] mt-7">
+              {exp.name}
+            </h3>
+            <p className="text-md font-semibold text-white">{exp.position}</p>
+            <p className="text-sm text-white">
+              {exp.startDate} - {exp.endDate}
+            </p>
+            <p className="text-sm text-white leading-6 mt-4">{exp.description}</p>
+          </div>
+        </div>
+      ))}
+</div>
 
-                <h3 className="font-bold uppercase text-lg mb-5  text-[#a37eff]">{exp.name}</h3>
-                <p className="text-md font-semibold  text-white ">{exp.position}</p>
-                <p className="text-sm text-white">{exp.startDate} - {exp.endDate}</p>
-                <p className="text-sm text-white leading-6 mt-4">{exp.description}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
 
         {/* <div className="text-center  uppercase pt-20 pb-20 flex flex-col items-center justify-center text-white relative" data-aos="fade-up">
           <h2 className="text-5xl  font-bold  " >Education & Certificates</h2>

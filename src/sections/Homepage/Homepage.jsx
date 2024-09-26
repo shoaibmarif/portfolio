@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Wrapper } from "../../shared/Wrapper";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
-import { SocialIcon } from "../../shared/SocialIcons";
+
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -90,7 +90,9 @@ export const Homepage = () => {
                     }`}
               ></span>
               <span>
-                    <SocialIcon/>
+                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300 hover:bg-[#1877F2]">
+                  <FaFacebookF className="dark:text-white " />
+                </span>
               </span>
               <span>
                 <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300  hover:bg-[#0A66C2]">
