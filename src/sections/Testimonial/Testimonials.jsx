@@ -1,7 +1,13 @@
 import React from 'react';
-
+import {ContentWrapper} from "../../shared/ContentWrapper";
+import {Wrapper} from "../../shared/Wrapper"
 export const Testimonials = () => {
     return(
-        <div>Testimonials</div>
+        <ContentWrapper>
+            <Wrapper>
+                    
+
+            </Wrapper>
+        </ContentWrapper>
     )
 }

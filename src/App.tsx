@@ -21,11 +21,11 @@ const App = () => {
         <About />
         {/* <Project /> */}
         {/* <ContactUs /> */}
-        {/* <Testimonials /> */}
         <Pricing />
+        <Testimonials />
         {/* <Footer/> */}
         </div>
-          <div className="fixed__button__wrapper fixed bottom-10 right-10 bg-[#6765F1] rounded-full cursor-pointer ">
+          <div className="fixed__button__wrapper fixed bottom-10 right-10 bg-[#662d91] rounded-full cursor-pointer z-[999] ">
             <FaWhatsapp color="white" />
         </div>
     </React.Fragment>

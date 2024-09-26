@@ -84,12 +84,8 @@ const pricing = [
       "Revisions: 1 - 2 Revisions",
       "Up to 5 Pages",
       "Responsive Design",
-      "Basic SEO",
       "Contact Form Integration",
-      "Social Media Links Integration",
-      "Basic Security Setup",
       "Cross-Browser Compatibility",
-      "Free Hosting for 1 Year",
       "Content Upload"
     ]
   },
@@ -101,13 +97,7 @@ const pricing = [
       "Revisions: 2 - 3 Revisions",
       "Up to 10 Pages",
       "Custom Design",
-      "Advanced SEO Setup",
-      "CMS Integration",
-      "E-Commerce Functionality",
-      "Social Media Feed Integration",
-      "Advanced Security Setup",
       "1 Year Free Maintenance",
-      "3rd Party Integrations"
     ]
   },
   {
@@ -119,11 +109,8 @@ const pricing = [
       "Unlimited Pages",
       "Fully Custom Design",
       "Full E-Commerce Integration",
-      "Custom Plugin Development",
       "Performance Optimization",
-      "Advanced Security Features",
       "API Integration",
-      "1 Year Free Hosting & Domain",
       "Multi-language Support",
     ]
   }

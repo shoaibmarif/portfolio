@@ -6,7 +6,7 @@ export const Service = ({ service, index }) => {
     <div
       data-aos="zoom-in"
       data-aos-duration={duration}
-      className="dark:bg-[#1f1f1f] text-white min-h-[350px] flex items-center relative justify-center overflow-hidden flex-col p-10 rounded-xl cursor-pointer group "
+      className="z-10 dark:bg-[#1f1f1f] text-white min-h-[350px] flex items-center relative justify-center overflow-hidden flex-col p-10 rounded-xl cursor-pointer group "
     >
       <span className=" text-2xl font-bold text-[#6666F1]">
         {service.title}

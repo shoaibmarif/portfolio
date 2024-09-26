@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContentWrapper = ({ children, classes }) => {
     return (
-        <div className={`${classes} dark:bg-[#101011] transition-all  from-red-50 to-orange-50`}>
+        <div className={`${classes} bg-gradient-to-r from-[#0f0f0f] via-[#111111] to-[#0f0f0f] transition-all  `}>
             {children}
         </div>
     )

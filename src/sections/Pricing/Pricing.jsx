@@ -12,10 +12,10 @@ export const Pricing = () => {
         <Wrapper>
           
           <TopHeading title={"Pricing"}/>
-            <div className='grid grid-cols-3 gap-12 '>
+            <div className='grid grid-cols-3 gap-12 z-10 relative '>
                 {pricing.map((price,index) =>{
                     return(
-                        <div key={price.plan} className={`cols-span-1  rounded-[20px] overflow-hidden bg-[#1f1f1f] text-white px-6 py-10 `}>
+                        <div key={price.plan} className={`relative cols-span-1  rounded-[20px] overflow-hidden bg-[#1f1f1f] text-white px-6 py-10 `}>
                             <div className='  flex flex-col items-center justify-between'>
                                 <h2 className='font-bold  text-3xl uppercase text-[#6765F1]'>{price.plan}</h2>
                                 <h2 className=' font-bold text-6xl mt-5 text-[#6765F1] '>{price.price}<span className='text-2xl'>.00</span></h2>
@@ -24,12 +24,20 @@ export const Pricing = () => {
                                     <ul className='text-start w-full'>
                                         {price.features.map((feature,index) =>{
                                             return(
-                                                <li className='mt-2 text-gray-200 flex items-center ' key={index}>
+                                                <li className='mt-5 text-gray-200 flex items-center ' key={index}>
                                                 <FiCheckCircle color='#6765F1' size={18}/>
                                                 <span className='ml-3'>{feature}</span></li>
                                             )
                                         })}
                                     </ul>
+
+                                    {/* <button
+                                            data-aos="fade-right"
+                                            data-aos-duration="1000"
+                                            className="absolute mr-4  text-white min-w-48 px-14 py-4 rounded-full font-semibold
+                                            shadow-[0_0px_5px_0px_#A2A2A2] bottom-28">
+                Choose Plan
+              </button> */}
                             </div>
                         </div>
                     )

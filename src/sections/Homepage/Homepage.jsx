@@ -37,7 +37,7 @@ export const Homepage = () => {
               Hi, I'm
             </p>
             <h1
-              className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-[#E4405F] text-transparent bg-clip-text"
+              className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-r from-[#662d91] via-[#bb62ff] to-[#662d91] text-transparent bg-clip-text"
             >
               Shoaib Arif
             </h1>
@@ -57,7 +57,7 @@ export const Homepage = () => {
                   loop: true,
                   pauseFor: 1500,
                   cursorClassName:
-                    " bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text",
+                    " bg-gradient-to-b bg-gradient-to-r from-[#662d91] via-indigo-500 to-[#662d91]  inline-block text-transparent bg-clip-text",
                 }}
               />
             </h2>
@@ -121,30 +121,28 @@ export const Homepage = () => {
               </span>
             </div>
             <div className="mt-10 flex items-center ">    
-              <button
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                className="relative mr-4  text-white min-w-48 px-14 py-4 rounded-full font-semibold
-                after:absolute after:w-0 after:h-full transition-all after:duration-300 after:transition-all
-                 hover:after:w-[105%] hover:after:h-[105%] after:bg-[#] after:left-[-1%] after:top-[-1%] after:-z-10 overflow-hidden after:rounded-full shadow-[0_0px_5px_0px_#A2A2A2]"
-                  
-                  >
-                Hire Me
-              </button>
+            <button
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-[#fff] text-[#662d91] shadow-[0_0px_5px_0px_#fff] mr-2 border border-6 border-white "
+            >
+              Hire Me
+            </button>
+
 
               <button
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold bg-[#6665F1]  shadow-[0_1px_5px_0px_#A2A2A2]
+                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold bg-[#662d91]  shadow-[0_0px_5px_0px_#662d91]
                 
                 "
               >
-                <LuDownload size={15} /> <span className="ml-1">Resume</span>
+                <LuDownload size={20} /> <span className="ml-1 font-normal">Resume</span>
               </button>
             </div>
           </Wrapper>
-          <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%]  ">
-            <div className="flex items-center justify-between px-24  py-8 rounded-xl dark:bg-[#1f1f1f] transition-all  from-red-50 to-orange-50  ">
+          <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%] z-10 ">
+            <div className="  flex items-center justify-between px-24  py-8 rounded-xl bg-gradient-to-r from-[#662d91] via-[#bb62ff] to-[#662d91] transition-all    ">
               <div className="text-white flex items-center">
                 <div>
                   <svg
