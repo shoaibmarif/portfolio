@@ -25,7 +25,7 @@ const App = () => {
         <Testimonials />
         {/* <Footer/> */}
         </div>
-          <div className="fixed__button__wrapper fixed bottom-10 right-10 bg-[#662d91] rounded-full cursor-pointer z-[999] ">
+          <div className="fixed__button__wrapper fixed bottom-10 right-10  bg-gradient-to-r from-[#a56ab6] via-[#b23fd1d2] to-[#a56ab6]  rounded-full cursor-pointer z-[999] ">
             <FaWhatsapp color="white" />
         </div>
     </React.Fragment>

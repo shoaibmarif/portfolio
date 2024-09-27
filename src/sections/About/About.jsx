@@ -218,8 +218,110 @@ export const About = () => {
       orgImg: FreeCodeCamp,
       redirectLink: "https://www.freecodecamp.org/certificate-link",
     },
+    {
+      name: "100 Days of Code: The Complete Python Pro Bootcamp for 2023",
+      organization: "Udemy",
+      issueDate: "Dec 2022",
+      orgImg: Udemy,
+      redirectLink: "https://www.udemy.com/certificate-link",
+    },
+    {
+      name: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+      organization: "Udemy",
+      issueDate: "Dec 2022",
+      orgImg: Udemy,
+      redirectLink: "https://www.udemy.com/certificate-link",
+    },
+    {
+      name: "Data Science Foundations - Level 1",
+      organization: "IBM",
+      issueDate: "Jul 2021",
+      orgImg: Ibm,
+      redirectLink: "https://www.ibm.com/certificate-link",
+    },
+    {
+      name: "Data Science Orientation",
+      organization: "Coursera",
+      issueDate: "Jul 2021",
+      orgImg: Coursera,
+      redirectLink: "https://www.coursera.org/certificate-link",
+    },
+    {
+      name: "Tools for Data Science",
+      organization: "Coursera",
+      issueDate: "Jul 2021",
+      orgImg: Coursera,
+      redirectLink: "https://www.coursera.org/certificate-link",
+    },
+    {
+      name: "Learning Python",
+      organization: "LinkedIn",
+      issueDate: "Jun 2021",
+      orgImg: Linkedin,
+      redirectLink: "https://www.linkedin.com/certificate-link",
+    },
+    {
+      name: "Programming for Everybody (Getting Started with Python)",
+      organization: "Coursera",
+      issueDate: "Jun 2021",
+      orgImg: Coursera,
+      redirectLink: "https://www.coursera.org/certificate-link",
+    },
+    {
+      name: "What is Data Science?",
+      organization: "Coursera",
+      issueDate: "Jun 2021",
+      orgImg: Coursera,
+      redirectLink: "https://www.coursera.org/certificate-link",
+    },
+    {
+      name: "Core Python - Getting Started",
+      organization: "Pluralsight",
+      issueDate: "Apr 2021",
+      orgImg: Pluralsight,
+      redirectLink: "https://www.pluralsight.com/certificate-link",
+    },
+    {
+      name: "Introduction to SQL",
+      organization: "Pluralsight",
+      issueDate: "Apr 2021",
+      orgImg: Pluralsight,
+      redirectLink: "https://www.pluralsight.com/certificate-link",
+    },
+    {
+      name: "Practical Python for Beginners",
+      organization: "Pluralsight",
+      issueDate: "Apr 2021",
+      orgImg: Pluralsight,
+      redirectLink: "https://www.pluralsight.com/certificate-link",
+    },
+    {
+      name: "Python - Big Picture",
+      organization: "Pluralsight",
+      issueDate: "Apr 2021",
+      orgImg: Pluralsight,
+      redirectLink: "https://www.pluralsight.com/certificate-link",
+    },
+    {
+      name: "Responsive Web Design",
+      organization: "freeCodeCamp",
+      issueDate: "Apr 2021",
+      orgImg: FreeCodeCamp,
+      redirectLink: "https://www.freecodecamp.org/certificate-link",
+    },
   ];
 
+
+  const certificateSlider = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    rows: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
   return (
     <ContentWrapper>
       <Wrapper>
@@ -227,21 +329,21 @@ export const About = () => {
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 ">
           {experience.map((exp) => (
             <div key={exp.id} className="group z-10">
-              <div className="dark:bg-[#1f1f1f] rounded-lg text-start min-h-[400px] p-10  flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
-                {/* <img
-              src={exp.imgSrc}
-              style={{
-                backgroundImage: `url(${exp.imgSrc})`,
-                opacity: 0.30,
-              }}
-              alt={exp.name}
-              className="mx-auto mb-4 size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-            /> */}
+              <div className="dark:bg-[#1f1f1f] rounded-lg text-start min-h-[300px] p-10  flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
                 <img
+                  src={exp.imgSrc}
+                  style={{
+                    backgroundImage: `url(${exp.imgSrc})`,
+                    opacity: 0.30,
+                  }}
+                  alt={exp.name}
+                  className="mx-auto mb-4 size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+                />
+                {/* <img
                   src={exp.imgSrc}
                   className="size-[100px] mx-auto rounded-full"
                   alt=""
-                />
+                /> */}
                 <h3 className="font-bold uppercase text-lg  text-[#a37eff] mt-7">
                   {exp.name}
                 </h3>
@@ -259,24 +361,75 @@ export const About = () => {
           ))}
         </div>
       </Wrapper>
-      
+
+
+      <Wrapper>
+        <div className="grid grid-cols-3">
+          <div className="col-span-1">
+            <div className="flex items-center justify-start h-full flex-wrap">
+              <img className="w-[150px]  mt-5 mr-5" src={Badge1} alt="" />
+              <img className="w-[150px]  mt-5 mr-5" src={Badge2} alt="" />
+              <img className="w-[150px]  mt-5 mr-5" src={Badge3} alt="" />
+              <img className="w-[150px]  mt-5 mr-5" src={Badge4} alt="" />
+            </div>
+          </div>
+          <div className="col-span-1">
+            <div className=" flex items-center justify-center h-full flex-col">
+              <h1 className="text-center text-white font-extrabold uppercase text-9xl mt-8">About</h1>
+              <p className="text-white text-center mt-5"> With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored to
+                the unique needs of businesses.</p>
+            </div>
+          </div>
+          <div className="col-span-1 ">
+            <div className="flex items-center justify-end  h-full flex-wrap">
+              <img className="w-[150px]  mt-5 ml-5" src={Badge5} alt="" />
+              <img className="w-[150px]  mt-5 ml-5" src={Badge6} alt="" />
+              <img className="w-[150px]  mt-5 ml-5" src={Badge7} alt="" />
+              <img className="w-[150px]  mt-5 ml-5" src={Badge8} alt="" />
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+      <Wrapper classes="mt-8">
+        <Slider {...certificateSlider} className="">
+          {certificates.map((certificate, index) => {
+            return (
+              <div className="px-2 mt-4">
+                <div key={index} className={`relative min-h-[250px] flex flex-col items-start  justify-start  p-5 ${index % 2 === 0 ? "bg-[#1f1f1f]" : "bg-[#1f1f1fa2]"}`}>
+                  <img src={certificate.orgImg}
+                    className="size-16 rounded-full mb-5"
+                  // style={{ backgroundImage: `url(${certificate.orgImg})`, opacity: 0.20, }}
+                  // className="mx-auto mb-4 size-[60px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+                  />
+                  <p className="text-base font-bold text-white mt-3">{certificate.name}</p>
+                  {/* <p className="font-semibold text-xs text-gray-300">{certificate.organization}</p> */}
+                  <p className="text-sm text-gray-300 mt-2">{certificate.issueDate}</p>
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
+      </Wrapper >
+
       <Wrapper classes="z-10 bg-gradient-to-r from-[#0f0f0f] via-[#111111] to-[#0f0f0f] transition-all relative py-6">
-      <div className="grid grid-cols-12 gap-12 text-white ">
+        <div className="grid grid-cols-12 gap-12 text-white ">
           <div className="col-span-7 mt-10 z-10">
-            <div className="relative flex items-start flex-col py-4 ">
+            {/* <div className="relative flex items-start flex-col py-4 ">
               <h2 className="text-white text-2xl uppercase font-bold">
                 Certificates
               </h2>
               <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
-            </div>
-            <div className="h-[500px] overflow-y-auto rounded-lg shadow-inner	">
+            </div> */}
+            {/* <div className="h-[500px] overflow-y-auto rounded-lg shadow-inner	">
               {certificates.map((certificate, index) => {
                 return (
                   <div
                     key={index}
-                    className={`flex flex-row items-center p-[0.6rem] ${
-                      index % 2 === 0 ? "bg-[#1f1f1f]" : "bg-[#1f1f1fa2]"
-                    }`}
+                    className={`flex flex-row items-center p-[0.6rem] ${index % 2 === 0 ? "bg-[#1f1f1f]" : "bg-[#1f1f1fa2]"
+                      }`}
                   >
                     <img src={certificate.orgImg} className="w-[50px]" alt="" />
                     <div className="flex items-center justify-between w-full">
@@ -296,10 +449,9 @@ export const About = () => {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
-          <div className="col-span-5 mt-10">
-            {/* <h2 className="text-3xl uppercase font-bold">About</h2> */}
+          {/* <div className="col-span-5 mt-10">
             <div className="relative flex items-start flex-col py-4">
               <h2 className="text-white text-2xl uppercase font-bold">
                 Education
@@ -330,9 +482,9 @@ export const About = () => {
               <img className="w-[90px]  mt-5 mr-5" src={Badge7} alt="" />
               <img className="w-[90px]  mt-5 mr-5" src={Badge8} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
-        </Wrapper>
-    </ContentWrapper>
+      </Wrapper>
+    </ContentWrapper >
   );
 };

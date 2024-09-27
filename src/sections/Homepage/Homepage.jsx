@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import { Wrapper } from "../../shared/Wrapper";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
@@ -37,7 +37,7 @@ export const Homepage = () => {
               Hi, I'm
             </p>
             <h1
-              className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-r from-[#662d91] via-[#bb62ff] to-[#662d91] text-transparent bg-clip-text"
+              className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-r from-[#8500A9] via-[#b354ce] to-[#8500A9] text-transparent bg-clip-text"
             >
               Shoaib Arif
             </h1>
@@ -57,7 +57,7 @@ export const Homepage = () => {
                   loop: true,
                   pauseFor: 1500,
                   cursorClassName:
-                    " bg-gradient-to-b bg-gradient-to-r from-[#662d91] via-indigo-500 to-[#662d91]  inline-block text-transparent bg-clip-text",
+                    " bg-gradient-to-b bg-gradient-to-r from-[#C300F7] via-[#a953ff] to-[#C300F7] inline-block text-transparent bg-clip-text",
                 }}
               />
             </h2>
@@ -78,62 +78,36 @@ export const Homepage = () => {
             <div className="absolute top-1/2 translate-y-[-50%] left-14">
               <span
                 className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-30%] rounded-full 
-                    transition-all duration-700 ease-out ${
-                      isVisible ? "h-20" : "h-0"
-                    }`}
+                    transition-all duration-700 ease-out ${isVisible ? "h-20" : "h-0"
+                  }`}
               ></span>
 
               <span
                 className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-35%] rounded-full
-                    transition-all duration-700 ease-out ${
-                      isVisible ? "h-20" : "h-0"
-                    }`}
+                    transition-all duration-700 ease-out ${isVisible ? "h-20" : "h-0"
+                  }`}
               ></span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300 hover:bg-[#1877F2]">
-                  <FaFacebookF className="dark:text-white " />
-                </span>
-              </span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300  hover:bg-[#0A66C2]">
-                  <FaLinkedinIn className="dark:text-white " />
-                </span>
-              </span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300   hover:bg-[#000]">
-                  <FaGithub className=" dark:text-white  " />
-                </span>
-              </span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300  hover:bg-[#1DA1F2]">
-                  <FaTwitter className="dark:text-white" />
-                </span>
-              </span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300  hover:bg-[#E4405F]">
-                  <FaInstagram className="dark:text-white" />
-                </span>
-              </span>
-              <span>
-                <span className="mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300  hover:bg-[#E7700D]">
-                  <FaStackOverflow className="dark:text-white" />
-                </span>
-              </span>
+              <SocialIcon color={'#1877F2'} icon={<FaFacebookF className="dark:text-white " />} />
+              <SocialIcon color={'#0A66C2'} icon={<FaLinkedinIn className="dark:text-white " />} />
+              <SocialIcon color={'#000000'} icon={<FaGithub className="dark:text-white " />} />
+              <SocialIcon color={'#E4405F'} icon={<FaInstagram className="dark:text-white " />} />
+              <SocialIcon color={'#1DA1F2'} icon={<FaTwitter className="dark:text-white " />} />
+
             </div>
-            <div className="mt-10 flex items-center ">    
-            <button
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-[#fff] text-[#662d91] shadow-[0_0px_5px_0px_#fff] mr-2 border border-6 border-white "
-            >
-              Hire Me
-            </button>
+            <div className="mt-10 flex items-center ">
+              <button
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-[#fff] text-[#662d91] shadow-[0_0px_5px_0px_#d6d6d6] mr-2 border border-6 border-white "
+              >
+                Hire Me
+              </button>
 
 
               <button
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold bg-[#662d91]  shadow-[0_0px_5px_0px_#662d91]
+                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold shadow-[0_0px_5px_0px_#d6d6d6]  bg-[#8500A9]   
                 
                 "
               >
@@ -142,7 +116,7 @@ export const Homepage = () => {
             </div>
           </Wrapper>
           <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%] z-10 ">
-            <div className="  flex items-center justify-between px-24  py-8 rounded-xl bg-gradient-to-r from-[#662d91] via-[#bb62ff] to-[#662d91] transition-all    ">
+            <div className="  flex items-center justify-between px-24  py-10 rounded-xl bg-[#2f2f2f] transition-all    ">
               <div className="text-white flex items-center">
                 <div>
                   <svg
@@ -160,7 +134,7 @@ export const Homepage = () => {
                     <path d="m14.25 9.25v-3.25l-6.25-3.25-6.25 3.25 6.25 3.25 3.25-1.5v3.5c0 1-1.5 2-3.25 2s-3.25-1-3.25-2v-3.5" />
                   </svg>
                 </div>
-                <div className="flex items-start flex-col ml-2">
+                <div className="flex items-start flex-col ml-2 font-semibold">
                   <span className="font-extrabold text-3xl  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -200,8 +174,8 @@ export const Homepage = () => {
                     </g>
                   </svg>
                 </div>
-                
-                <div className="flex items-start flex-col ml-2">
+
+                <div className="flex items-start flex-col ml-2 font-semibold">
                   <span className="font-extrabold text-3xl  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -232,8 +206,8 @@ export const Homepage = () => {
                     />
                   </svg>
                 </div>
-                
-                <div className="flex items-start flex-col ml-2">
+
+                <div className="flex items-start flex-col ml-2 font-semibold">
                   <span className="font-extrabold text-3xl  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -248,11 +222,11 @@ export const Homepage = () => {
               <span className="bg-white w-[4px] rounded-full counter__line "></span>
               <div className="text-white flex items-center  ">
                 <div>
-                <svg fill="#fff" width="60px" height="60px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <path d="M-0.136 16.708c0.152-8.765 6.287-15.005 13.797-16.015 8.959-1.199 16.495 4.895 17.943 12.979 1.375 7.667-2.839 14.844-9.787 17.688-0.599 0.244-0.927 0.109-1.156-0.5l-3.453-8.969c-0.197-0.527-0.063-0.855 0.453-1.088 1.563-0.709 2.536-1.896 2.797-3.6 0.411-2.64-1.5-5.077-4.161-5.307-2.423-0.235-4.609 1.453-5 3.853-0.339 2.131 0.713 4.115 2.697 5.016 0.62 0.281 0.745 0.557 0.505 1.188l-3.469 9.031c-0.167 0.443-0.531 0.6-1 0.417-3.661-1.432-6.667-4.167-8.437-7.677-1.609-3.177-1.624-5.661-1.729-7.021zM1.213 16.584c0.027 0.427 0.041 0.921 0.084 1.427 0.405 4.64 3.197 9.26 8.452 11.817 0.209 0.093 0.287 0.052 0.365-0.145 0.959-2.527 1.927-5.052 2.901-7.579 0.083-0.208 0.041-0.307-0.152-0.427-2.041-1.287-3.057-3.131-2.943-5.552 0.063-1.391 0.6-2.615 1.537-3.636 1.932-2.109 4.968-2.568 7.453-1.135 2.052 1.187 3.197 3.484 2.916 5.839-0.235 1.968-1.244 3.479-2.953 4.5-0.172 0.104-0.224 0.187-0.145 0.389 0.979 2.532 1.953 5.063 2.916 7.595 0.079 0.203 0.157 0.244 0.36 0.145 2.297-1.068 4.208-2.599 5.688-4.64 2.244-3.115 3.171-6.579 2.728-10.391-0.88-7.584-7.703-13.865-16.489-12.781-6.844 0.839-12.604 6.615-12.719 14.573z"/>
-</svg>
+                  <svg fill="#fff" width="60px" height="60px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-0.136 16.708c0.152-8.765 6.287-15.005 13.797-16.015 8.959-1.199 16.495 4.895 17.943 12.979 1.375 7.667-2.839 14.844-9.787 17.688-0.599 0.244-0.927 0.109-1.156-0.5l-3.453-8.969c-0.197-0.527-0.063-0.855 0.453-1.088 1.563-0.709 2.536-1.896 2.797-3.6 0.411-2.64-1.5-5.077-4.161-5.307-2.423-0.235-4.609 1.453-5 3.853-0.339 2.131 0.713 4.115 2.697 5.016 0.62 0.281 0.745 0.557 0.505 1.188l-3.469 9.031c-0.167 0.443-0.531 0.6-1 0.417-3.661-1.432-6.667-4.167-8.437-7.677-1.609-3.177-1.624-5.661-1.729-7.021zM1.213 16.584c0.027 0.427 0.041 0.921 0.084 1.427 0.405 4.64 3.197 9.26 8.452 11.817 0.209 0.093 0.287 0.052 0.365-0.145 0.959-2.527 1.927-5.052 2.901-7.579 0.083-0.208 0.041-0.307-0.152-0.427-2.041-1.287-3.057-3.131-2.943-5.552 0.063-1.391 0.6-2.615 1.537-3.636 1.932-2.109 4.968-2.568 7.453-1.135 2.052 1.187 3.197 3.484 2.916 5.839-0.235 1.968-1.244 3.479-2.953 4.5-0.172 0.104-0.224 0.187-0.145 0.389 0.979 2.532 1.953 5.063 2.916 7.595 0.079 0.203 0.157 0.244 0.36 0.145 2.297-1.068 4.208-2.599 5.688-4.64 2.244-3.115 3.171-6.579 2.728-10.391-0.88-7.584-7.703-13.865-16.489-12.781-6.844 0.839-12.604 6.615-12.719 14.573z" />
+                  </svg>
                 </div>
-                <div className="flex items-start flex-col ml-2">
+                <div className="flex items-start flex-col ml-2 font-semibold">
                   <span className="font-extrabold text-3xl  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -267,9 +241,27 @@ export const Homepage = () => {
             </div>
           </Wrapper>
         </div>
-      </ContentWrapper>
-    </React.Fragment>
+      </ContentWrapper >
+    </React.Fragment >
   );
 };
 
 
+
+const SocialIcon = ({ icon, color }) => {
+  // var colors = ['bg-[#1877F2]',
+  //   '#0A66C2',
+  //   '#000000',
+  //   '#E4405F',
+  //   '#1DA1F2']
+  const hoverColorClass = `bg-[${color}]`;
+  const fullHover = `hover:${hoverColorClass}`;
+  console.log(fullHover)
+  return (
+    <React.Fragment>
+      <span className={`${fullHover} mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300 `}>
+        {icon}
+      </span>
+    </React.Fragment>
+  )
+}
