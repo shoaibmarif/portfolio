@@ -1,10 +1,9 @@
-import React, { Children, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Wrapper } from "../../shared/Wrapper";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
-
+import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
   FaLinkedinIn,
   FaGithub,
   FaTwitter,
@@ -87,27 +86,28 @@ export const Homepage = () => {
                     }`}
               ></span>
               <SocialIcon
-                color={"#1877F2"}
-                icon={<FaFacebookF className="dark:text-white " />}
-              />
-              <SocialIcon
                 color={"#0A66C2"}
+                url="https://www.linkedin.com/in/shoaibmarif/"
                 icon={<FaLinkedinIn className="dark:text-white " />}
               />
               <SocialIcon
                 color={"#4d4d4d"}
+                url="https://github.com/shoaibmarif"
                 icon={<FaGithub className="dark:text-white " />}
               />
               <SocialIcon
                 color={"#E4405F"}
+                url="https://www.instagram.com/shoaibmarif/"
                 icon={<FaInstagram className="dark:text-white " />}
               />
               <SocialIcon
                 color={"#1DA1F2"}
+                url="https://x.com/mshoaibmarif"
                 icon={<FaTwitter className="dark:text-white " />}
               />
               <SocialIcon
                 color={"#E7700D"}
+                url="https://stackoverflow.com/users/7770942/shoaib-arif"
                 icon={<FaStackOverflow className="dark:text-white " />}
               />
             </div>
@@ -136,8 +136,8 @@ export const Homepage = () => {
             <div className="  flex items-center justify-between px-24  py-10 rounded-xl bg-[#2f2f2f] transition-all    ">
               <div className="text-white flex items-center">
                 <ExperienceSvg color={"#fff"} size={"60px"} />
-                <div className="flex items-start flex-col ml-2 font-semibold">
-                  <span className="font-extrabold text-3xl  ">
+                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                  <span className="text-4xl text-stroke mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
@@ -152,8 +152,8 @@ export const Homepage = () => {
               <div className="text-white flex items-center  ">
                 <ProjectSvg color={"#fff"} size="60px" />
 
-                <div className="flex items-start flex-col ml-2 font-semibold">
-                  <span className="font-extrabold text-3xl  ">
+                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                  <span className="text-4xl text-stroke mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
@@ -171,8 +171,8 @@ export const Homepage = () => {
                   <HappySvg color="#fff" size="60px" />
                 </div>
 
-                <div className="flex items-start flex-col ml-2 font-semibold">
-                  <span className="font-extrabold text-3xl  ">
+                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                  <span className="text-4xl text-stroke mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
@@ -186,8 +186,8 @@ export const Homepage = () => {
               <span className="bg-white w-[4px] rounded-full counter__line "></span>
               <div className="text-white flex items-center  ">
                 <OpenSourceSvg color={"#fff"} size="60px" />
-                <div className="flex items-start flex-col ml-2 font-semibold">
-                  <span className="font-extrabold text-3xl  ">
+                <div className="flex items-start flex-col ml-3 font-semibold uppercase">
+                  <span className="text-4xl text-stroke mb-1 ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
@@ -206,15 +206,16 @@ export const Homepage = () => {
   );
 };
 
-const SocialIcon = ({ icon, color }) => {
+const SocialIcon = ({ icon, color , url }) => {
   return (
     <React.Fragment>
-      <span
+      <Link 
+        to={url}
         style={{ "--hover-color": color }}
         className={`hover:bg-[--hover-color] mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300 `}
       >
         {icon}
-      </span>
+      </Link>
     </React.Fragment>
   );
 };

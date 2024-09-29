@@ -8,9 +8,9 @@ import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 
 export const Navigation = ({ darkMode, setDarkMode }) => {
   return (
-    <ContentWrapper classes="fixed w-full z-[9999]  ">
+    <ContentWrapper classes="fixed w-full z-[9999] custom__nav__wrapper" anim={"fade-down"} duration={1000}>
       <Wrapper classes="flex items-center justify-between text-white py-5">
-        <div className=" bg-[#662d91] rounded-full" >
+        <div className=" bg-[#662d91] rounded-full"  >
           <img
             className="size-[50px]"
             src={Profile}
@@ -32,7 +32,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
           })}
         </ul>
         <Toggler darkMode={darkMode} setDarkMode={setDarkMode} />
-      </Wrapper >
-    </ContentWrapper >
+      </Wrapper>
+    </ContentWrapper>
   );
 };
