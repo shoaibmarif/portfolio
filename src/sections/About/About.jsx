@@ -325,8 +325,8 @@ export const About = () => {
   return (
     <ContentWrapper>
       <Wrapper>
-        <TopHeading title="Experience" />
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 ">
+        {/* <TopHeading title="Experience" /> */}
+        {/* <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 ">
           {experience.map((exp) => (
             <div key={exp.id} className="group z-10">
               <div className="dark:bg-[#1f1f1f] rounded-lg text-start min-h-[300px] p-10  flex items-start justify-center flex-col relative cursor-pointer overflow-hidden">
@@ -339,11 +339,6 @@ export const About = () => {
                   alt={exp.name}
                   className="mx-auto mb-4 size-[100px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
                 />
-                {/* <img
-                  src={exp.imgSrc}
-                  className="size-[100px] mx-auto rounded-full"
-                  alt=""
-                /> */}
                 <h3 className="font-bold uppercase text-lg  text-[#a37eff] mt-7">
                   {exp.name}
                 </h3>
@@ -359,8 +354,44 @@ export const About = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+
+
+<div>
+  <div class="flex gap-x-3">
+    <div class="w-16 text-end">
+      <span class="text-xs text-gray-500 dark:text-neutral-400">My Period</span>
+    </div>
+    <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+      <div class="relative z-10 size-7 flex justify-center items-center">
+        <div class="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
+      </div>
+    </div>
+    <div class="grow pt-0.5 pb-8 bg-purple-700 max-w-80 rounded-2xl ">
+      <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+        <svg class="shrink-0 size-4 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" x2="8" y1="13" y2="13"></line>
+          <line x1="16" x2="8" y1="17" y2="17"></line>
+          <line x1="10" x2="8" y1="9" y2="9"></line>
+        </svg>
+        Software Engineer 
+      </h3>
+      <button type="button" class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+        <img class="shrink-0 size-4 rounded-full" src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=facearea&facepad=3&w=320&h=320&q=80" alt="Avatar"/>
+        Daraz
+      </button>
+      <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+        little bit information about me expeirenc 
+      </p>
+    </div>
+  </div>
+</div>
       </Wrapper>
+
+
+
 
 
       <Wrapper>
@@ -401,11 +432,8 @@ export const About = () => {
                 <div key={index} className={`relative min-h-[250px] flex flex-col items-start  justify-start  p-5 ${index % 2 === 0 ? "bg-[#1f1f1f]" : "bg-[#1f1f1fa2]"}`}>
                   <img src={certificate.orgImg}
                     className="size-16 rounded-full mb-5"
-                  // style={{ backgroundImage: `url(${certificate.orgImg})`, opacity: 0.20, }}
-                  // className="mx-auto mb-4 size-[60px] object-contain absolute rounded-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
                   />
                   <p className="text-base font-bold text-white mt-3">{certificate.name}</p>
-                  {/* <p className="font-semibold text-xs text-gray-300">{certificate.organization}</p> */}
                   <p className="text-sm text-gray-300 mt-2">{certificate.issueDate}</p>
                 </div>
               </div>
