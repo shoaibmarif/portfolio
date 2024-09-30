@@ -92,113 +92,19 @@ export const About = () => {
     },
   ];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <HiArrowLongRight color="white" />,
-    prevArrow: <HiArrowLongLeft color="white" />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
 
   return (
     <ContentWrapper>
-      <Wrapper>
-        <div>
-          <div class="flex gap-x-3">
-            <div class="w-16 text-end">
-              <span class="text-xs text-gray-500 dark:text-neutral-400">
-                My Period
-              </span>
-            </div>
-            <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-              <div class="relative z-10 size-7 flex justify-center items-center">
-                <div class="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
-              </div>
-            </div>
-            <div class="grow pt-0.5 pb-8 bg-purple-700 max-w-80 rounded-2xl ">
-              <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
-                <svg
-                  class="shrink-0 size-4 mt-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" x2="8" y1="13" y2="13"></line>
-                  <line x1="16" x2="8" y1="17" y2="17"></line>
-                  <line x1="10" x2="8" y1="9" y2="9"></line>
-                </svg>
-                Software Engineer
-              </h3>
-              <button
-                type="button"
-                class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-              >
-                <img
-                  class="shrink-0 size-4 rounded-full"
-                  src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
-                  alt="Avatar"
-                />
-                Daraz
-              </button>
-              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                little bit information about me expeirenc
-              </p>
-            </div>
-          </div>
-        </div>
-      </Wrapper>
 
       <Wrapper>
-        <div className="grid grid-cols-3">
-          <div className="col-span-1">
-            <div className="flex items-center justify-start h-full flex-wrap">
-              <img className="w-[150px]  mt-5 mr-5" src={Badge1} alt="" />
-              <img className="w-[150px]  mt-5 mr-5" src={Badge2} alt="" />
-              <img className="w-[150px]  mt-5 mr-5" src={Badge3} alt="" />
-              <img className="w-[150px]  mt-5 mr-5" src={Badge4} alt="" />
-            </div>
-          </div>
+        <div className="grid grid-cols-2">
           <div className="col-span-1">
             <div className=" flex items-center justify-center h-full flex-col">
               <h1 className="text-center text-white font-extrabold uppercase text-9xl mt-8">
                 About
               </h1>
-              <p className="text-white text-center mt-5">
+              <p className="text-white mt-5">
                 {" "}
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
@@ -206,90 +112,74 @@ export const About = () => {
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
-            </div>
-          </div>
-          <div className="col-span-1 ">
-            <div className="flex items-center justify-end  h-full flex-wrap">
-              <img className="w-[150px]  mt-5 ml-5" src={Badge5} alt="" />
-              <img className="w-[150px]  mt-5 ml-5" src={Badge6} alt="" />
-              <img className="w-[150px]  mt-5 ml-5" src={Badge7} alt="" />
-              <img className="w-[150px]  mt-5 ml-5" src={Badge8} alt="" />
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-      <Certificates />
-      <Wrapper classes="z-10 bg-gradient-to-r from-[#0f0f0f] via-[#111111] to-[#0f0f0f] transition-all relative py-6">
-        <div className="grid grid-cols-12 gap-12 text-white ">
-          <div className="col-span-7 mt-10 z-10">
-            {/* <div className="relative flex items-start flex-col py-4 ">
-              <h2 className="text-white text-2xl uppercase font-bold">
-                Certificates
-              </h2>
-              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
-            </div> */}
-            {/* <div className="h-[500px] overflow-y-auto rounded-lg shadow-inner	">
-              {certificates.map((certificate, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`flex flex-row items-center p-[0.6rem] ${index % 2 === 0 ? "bg-[#1f1f1f]" : "bg-[#1f1f1fa2]"
-                      }`}
-                  >
-                    <img src={certificate.orgImg} className="w-[50px]" alt="" />
-                    <div className="flex items-center justify-between w-full">
-                      <div className="flex mx-4 flex-col">
-                        <p className="text-sm">{certificate.name}</p>
-                        <p className="font-semibold text-xs text-gray-300">
-                          {certificate.organization}
-                        </p>
-                        <div className="text-xs text-gray-300">
-                          {certificate.issueDate} Credentials
-                        </div>
-                      </div>
-                      <div className="mr-6 border-[white] border-2 p-2 rounded-full">
-                        <MdArrowForwardIos size={14} />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div> */}
-          </div>
-          {/* <div className="col-span-5 mt-10">
-            <div className="relative flex items-start flex-col py-4">
-              <h2 className="text-white text-2xl uppercase font-bold">
-                Education
-              </h2>
-              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
-            </div>
-            <p className="mt-4 leading-8">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored to
-              the unique needs of businesses.{" "}
-            </p>
 
-            <div className="relative flex items-start flex-col py-4">
-              <h2 className="text-white text-2xl uppercase font-bold">
-                Credly Badges
-              </h2>
-              <span className="w-[20%] bg-[#ef4444] mt-3 h-[3px]"></span>
+              <div className="flex items-center flex-wrap">
+                <img className="w-[90px]  mt-5 mr-5" src={Badge1} alt="" />
+                <img className="w-[90px]  mt-5 mr-5" src={Badge2} alt="" />
+                <img className="w-[90px]  mt-5 mr-5" src={Badge3} alt="" />
+                <img className="w-[90px]  mt-5 mr-5" src={Badge4} alt="" />
+                <img className="w-[90px]  mt-5 ml-5" src={Badge5} alt="" />
+                <img className="w-[90px]  mt-5 ml-5" src={Badge6} alt="" />
+                <img className="w-[90px]  mt-5 ml-5" src={Badge7} alt="" />
+                <img className="w-[90px]  mt-5 ml-5" src={Badge8} alt="" />
+              </div>
             </div>
-            <div className="flex flex-wrap justify-start">
-              <img className="w-[90px]  mt-5 mr-5" src={Badge1} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge2} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge3} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge4} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge5} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge6} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge7} alt="" />
-              <img className="w-[90px]  mt-5 mr-5" src={Badge8} alt="" />
+          </div>
+          <div className="col-span-1">
+            <div class="flex gap-x-3">
+              <div class="w-16 text-end">
+                <span class="text-xs text-gray-500 dark:text-neutral-400">
+                  My Period
+                </span>
+              </div>
+              <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                <div class="relative z-10 size-7 flex justify-center items-center">
+                  <div class="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
+                </div>
+              </div>
+              <div class="grow pt-0.5 pb-8 bg-purple-700 max-w-80 rounded-2xl ">
+                <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+                  <svg
+                    class="shrink-0 size-4 mt-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" x2="8" y1="13" y2="13"></line>
+                    <line x1="16" x2="8" y1="17" y2="17"></line>
+                    <line x1="10" x2="8" y1="9" y2="9"></line>
+                  </svg>
+                  Software Engineer
+                </h3>
+                <button
+                  type="button"
+                  class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                >
+                  <img
+                    class="shrink-0 size-4 rounded-full"
+                    src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
+                    alt="Avatar"
+                  />
+                  Daraz
+                </button>
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  little bit information about me expeirenc
+                </p>
+              </div>
             </div>
-          </div> */}
+          </div>
+
+
         </div>
       </Wrapper>
-    </ContentWrapper>
+    </ContentWrapper >
   );
 };

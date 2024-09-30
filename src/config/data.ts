@@ -11,7 +11,6 @@ const navigationLinks = [
     "Home",
     "Services",
     "About",
-    "Projects",
     "Testimonials",
     "Blog",
     "NewsLetter",
@@ -47,7 +46,7 @@ const servicesData = [
 const navLinks = [
     {
         name:"Home",
-        href:"/"
+        href:"home"
     },
     {
         name:"Services",
@@ -58,12 +57,12 @@ const navLinks = [
         href:"about"
     },
     {
-        name:"Projects",
-        href:"projects"
-    },
-    {
         name:"Pricing",
         href:"pricing"
+    },
+    {
+        name:"Certificates",
+        href:"certificates"
     },
     {
         name:"Testimnonials",
@@ -71,7 +70,7 @@ const navLinks = [
     },
     {
         name:"Contact Us",
-        href:"contact-us"
+        href:"contact"
     }
 ]
 

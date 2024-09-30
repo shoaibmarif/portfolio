@@ -34,7 +34,7 @@ export const Homepage = () => {
             >
               Hi, I'm
             </p>
-            <h1 className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-r from-[#8500A9] via-[#b354ce] to-[#8500A9] text-transparent bg-clip-text">
+            <h1 className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-t from-[#662d91] via-[#c04cff] to-[#662d91] text-transparent bg-clip-text">
               Shoaib Arif
             </h1>
             <h2
@@ -53,7 +53,7 @@ export const Homepage = () => {
                   loop: true,
                   pauseFor: 1500,
                   cursorClassName:
-                    " bg-gradient-to-b bg-gradient-to-r from-[#C300F7] via-[#a953ff] to-[#C300F7] inline-block text-transparent bg-clip-text",
+                    " bg-gradient-to-b bg-gradient-to-r from-[#662d91] via-[#c04cff] to-[#662d91] inline-block text-transparent bg-clip-text",
                 }}
               />
             </h2>
@@ -69,48 +69,50 @@ export const Homepage = () => {
               solutions that connect billions of people
             </p>
 
-            {/* Social Icons  */}
+            {/* ASs  */}
 
-            <div className="absolute top-1/2 translate-y-[-50%] left-14">
+            <div className="absolute top-1/2 translate-y-[-40%] left-14">
               <span
-                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-30%] rounded-full 
-                    transition-all duration-700 ease-out ${
-                      isVisible ? "h-20" : "h-0"
-                    }`}
+                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-35%] rounded-full 
+                    transition-all duration-700 ease-out ${isVisible ? "h-24" : "h-0"
+                  }`}
               ></span>
 
               <span
-                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-35%] rounded-full
-                    transition-all duration-700 ease-out ${
-                      isVisible ? "h-20" : "h-0"
-                    }`}
+                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-40%] rounded-full
+                    transition-all duration-700 ease-out ${isVisible ? "h-24" : "h-0"
+                  }`}
               ></span>
-              <SocialIcon
-                color={"#0A66C2"}
-                url="https://www.linkedin.com/in/shoaibmarif/"
-                icon={<FaLinkedinIn className="dark:text-white " />}
-              />
-              <SocialIcon
-                color={"#4d4d4d"}
-                url="https://github.com/shoaibmarif"
-                icon={<FaGithub className="dark:text-white " />}
-              />
-              <SocialIcon
-                color={"#E4405F"}
-                url="https://www.instagram.com/shoaibmarif/"
-                icon={<FaInstagram className="dark:text-white " />}
-              />
-              <SocialIcon
-                color={"#1DA1F2"}
-                url="https://x.com/mshoaibmarif"
-                icon={<FaTwitter className="dark:text-white " />}
-              />
-              <SocialIcon
-                color={"#E7700D"}
-                url="https://stackoverflow.com/users/7770942/shoaib-arif"
-                icon={<FaStackOverflow className="dark:text-white " />}
-              />
+              <div data-aos="fade-right"
+                data-aos-duration="700">
+                <SocialIcon
+                  color={"#0A66C2"}
+                  url="https://www.linkedin.com/in/shoaibmarif/"
+                  icon={<FaLinkedinIn size={20} className="dark:text-white " />}
+                />
+                <SocialIcon
+                  color={"#4d4d4d"}
+                  url="https://github.com/shoaibmarif"
+                  icon={<FaGithub size={20} className="dark:text-white " />}
+                />
+                <SocialIcon
+                  color={"#E4405F"}
+                  url="https://www.instagram.com/shoaibmarif/"
+                  icon={<FaInstagram size={20} className="dark:text-white " />}
+                />
+                <SocialIcon
+                  color={"#1DA1F2"}
+                  url="https://x.com/mshoaibmarif"
+                  icon={<FaTwitter size={20} className="dark:text-white " />}
+                />
+                <SocialIcon
+                  color={"#E7700D"}
+                  url="https://stackoverflow.com/users/7770942/shoaib-arif"
+                  icon={<FaStackOverflow size={20} className="dark:text-white " />}
+                />
+              </div>
             </div>
+
             <div className="mt-10 flex items-center ">
               <button
                 data-aos="fade-right"
@@ -123,7 +125,7 @@ export const Homepage = () => {
               <button
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold shadow-[0_0px_5px_0px_#d6d6d6]  bg-[#8500A9]   
+                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold shadow-[0_0px_5px_0px_#d6d6d6]  bg-[#662d91]   
                 
                 "
               >
@@ -206,13 +208,13 @@ export const Homepage = () => {
   );
 };
 
-const SocialIcon = ({ icon, color , url }) => {
+const SocialIcon = ({ icon, color, url }) => {
   return (
     <React.Fragment>
-      <Link 
+      <Link
         to={url}
-        style={{ "--hover-color": color }}
-        className={`hover:bg-[--hover-color] mt-3 block rounded-full p-2 cursor-pointer social__wrapper  transition-all duration-300 `}
+        style={{ "--hover-color": color, }}
+        className={`bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer social__wrapper  transition-all duration-300 `}
       >
         {icon}
       </Link>
