@@ -16,6 +16,16 @@ import CountUp from "react-countup";
 export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+
+  const texts = [
+    "Frontend Developer",
+    "React Developer",
+    "Full Stack  Developer",
+  ];
+
+
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -27,17 +37,30 @@ export const Homepage = () => {
       <ContentWrapper>
         <div className="relative h-full w-full">
           <Wrapper classes="text-white flex items-center h-[100vh] justify-center flex-col">
-            <p
-              className="text-start font-semibold tracking-[4px] text-xl"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              Hi, I'm
-            </p>
-            <h1 className="font-extrabold  uppercase leading-[6rem] main__heading inline-block bg-gradient-to-t from-[#662d91] via-[#c04cff] to-[#662d91] text-transparent bg-clip-text">
-              Shoaib Arif
+            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text">
+              <span className="inline-block animate-bounce-long delay-300 text-orange-400">S</span>
+              <span className="animate-bounce-medium delay-600 text-violet-500">H</span>
+              <span className="animate-bounce-long delay-200 text-green-400">O</span>
+              <span className="animate-bounce-short delay-500 text-cyan-500">A</span>
+              <span className="animate-bounce-long delay-400 text-fuchsia-700">I</span>
+              <span className="animate-bounce-medium delay-800 text-pink-900">B</span>
+              <span className="animate-bounce-short mx-5 "> </span>
+              <span className="animate-bounce-long delay-500  text-red-100">A</span>
+              <span className="animate-bounce-long delay-700  text-orange-300">R</span>
+              <span className="animate-bounce-medium delay-900  text-gray-500">I</span>
+              <span className="animate-bounce-short delay-100  text-cyan-800">F</span>
             </h1>
-            <h2
+
+
+            <h2 className="text-4xl my-3 font-bold relative overflow-hidden flex  ">
+              <span className="text-[#D5B572]">console.</span>
+              <span className="text-[#C0646A]">log</span>
+              <span className="text-[#D5B572]">("</span>
+
+              <span className="text-[#D5B572]">")</span>
+            </h2>
+
+            {/* <h2
               className="font-bold text-[3rem]  transition-all dark:text-white text-black"
               data-aos="fade-up"
               data-aos-duration="800"
@@ -56,7 +79,7 @@ export const Homepage = () => {
                     " bg-gradient-to-b bg-gradient-to-r from-[#662d91] via-[#c04cff] to-[#662d91] inline-block text-transparent bg-clip-text",
                 }}
               />
-            </h2>
+            </h2> */}
 
             <p
               className="max-w-[700px] text-center mt-5 text-black dark:text-white transition-all"

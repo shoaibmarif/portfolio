@@ -12,6 +12,7 @@ import Sameer from "../../../public/images/testimonials/sameer.jpg"
 import Sarim from "../../../public/images/testimonials/Sarim.jpg"
 import Talha from "../../../public/images/testimonials/Talha.jpg"
 import Urooba from "../../../public/images/testimonials/Urooba.jpg"
+import Qoute from "../../../public/icons/quote.png"
 export const Testimonials = () => {
 
     const testimonials = [
@@ -90,22 +91,24 @@ export const Testimonials = () => {
                 <Slider {...settings} >
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="flex  px-5">
-                            <div className='flex flex-col bg-[#1f1f1f]  rounded-xl p-8 min-h-[400px]'>
+                            <div className='flex flex-col items-center justify-between bg-[#1f1f1f]  rounded-xl p-8 min-h-[370px] relative'>
 
-                                <p className="text-base leading-7 text-white mt-5 italic ">
+                                <p className="text-sm  text-white mt-5  ">
                                     "{testimonial.comments}"
                                 </p>
 
-                                <div className=" flex items-center  mt-8 ">
+                                <img src={Qoute} alt="Testimonials" className='absolute right-10 top-10 opacity-30  w-24' />
+                                <img src={Qoute} alt="Testimonials" className='absolute left-10 bottom-10 opacity-30  w-24 rotate-180' />
+
+                                <div className=" flex items-center flex-col justify-center  mt-3 ">
                                     <img
                                         src={testimonial.profileIcon}
                                         alt={testimonial.name}
                                         className="size-20  rounded-full"
                                     />
-                                    <div className='ml-4'>
-                                        <p className="font-bold text-xl text-[#6A2F96] ">{testimonial.name}</p>
-                                        <p className="text-gray-200 ">{testimonial.designation}</p>
-                                    </div>
+                                    <p className="font-bold text-lg text-[#6A2F96] mt-2 ">{testimonial.name}</p>
+                                    <p className="text-gray-200 text-sm font-semibold">{testimonial.designation}</p>
+
                                 </div>
 
                             </div>
