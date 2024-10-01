@@ -2,6 +2,9 @@
   scroll-behavior: smooth;
 }
 
+*, html, body{
+    font-family: "Poppins", sans-serif;
+}
 
 @tailwind base;
 @tailwind components;
@@ -21,16 +24,12 @@
 }
 .screen_animation{
   width: 0%;
-  animation: screenAnim 0.8s ease-out;
+  animation: screenAnim 0.5s ease-out;
 }
 @keyframes screenAnim {
     0% {
         width:100%;
       }
-    40%{
-      width:100%;
-    }
-
     100% {
         width: 0%;
     }
@@ -321,15 +320,8 @@ div {
   }
 
 
-  .animate-bounce-short {
+  .animate-bounce {
     display: inline-block;
-    animation: bounce 1.5s ease infinite; /* Change duration as needed */ 
+    animation: bounce 2s ease infinite; /* Change duration as needed */ 
   }
-  .animate-bounce-medium {
-    display: inline-block;
-    animation: bounce 2s ease infinite; /* Change duration as needed */
-  }
-  .animate-bounce-long {
-    display: inline-block;
-    animation: bounce 2.5s ease infinite; /* Change duration as needed */
-  }
+

@@ -98,20 +98,18 @@ export const About = () => {
     <ContentWrapper>
 
       <Wrapper>
+        <TopHeading title="About" />
         <div className="grid grid-cols-2">
           <div className="col-span-1">
             <div className=" flex items-center justify-center h-full flex-col">
-              <h1 className="text-center text-white font-extrabold uppercase text-9xl mt-8">
-                About
-              </h1>
               <p className="text-white mt-5">
-                {" "}
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
+              <p></p>
 
               <div className="flex items-center flex-wrap">
                 <img className="w-[90px]  mt-5 mr-5" src={Badge1} alt="" />

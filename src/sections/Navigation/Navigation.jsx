@@ -20,9 +20,9 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <ContentWrapper classes="fixed w-full z-[9999] custom__nav__wrapper transition-all" anim={"fade-down"}>
+    <ContentWrapper classes="fixed w-full z-[999] custom__nav__wrapper transition-all" anim={"fade-down"} delay="1000">
       <Wrapper classes="flex items-center justify-between text-white py-5">
-        <div className="bg-[#662d91] rounded-full">
+        <div className="bg-violet-800 rounded-full">
           <img
             className="size-[50px]"
             src={Profile}

@@ -6,30 +6,54 @@ import 'aos/dist/aos.css';
 import { FaWhatsapp } from "react-icons/fa";
 import {Certificates} from "./sections/Certificates/Certificates.jsx";
 import {useNavigate} from "react-router-dom"
-
+import {Loader} from "./shared/Loader/Loader.jsx"
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
   const navigate = useNavigate();
+  const [loader,setLoader] = useState(true);
   useEffect(() => {
     AOS.init();
       window.location.pathname.trim() === "/" ? navigate('/home'): null; 
-  
+
+      setTimeout(() =>{
+        setLoader(false)
+      },2000)
   }, []);
+
+
+
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
-      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div id="home"><Homepage /></div>
-      <div id="services"><Services /></div>
-      <div id="about"><About /></div>
-      <div id="pricing"><Pricing /></div>
-      <div id="certificates"> <Certificates /></div>
-      <div id="testimonials"><Testimonials /></div>
-      <div id="contact"><ContactUs /></div>
-      <Footer />
-      <div className="fixed__button__wrapper fixed bottom-10 right-10 bg-gradient-to-r from-[#a56ab6] via-[#b23fd1d2] to-[#a56ab6] rounded-full cursor-pointer z-[999]">
-        <FaWhatsapp color="white" />
-      </div>
-    </div>
+<React.Fragment>
+           
+<div className={`${darkMode ? "dark" : ""}`}>
+   {loader ? <Loader/> : 
+             <React.Fragment>
+         {/* <div className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-6 top-0 left-0">
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+            </div>  */}
+          <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+            <div id="home"><Homepage /></div>
+            <div id="services"><Services /></div>
+            <div id="about"><About /></div>
+            <div id="pricing"><Pricing /></div>
+            <div id="certificates"> <Certificates /></div>
+            <div id="testimonials"><Testimonials /></div>
+            <div id="contact"><ContactUs /></div>
+            <Footer />
+            <div className="fixed__button__wrapper fixed bottom-10 right-10 bg-violet-800 rounded-full cursor-pointer z-[999]">
+              <FaWhatsapp color="white" />
+            </div>
+            </React.Fragment>
+   }
+   </div> 
+
+ 
+    </React.Fragment>
   );
 }
 

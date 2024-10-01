@@ -17,12 +17,6 @@ export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
 
-  const texts = [
-    "Frontend Developer",
-    "React Developer",
-    "Full Stack  Developer",
-  ];
-
 
 
 
@@ -36,55 +30,38 @@ export const Homepage = () => {
     <React.Fragment>
       <ContentWrapper>
         <div className="relative h-full w-full">
-          <Wrapper classes="text-white flex items-center h-[100vh] justify-center flex-col">
-            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text">
-              <span className="inline-block animate-bounce-long delay-300 text-orange-400">S</span>
-              <span className="animate-bounce-medium delay-600 text-violet-500">H</span>
-              <span className="animate-bounce-long delay-200 text-green-400">O</span>
-              <span className="animate-bounce-short delay-500 text-cyan-500">A</span>
-              <span className="animate-bounce-long delay-400 text-fuchsia-700">I</span>
-              <span className="animate-bounce-medium delay-800 text-pink-900">B</span>
-              <span className="animate-bounce-short mx-5 "> </span>
-              <span className="animate-bounce-long delay-500  text-red-100">A</span>
-              <span className="animate-bounce-long delay-700  text-orange-300">R</span>
-              <span className="animate-bounce-medium delay-900  text-gray-500">I</span>
-              <span className="animate-bounce-short delay-100  text-cyan-800">F</span>
+          <Wrapper classes="text-white flex items-center h-[100vh] justify-center flex-col ">
+            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="fade-down" data-aos-delay={800}>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">H</span>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">O</span>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
+              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">B</span>
+              <span className=""> </span>
+              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
+              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">R</span>
+              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
+              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">F</span>
             </h1>
 
 
-            <h2 className="text-4xl my-3 font-bold relative overflow-hidden flex  ">
-              <span className="text-[#D5B572]">console.</span>
-              <span className="text-[#C0646A]">log</span>
-              <span className="text-[#D5B572]">("</span>
-
-              <span className="text-[#D5B572]">")</span>
-            </h2>
-
-            {/* <h2
-              className="font-bold text-[3rem]  transition-all dark:text-white text-black"
-              data-aos="fade-up"
-              data-aos-duration="800"
-            >
+            <div className="text-5xl flex font-bold  mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
                 options={{
-                  strings: [
-                    `Frontend Developer`,
-                    "React Developer",
-                    "Full Stack Developer",
-                  ],
+                  strings: ['Frontend Developer', 'React Developer', 'Full Stack Developer'],
                   autoStart: true,
                   loop: true,
-                  pauseFor: 1500,
-                  cursorClassName:
-                    " bg-gradient-to-b bg-gradient-to-r from-[#662d91] via-[#c04cff] to-[#662d91] inline-block text-transparent bg-clip-text",
                 }}
-              />
-            </h2> */}
+              /></div>
+
+
+
 
             <p
-              className="max-w-[700px] text-center mt-5 text-black dark:text-white transition-all"
+              className="max-w-[700px] text-center text-lg mt-8 text-black dark:text-[#dbdbdb]  transition-all"
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-delay="900"
             >
               I break down complex user experinece problems to create integritiy
               focussed solutions that connect billions of people I break down
@@ -97,41 +74,42 @@ export const Homepage = () => {
             <div className="absolute top-1/2 translate-y-[-40%] left-14">
               <span
                 className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-35%] rounded-full 
-                    transition-all duration-700 ease-out ${isVisible ? "h-24" : "h-0"
+                    transition-all duration-700 delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
                   }`}
               ></span>
 
               <span
                 className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-40%] rounded-full
-                    transition-all duration-700 ease-out ${isVisible ? "h-24" : "h-0"
+                    transition-all duration-700   delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
                   }`}
               ></span>
               <div data-aos="fade-right"
-                data-aos-duration="700">
+                data-aos-duration="700"
+                data-aos-delay="800">
                 <SocialIcon
                   color={"#0A66C2"}
                   url="https://www.linkedin.com/in/shoaibmarif/"
-                  icon={<FaLinkedinIn size={20} className="dark:text-white " />}
+                  icon={<FaLinkedinIn size={18} className="dark:text-white " />}
                 />
                 <SocialIcon
                   color={"#4d4d4d"}
                   url="https://github.com/shoaibmarif"
-                  icon={<FaGithub size={20} className="dark:text-white " />}
+                  icon={<FaGithub size={18} className="dark:text-white " />}
                 />
                 <SocialIcon
                   color={"#E4405F"}
                   url="https://www.instagram.com/shoaibmarif/"
-                  icon={<FaInstagram size={20} className="dark:text-white " />}
+                  icon={<FaInstagram size={18} className="dark:text-white " />}
                 />
                 <SocialIcon
                   color={"#1DA1F2"}
                   url="https://x.com/mshoaibmarif"
-                  icon={<FaTwitter size={20} className="dark:text-white " />}
+                  icon={<FaTwitter size={18} className="dark:text-white " />}
                 />
                 <SocialIcon
                   color={"#E7700D"}
                   url="https://stackoverflow.com/users/7770942/shoaib-arif"
-                  icon={<FaStackOverflow size={20} className="dark:text-white " />}
+                  icon={<FaStackOverflow size={18} className="dark:text-white " />}
                 />
               </div>
             </div>
@@ -140,32 +118,44 @@ export const Homepage = () => {
               <button
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-[#fff] text-[#662d91] shadow-[0_0px_5px_0px_#d6d6d6] mr-2 border border-6 border-white "
+                data-aos-delay="1200"
+                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-violet-800 text-white mr-2 overflow-hidden 
+                shadow-[4px_4px_0px_0px_#ddd6fe]"
               >
-                Hire Me
+                <span className="relative z-[10] font-semibold">Hire Me</span>
+                <span className="w-[25%] bg-violet-400 absolute top-5 h-[200px] left-[0%] rounded-full"></span>
+                <span className="w-[30%] bg-violet-400 absolute top-7 h-[200px] left-[20%] rounded-full"></span>
+                <span className="w-[40%] bg-violet-400 absolute top-4 h-[200px] left-[40%] rounded-full"></span>
+                <span className="w-[40%] bg-violet-400 absolute top-9 h-[200px] left-[60%] rounded-full"></span>
               </button>
 
               <button
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="ml-2 flex items-center justify-center mr-4 text-[#fff] min-w-48 px-14 py-4 rounded-full font-semibold shadow-[0_0px_5px_0px_#d6d6d6]  bg-[#662d91]   
-                
+                data-aos-delay="1200"
+                className="ml-2 flex items-center justify-center mr-4  min-w-48 px-14 py-4 rounded-full  bg-violet-800 text-white  overflow-hidden  
+                shadow-[4px_4px_0px_0px_#ddd6fe]
                 "
               >
-                <LuDownload size={20} />{" "}
-                <span className="ml-1 font-normal">Resume</span>
+                <LuDownload size={20} className="relative z-[10]" />{" "}
+                <span className="ml-1 font-semibold relative z-[10]">Resume</span>
+                <span className="w-[25%] bg-violet-400 absolute top-5 h-[200px] left-[0%] rounded-full"></span>
+                <span className="w-[30%] bg-violet-400 absolute top-7 h-[200px] left-[20%] rounded-full"></span>
+                <span className="w-[40%] bg-violet-400 absolute top-4 h-[200px] left-[40%] rounded-full"></span>
+                <span className="w-[40%] bg-violet-400 absolute top-9 h-[200px] left-[60%] rounded-full"></span>
               </button>
             </div>
-          </Wrapper>
-          <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%] z-10 ">
-            <div className="  flex items-center justify-between px-24  py-10 rounded-xl bg-[#2f2f2f] transition-all    ">
+          </Wrapper >
+          <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%] z-10 " >
+            <div className="  flex items-center justify-between px-20  py-8 rounded-xl  bg-[#1f1f1f] transition-all" data-aos="fade-up" data-aos-delay="1000">
               <div className="text-white flex items-center">
-                <ExperienceSvg color={"#fff"} size={"60px"} />
+                <ExperienceSvg color={"#fff"} size={"50px"} />
                 <div className="flex items-start flex-col ml-2 font-semibold uppercase">
-                  <span className="text-4xl text-stroke mb-1  ">
+                  <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
+                      delay={1}
                       end={4}
                     />
                     +
@@ -175,14 +165,15 @@ export const Homepage = () => {
               </div>
               <span className="bg-white w-[4px] rounded-full counter__line  "></span>
               <div className="text-white flex items-center  ">
-                <ProjectSvg color={"#fff"} size="60px" />
+                <ProjectSvg color={"#fff"} size="50px" />
 
                 <div className="flex items-start flex-col ml-2 font-semibold uppercase">
-                  <span className="text-4xl text-stroke mb-1  ">
+                  <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
                       end={50}
+                      delay={1}
                     />
                     +
                   </span>
@@ -193,15 +184,16 @@ export const Homepage = () => {
 
               <div className="text-white flex items-center  ">
                 <div>
-                  <HappySvg color="#fff" size="60px" />
+                  <HappySvg color="#fff" size="50px" />
                 </div>
 
                 <div className="flex items-start flex-col ml-2 font-semibold uppercase">
-                  <span className="text-4xl text-stroke mb-1  ">
+                  <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
                       enableScrollSpy={true}
                       end={20}
+                      delay={1}
                     />
                     +
                   </span>
@@ -210,11 +202,12 @@ export const Homepage = () => {
               </div>
               <span className="bg-white w-[4px] rounded-full counter__line "></span>
               <div className="text-white flex items-center  ">
-                <OpenSourceSvg color={"#fff"} size="60px" />
+                <OpenSourceSvg color={"#fff"} size="50px" />
                 <div className="flex items-start flex-col ml-3 font-semibold uppercase">
-                  <span className="text-4xl text-stroke mb-1 ">
+                  <span className="text-2xl font-bold mb-1 ">
                     <CountUp
                       scrollSpyOnce={true}
+                      delay={1}
                       enableScrollSpy={true}
                       end={25}
                     />
@@ -225,9 +218,9 @@ export const Homepage = () => {
               </div>
             </div>
           </Wrapper>
-        </div>
-      </ContentWrapper>
-    </React.Fragment>
+        </div >
+      </ContentWrapper >
+    </React.Fragment >
   );
 };
 
