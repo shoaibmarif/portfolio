@@ -16,8 +16,21 @@ export default {
           '2xl': '6rem',
         },
       },
+      colors: {
+        primary: {
+          DEFAULT: '#1D4ED8', // Light mode primary color
+          dark: '#7c3aed', // Dark mode primary color
+        },
+        secondary: {
+          DEFAULT: '#1D4ED8', // Light mode primary color
+          dark: '#7c3aed', // Dark mode primary color
+        },
+        ternary: {
+          DEFAULT: '#1D4ED8', // Light mode primary color
+          dark: '#4F46E5', // Dark mode primary color
+        },
+      },
     },
   },
   plugins: [],
 }
-

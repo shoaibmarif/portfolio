@@ -1,6 +1,5 @@
 import React from 'react';
 import { ContentWrapper } from "../../shared/ContentWrapper";
-import { Wrapper } from "../../shared/Wrapper";
 import Slider from "react-slick";
 import { TopHeading } from "../../shared/TopHeading"
 import Hassan from "../../../public/images/testimonials/Hassan.jpg"
@@ -84,39 +83,34 @@ export const Testimonials = () => {
     };
     return (
         <ContentWrapper>
-            <Wrapper>
+            <TopHeading title="Testimonials" />
+            <Slider {...settings} >
+                {testimonials.map((testimonial, index) => (
+                    <div key={index} className="flex  px-5">
+                        <div className='flex flex-col items-center justify-between bg-[#1f1f1f]  rounded-xl p-8 min-h-[370px] relative'>
 
-                <TopHeading title="Testimonials" />
+                            <p className="text-sm  text-white mt-5  ">
+                                "{testimonial.comments}"
+                            </p>
 
-                <Slider {...settings} >
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="flex  px-5">
-                            <div className='flex flex-col items-center justify-between bg-[#1f1f1f]  rounded-xl p-8 min-h-[370px] relative'>
+                            <img src={Qoute} alt="Testimonials" className='absolute right-10 top-10 opacity-30  w-24' />
+                            <img src={Qoute} alt="Testimonials" className='absolute left-10 bottom-10 opacity-30  w-24 rotate-180' />
 
-                                <p className="text-sm  text-white mt-5  ">
-                                    "{testimonial.comments}"
-                                </p>
-
-                                <img src={Qoute} alt="Testimonials" className='absolute right-10 top-10 opacity-30  w-24' />
-                                <img src={Qoute} alt="Testimonials" className='absolute left-10 bottom-10 opacity-30  w-24 rotate-180' />
-
-                                <div className=" flex items-center flex-col justify-center  mt-3 ">
-                                    <img
-                                        src={testimonial.profileIcon}
-                                        alt={testimonial.name}
-                                        className="size-20  rounded-full"
-                                    />
-                                    <p className="font-bold text-lg text-[#6A2F96] mt-2 ">{testimonial.name}</p>
-                                    <p className="text-gray-200 text-sm font-semibold">{testimonial.designation}</p>
-
-                                </div>
+                            <div className=" flex items-center flex-col justify-center  mt-3 ">
+                                <img
+                                    src={testimonial.profileIcon}
+                                    alt={testimonial.name}
+                                    className="size-20  rounded-full"
+                                />
+                                <p className="font-bold text-lg text-[#6A2F96] mt-2 ">{testimonial.name}</p>
+                                <p className="text-gray-200 text-sm font-semibold">{testimonial.designation}</p>
 
                             </div>
-                        </div>
-                    ))}
-                </Slider>
 
-            </Wrapper>
-        </ContentWrapper >
+                        </div>
+                    </div>
+                ))}
+            </Slider>
+        </ContentWrapper>
     )
 }

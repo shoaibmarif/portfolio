@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Wrapper } from "../../shared/Wrapper";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { Link } from "react-router-dom";
@@ -15,11 +14,6 @@ import CountUp from "react-countup";
 
 export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
-
-
-
-
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -29,23 +23,48 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper>
-        <div className="relative h-full w-full">
-          <Wrapper classes="text-white flex items-center h-[100vh] justify-center flex-col ">
+        <div className="absolute left-8 top-1/2  z-[9999] " >
+          <SocialIcon
+            color={"#0A66C2"}
+            url="https://www.linkedin.com/in/shoaibmarif/"
+            icon={<FaLinkedinIn size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+            color={"#4d4d4d"}
+            url="https://github.com/shoaibmarif"
+            icon={<FaGithub size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+            color={"#E4405F"}
+            url="https://www.instagram.com/shoaibmarif/"
+            icon={<FaInstagram size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+            color={"#1DA1F2"}
+            url="https://x.com/mshoaibmarif"
+            icon={<FaTwitter size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+            color={"#E7700D"}
+            url="https://stackoverflow.com/users/7770942/shoaib-arif"
+            icon={<FaStackOverflow size={18} className="dark:text-white " />}
+          />
+        </div>
+        <div className="relative flex items-center justify-center w-full" style={{ minHeight: "calc(100vh - 74px)" }}>
+          <div className="flex items-center justify-center text-center text-white flex-col">
             <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="fade-down" data-aos-delay={800}>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">H</span>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">O</span>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
-              <span className="  text-violet-800  drop-shadow-[4px_4px_0px_#fae8ff]">B</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">H</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">O</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
+              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">B</span>
               <span className=""> </span>
-              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
-              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">R</span>
-              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
-              <span className="   text-violet-800   drop-shadow-[4px_4px_0px_#fae8ff]">F</span>
+              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
+              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">R</span>
+              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
+              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">F</span>
             </h1>
-
-
             <div className="text-5xl flex font-bold  mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
                 options={{
@@ -54,10 +73,6 @@ export const Homepage = () => {
                   loop: true,
                 }}
               /></div>
-
-
-
-
             <p
               className="max-w-[700px] text-center text-lg mt-8 text-black dark:text-[#dbdbdb]  transition-all"
               data-aos="fade-up"
@@ -68,51 +83,6 @@ export const Homepage = () => {
               complex user experinece problems to create integritiy focussed
               solutions that connect billions of people
             </p>
-
-            {/* ASs  */}
-
-            <div className="absolute top-1/2 translate-y-[-40%] left-14">
-              <span
-                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-35%] rounded-full 
-                    transition-all duration-700 delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-                  }`}
-              ></span>
-
-              <span
-                className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-40%] rounded-full
-                    transition-all duration-700   delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-                  }`}
-              ></span>
-              <div data-aos="fade-right"
-                data-aos-duration="700"
-                data-aos-delay="800">
-                <SocialIcon
-                  color={"#0A66C2"}
-                  url="https://www.linkedin.com/in/shoaibmarif/"
-                  icon={<FaLinkedinIn size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#4d4d4d"}
-                  url="https://github.com/shoaibmarif"
-                  icon={<FaGithub size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#E4405F"}
-                  url="https://www.instagram.com/shoaibmarif/"
-                  icon={<FaInstagram size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#1DA1F2"}
-                  url="https://x.com/mshoaibmarif"
-                  icon={<FaTwitter size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#E7700D"}
-                  url="https://stackoverflow.com/users/7770942/shoaib-arif"
-                  icon={<FaStackOverflow size={18} className="dark:text-white " />}
-                />
-              </div>
-            </div>
 
             <div className="mt-10 flex items-center ">
               <button
@@ -126,19 +96,20 @@ export const Homepage = () => {
               </button>
 
               <button
-                data-aos="fade-left"
+                data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="1200"
-                className="ml-2 flex items-center justify-center mr-4  min-w-48 px-14 py-4 rounded-full  bg-violet-800 text-white  overflow-hidden  
+                className="ml-2 flex items-center justify-center mr-4  min-w-48 px-14 py-4 rounded-full  dark:bg-primary-dark bg-primary  text-white  overflow-hidden  
                 shadow-[4px_4px_0px_0px_#ddd6fe]"
               >
                 <LuDownload size={20} className="relative z-[10]" />{" "}
                 <span className="ml-1 font-semibold relative z-[10]">Resume</span>
               </button>
             </div>
-          </Wrapper >
-          <Wrapper classes="absolute bottom-0  left-1/2 translate-x-[-50%] z-10 " >
-            <div className="  flex items-center justify-between px-20  py-8 rounded-xl  bg-[#1f1f1f] transition-all" data-aos="fade-up" data-aos-delay="1000">
+
+
+            <div className="absolute bottom-0 w-full flex items-center justify-between px-20  py-8 rounded-xl  bg-[#1f1f1f] transition-all">
+
               <div className="text-white flex items-center">
                 <ExperienceSvg color={"#fff"} size={"50px"} />
                 <div className="flex items-start flex-col ml-2 font-semibold uppercase">
@@ -208,10 +179,29 @@ export const Homepage = () => {
                 </div>
               </div>
             </div>
-          </Wrapper>
-        </div >
-      </ContentWrapper >
-    </React.Fragment >
+
+
+          </div>
+
+        </div>
+
+        {/* <div className="relative min-h-[100vh] w-full">
+          <div className="absolute top-1/2 translate-y-[-40%] left-14">
+            <span
+              className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-35%] rounded-full 
+                    transition-all duration-700 delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+                }`}
+            ></span>
+
+            <span
+              className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-40%] rounded-full
+                    transition-all duration-700   delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+                }`}
+            ></span>
+          </div>
+        </div> */}
+      </ContentWrapper>
+    </React.Fragment>
   );
 };
 

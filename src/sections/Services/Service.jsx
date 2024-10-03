@@ -9,7 +9,7 @@ export const Service = ({ service, index }) => {
       <div
         className="shadow-[7px_7px_0px_#5b21b6] hover:shadow-[14px_14px_0px_#5b21b6] duration-500 transition-all z-10 dark:bg-[#1f1f1f] text-white min-h-[350px] flex items-center relative justify-center overflow-hidden flex-col p-8 rounded-xl cursor-pointer group "
       >
-        <span className=" text-xl font-semibold underline underline-offset-8  text-white uppercase text-center">
+        <span className=" text-xl font-semibold   text-white uppercase text-center">
           {service.title}
         </span>
         <span className="mt-8 text-[15px]  inline-block ">{service.text}</span>
