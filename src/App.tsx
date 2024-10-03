@@ -41,7 +41,6 @@ const App = () => {
             <div id="services"><Services /></div>
             <div id="about"><About /></div>
             <div id="pricing"><Pricing /></div>
-            <div id="certificates"> <Certificates /></div>
             <div id="testimonials"><Testimonials /></div>
             <div id="contact"><ContactUs /></div>
             <Footer />

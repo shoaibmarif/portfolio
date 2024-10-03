@@ -3,9 +3,11 @@ import { ContentWrapper } from "../../shared/ContentWrapper";
 export const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <ContentWrapper>
-            <div className="w-full h-[1px] bg-gray-700"></div>
-            <footer>@ShoaibArif {year}, All right reserved.</footer>
-        </ContentWrapper>
+        <React.Fragment>
+            <ContentWrapper>
+                <div className="w-full h-[1px]  dark:bg-white text-center mt-8 bg-[#0c0c0c]"></div>
+                <footer className="text-[#0c0c0c]  dark:text-white text-center py-3">© <span className="font-bold">{year}</span> Shoaib Arif. All rights reserved.</footer>
+            </ContentWrapper>
+        </React.Fragment>
     )
 }

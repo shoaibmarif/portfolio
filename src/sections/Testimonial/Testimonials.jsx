@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import Slider from "react-slick";
 import { TopHeading } from "../../shared/TopHeading"
@@ -11,8 +11,11 @@ import Sameer from "../../../public/images/testimonials/sameer.jpg"
 import Sarim from "../../../public/images/testimonials/Sarim.jpg"
 import Talha from "../../../public/images/testimonials/Talha.jpg"
 import Urooba from "../../../public/images/testimonials/Urooba.jpg"
-import Qoute from "../../../public/icons/quote.png"
+import Qoute from "../../../public/icons/qoute.svg"
+import { HiArrowLongLeft } from "react-icons/hi2";
+import { HiArrowLongRight } from "react-icons/hi2";
 export const Testimonials = () => {
+    const sliderRef = useRef(null);
 
     const testimonials = [
         {
@@ -30,7 +33,7 @@ export const Testimonials = () => {
         },
         {
             name: "Muhammad Majid Nazir",
-            designation: "Senior Web Developer (Team Lead)",
+            designation: "Senior Web Developer",
             profileIcon: Majid,
             comments: "I worked with Shoaib and I am impressed with his willing to learn attitude. He has a solid command in solving complex programming problems and in web development. He takes initiative and loves to take on new challenges. I highly recommend him, wishing him best of luck for his future endeavors."
         },
@@ -66,51 +69,58 @@ export const Testimonials = () => {
         },
         {
             name: "Burhan Saiyed",
-            designation: "Fundraiser | Marketer | Trainer | Entrepreneur",
+            designation: "Fundraiser | Entrepreneur",
             profileIcon: Burhan,
             comments: "I taught Shoaib while he was studying Tech Entrepreneurship at KIET. Shoaib while quiet in the classes was curious and engaged in his projects and would often message me on the side for work and other topics which he'd like to get counsel on. I found Shoaib to be mature, responsible and a self starter who knew what he wanted and how to get it. I'm excited to see where Shoaib goes in the future and believe he would be a worthy addition to any company that were lucky to have him "
         }
     ]
+
     const settings = {
         dots: false,
         arrows: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
     };
     return (
-        <ContentWrapper>
+        <ContentWrapper innerClass={"relative"}>
             <TopHeading title="Testimonials" />
-            <Slider {...settings} >
-                {testimonials.map((testimonial, index) => (
-                    <div key={index} className="flex  px-5">
-                        <div className='flex flex-col items-center justify-between bg-[#1f1f1f]  rounded-xl p-8 min-h-[370px] relative'>
-
-                            <p className="text-sm  text-white mt-5  ">
-                                "{testimonial.comments}"
-                            </p>
-
-                            <img src={Qoute} alt="Testimonials" className='absolute right-10 top-10 opacity-30  w-24' />
-                            <img src={Qoute} alt="Testimonials" className='absolute left-10 bottom-10 opacity-30  w-24 rotate-180' />
-
-                            <div className=" flex items-center flex-col justify-center  mt-3 ">
-                                <img
-                                    src={testimonial.profileIcon}
-                                    alt={testimonial.name}
-                                    className="size-20  rounded-full"
-                                />
-                                <p className="font-bold text-lg text-[#6A2F96] mt-2 ">{testimonial.name}</p>
-                                <p className="text-gray-200 text-sm font-semibold">{testimonial.designation}</p>
-
+            <div className="">
+                <span
+                    className="text-white absolute left-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+                    onClick={() => sliderRef.current.slickPrev()}
+                >
+                    <HiArrowLongLeft size={34} />
+                </span>
+                <span
+                    className="text-white absolute right-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+                    onClick={() => sliderRef.current.slickNext()}
+                >
+                    <HiArrowLongRight size={34} />
+                </span>
+            </div>
+            <div className='grid grid-cols-1 '>
+                <Slider {...settings} ref={sliderRef}>
+                    {testimonials.map((testimonial, index) => {
+                        return (
+                            <div className='col-span-1 px-2' key={index}>
+                                <div className='  p-8 rounded-lg h-[350px] bg-[#1f1f1f] relative overflow-hidden'>
+                                    <div className='absolute left-0 top-0 bg-primary-dark'></div>
+                                    <div className='flex flex-col items-center justify-center'>
+                                        <img src={testimonial.profileIcon} alt="" className='size-24 rounded-full ' />
+                                        <h2 className=' font-bold uppercase mt-4 text-primary-dark'>{testimonial.name}</h2>
+                                        <p className='text-white text-sm '>{testimonial.designation}</p>
+                                    </div>
+                                    <p className='line-clamp-5	text-white text-sm mt-4'>{testimonial.comments}</p>
+                                </div>
                             </div>
-
-                        </div>
-                    </div>
-                ))}
-            </Slider>
+                        )
+                    })}
+                </Slider>
+            </div>
         </ContentWrapper>
     )
 }

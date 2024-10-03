@@ -85,7 +85,6 @@ const pricing = [
       "Responsive Design",
       "Contact Form Integration",
       "Cross-Browser Compatibility",
-      "Content Upload"
     ]
   },
   {
@@ -97,6 +96,7 @@ const pricing = [
       "Up to 10 Pages",
       "Custom Design",
       "1 Year Free Maintenance",
+      "Content Upload"
     ]
   },
   {
@@ -107,10 +107,8 @@ const pricing = [
       "Revisions: Unlimited Revisions",
       "Unlimited Pages",
       "Fully Custom Design",
-      "Full E-Commerce Integration",
       "Performance Optimization",
       "API Integration",
-      "Multi-language Support",
     ]
   }
 ]

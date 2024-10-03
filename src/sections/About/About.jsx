@@ -94,68 +94,71 @@ export const About = () => {
 
 
   return (
-    <ContentWrapper>
-      <TopHeading title="About" />
-      <div className="grid grid-cols-2 gap-14">
-        <div className="col-span-1">
-          <div className=" flex  justify-start h-full flex-col ">
-            <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Overview</h2>
-            <p className="text-white ">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored
-              to the unique needs of businesses.
-            </p>
-            <p className="text-white mt-8">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored
-              to the unique needs of businesses.
-            </p>
+    <React.Fragment>
+      <ContentWrapper>
+        <TopHeading title="About" />
+        <div className="grid grid-cols-2 gap-14">
+          <div className="col-span-1">
+            <div className=" flex  justify-start h-full flex-col ">
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Overview</h2>
+              <p className="text-white ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+              <p className="text-white mt-8">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
 
-            <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Education</h2>
-            <p className="text-white ">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored
-              to the unique needs of businesses.
-            </p>
-            <p className="text-white mt-8 ">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored
-              to the unique needs of businesses.
-            </p>
-            <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Hobbies</h2>
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Education</h2>
+              <p className="text-white ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+              <p className="text-white mt-8 ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Hobbies</h2>
 
-            <p className="text-white ">
-              With extensive experience in Elementor and WooCommerce, I ensure
-              that every website is designed to provide a seamless user
-              experience, As a seasoned WordPress developer, I specialize in
-              crafting custom websites and building dynamic plugins tailored
-              to the unique needs of businesses.
-            </p>
+              <p className="text-white ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
 
 
+            </div>
           </div>
+          <div className="col-span-1">
+
+            <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5 ">Experience</h2>
+            {experience.map((exp, index) => {
+              return (
+                <Timeline key={index} experience={exp} />
+              )
+            })}
+          </div>
+
+
         </div>
-        <div className="col-span-1">
-
-          <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5 ">Experience</h2>
-          {experience.map((exp, index) => {
-            return (
-              <Timeline key={index} experience={exp} />
-            )
-          })}
-        </div>
-
-
-      </div>
-    </ContentWrapper >
+      </ContentWrapper >
+      <Certificates />
+    </React.Fragment>
   );
 };
 
@@ -163,32 +166,37 @@ export const About = () => {
 const Timeline = ({ experience }) => {
   const { name, startDate, endDate, position, imgSrc, description } = experience;
   return (
-    <div class="flex ">
-      <div class="w-28 text-end mt-[2px]">
-        <span class="text-xs text-white font-semibold">
-          {startDate} - {endDate}
-        </span>
-      </div>
-      <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-        <div class="relative z-10 size-7 flex justify-center items-center">
-          {/* <div class="size-2 rounded-full bg-violet-800 "></div> */}
-          <span class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-800 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-violet-800"></span>
+    <React.Fragment>
+      <div class="flex ">
+        <div class="w-28 text-end mt-[2px]">
+          <span class="text-xs text-white font-semibold">
+            {startDate} - {endDate}
           </span>
         </div>
+        <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+          <div class="relative z-10 size-7 flex justify-center items-center">
+            {/* <div class="size-2 rounded-full bg-violet-800 "></div> */}
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-800 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-violet-800"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class=" bg-[#1F1F1F] overflow-hidden cursor-pointer transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[100px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-50px] after:right-[-50px] hover:after:top-[-30px] hover:after:right-[-30px] after:transition-all">
+          <div>
+            <img src={imgSrc} className="w-12 mr-5 rounded-full" alt="" />
+          </div>
+          <div>
+            <h3 class=" font-semibold text-gray-800 dark:text-white">{position}</h3>
+            <p>{name}</p>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class=" bg-[#1F1F1F] overflow-hidden cursor-pointer transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[100px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-50px] after:right-[-50px] hover:after:top-[-30px] hover:after:right-[-30px] after:transition-all">
-        <div>
-          <img src={imgSrc} className="w-12 mr-5 rounded-full" alt="" />
-        </div>
-        <div>
-          <h3 class=" font-semibold text-gray-800 dark:text-white">{position}</h3>
-          <p>{name}</p>
-        </div>
+    </React.Fragment>
 
-      </div>
-    </div>
   )
 }
