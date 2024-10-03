@@ -13,8 +13,8 @@ export const Service = ({ service, index }) => {
           {service.title}
         </span>
         <span className="mt-8 text-[15px]  inline-block ">{service.text}</span>
-        <div className="absolute size-[150px] right-[-70px] top-[-70px] border-[3rem]  rounded-full opacity-10 border-[#fff] bg-white group-hover:size-[250px] transition-all duration-500"></div>
-        <div className="absolute size-[150px] bottom-[-70px] left-[-70px] border-[3rem]  rounded-full opacity-10 border-[#fff] bg-white group-hover:size-[250px] transition-all duration-500"></div>
+        <div className="absolute size-[100px] right-[-50px] top-[-50px]   rounded-full opacity-10 bg-[#fff]  group-hover:size-[150px] transition-all duration-500"></div>
+        <div className="absolute size-[100px] bottom-[-50px] left-[-50px]   rounded-full opacity-10 bg-[#fff]  group-hover:size-[150px] transition-all duration-500"></div>
       </div>
     </div>
   );

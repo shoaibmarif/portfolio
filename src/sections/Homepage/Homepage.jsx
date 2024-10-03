@@ -116,17 +116,13 @@ export const Homepage = () => {
 
             <div className="mt-10 flex items-center ">
               <button
-                data-aos="fade-right"
+                data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-delay="1200"
-                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-violet-800 text-white mr-2 overflow-hidden 
-                shadow-[4px_4px_0px_0px_#ddd6fe]"
+                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-transparent border-2 border-whtie text-white mr-2 overflow-hidden 
+                shadow-[2px_2px_0px_0px_#ddd6fe]"
               >
                 <span className="relative z-[10] font-semibold">Hire Me</span>
-                <span className="w-[25%] bg-violet-400 absolute top-5 h-[200px] left-[0%] rounded-full"></span>
-                <span className="w-[30%] bg-violet-400 absolute top-7 h-[200px] left-[20%] rounded-full"></span>
-                <span className="w-[40%] bg-violet-400 absolute top-4 h-[200px] left-[40%] rounded-full"></span>
-                <span className="w-[40%] bg-violet-400 absolute top-9 h-[200px] left-[60%] rounded-full"></span>
               </button>
 
               <button
@@ -134,15 +130,10 @@ export const Homepage = () => {
                 data-aos-duration="1000"
                 data-aos-delay="1200"
                 className="ml-2 flex items-center justify-center mr-4  min-w-48 px-14 py-4 rounded-full  bg-violet-800 text-white  overflow-hidden  
-                shadow-[4px_4px_0px_0px_#ddd6fe]
-                "
+                shadow-[4px_4px_0px_0px_#ddd6fe]"
               >
                 <LuDownload size={20} className="relative z-[10]" />{" "}
                 <span className="ml-1 font-semibold relative z-[10]">Resume</span>
-                <span className="w-[25%] bg-violet-400 absolute top-5 h-[200px] left-[0%] rounded-full"></span>
-                <span className="w-[30%] bg-violet-400 absolute top-7 h-[200px] left-[20%] rounded-full"></span>
-                <span className="w-[40%] bg-violet-400 absolute top-4 h-[200px] left-[40%] rounded-full"></span>
-                <span className="w-[40%] bg-violet-400 absolute top-9 h-[200px] left-[60%] rounded-full"></span>
               </button>
             </div>
           </Wrapper >

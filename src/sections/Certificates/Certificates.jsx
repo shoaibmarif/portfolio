@@ -13,6 +13,8 @@ import { certifcatesSettings } from "../../utils/SlickSettings.js";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { ContentWrapper } from "../../shared/ContentWrapper.jsx"
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 export const Certificates = () => {
   const sliderRef = useRef(null);
 
@@ -204,34 +206,58 @@ export const Certificates = () => {
 
 
   return (
-    <ContentWrapper>
-      <Wrapper classes="mt-8  relative">
-        <div className="">
-          <span className="text-white absolute left-0 top-[55%]  z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black" onClick={() => sliderRef.current.slickPrev()}>
-            <HiArrowLongLeft size={34} />
-          </span>
-          <span className="text-white absolute right-0 top-[55%]  z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black" onClick={() => sliderRef.current.slickNext()}>
-            <HiArrowLongRight size={34} />
-          </span>
-        </div>
-        <TopHeading title={"Certifications"} />
-        <Slider {...certifcatesSettings} ref={sliderRef}>
-          {certificates.map((certificate, index) => {
-            return (
-              <div className="px-2 mt-4">
-                <div key={index} className={`rounded-lg relative min-h-[250px] flex flex-col items-start  justify-start  p-5 bg-[#1f1f1f]`}>
-                  <img src={certificate.orgImg}
-                    className="size-16 rounded-full mb-5"
-                  />
-                  <p className="text-white bg-gray-500 rounded-md px-4 absolute right-3 text-xs py-1 uppercase font-semibold">{certificate.organization}</p>
-                  <p className="text-base font-bold text-white mt-3">{certificate.name}</p>
-                  <p className="text-sm text-gray-300 mt-2">{certificate.issueDate}</p>
+<ContentWrapper>
+  <Wrapper classes="relative">
+    <div className="">
+      <span
+        className="text-white absolute left-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+        onClick={() => sliderRef.current.slickPrev()}
+      >
+        <HiArrowLongLeft size={34} />
+      </span>
+      <span
+        className="text-white absolute right-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+        onClick={() => sliderRef.current.slickNext()}
+      >
+        <HiArrowLongRight size={34} />
+      </span>
+    </div>
+    <TopHeading title={"Certifications"} />
+    <Slider {...certifcatesSettings} ref={sliderRef}>
+      {certificates.map((certificate, index) => {
+        return (
+          <div className="px-2 mt-4" key={index}>
+            <div
+              className={`rounded-lg relative min-h-[250px] p-5 bg-[#1f1f1f]`}>
+              <div className="z-10 p-5 w-full bg-opacity-50 rounded-lg">
+                <div style={{
+                backgroundImage: `url(${certificate.orgImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                opacity: 0.15, // Adjust opacity of the background image here
+              }} className="absolute rounded-full top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] size-24"></div>
+                {/* <p className="text-white bg-gray-500 rounded-md px-4 absolute right-3 text-xs py-1 uppercase font-semibold">
+                  {certificate.organization}
+                </p> */}
+                <div>
+                <p className="text-base font-bold text-white mt-3">
+                  {certificate.name}
+                </p>
+                <p className="text-sm text-gray-300 mt-2">
+                  {certificate.issueDate}
+                </p>
+                </div>
+                <div className="text-white absolute bottom-6 underline flex items-center justify-between w-full"><p>Credentials</p><FaLongArrowAltRight />
                 </div>
               </div>
-            );
-          })}
-        </Slider>
-      </Wrapper >
-    </ContentWrapper>
+            </div>
+          </div>
+        );
+      })}
+    </Slider>
+  </Wrapper>
+</ContentWrapper>
+
   )
 }

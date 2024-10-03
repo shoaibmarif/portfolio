@@ -99,80 +99,61 @@ export const About = () => {
 
       <Wrapper>
         <TopHeading title="About" />
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-14">
           <div className="col-span-1">
-            <div className=" flex items-center justify-center h-full flex-col">
-              <p className="text-white mt-5">
+            <div className=" flex  justify-center h-full flex-col">
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Overview</h2>
+              <p className="text-white ">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
-              <p></p>
+              <p className="text-white mt-8">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
 
-              <div className="flex items-center flex-wrap">
-                <img className="w-[90px]  mt-5 mr-5" src={Badge1} alt="" />
-                <img className="w-[90px]  mt-5 mr-5" src={Badge2} alt="" />
-                <img className="w-[90px]  mt-5 mr-5" src={Badge3} alt="" />
-                <img className="w-[90px]  mt-5 mr-5" src={Badge4} alt="" />
-                <img className="w-[90px]  mt-5 ml-5" src={Badge5} alt="" />
-                <img className="w-[90px]  mt-5 ml-5" src={Badge6} alt="" />
-                <img className="w-[90px]  mt-5 ml-5" src={Badge7} alt="" />
-                <img className="w-[90px]  mt-5 ml-5" src={Badge8} alt="" />
-              </div>
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Education</h2>
+              <p className="text-white ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+              <p className="text-white mt-8 ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+              <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5">Hobbies</h2>
+
+              <p className="text-white ">
+                With extensive experience in Elementor and WooCommerce, I ensure
+                that every website is designed to provide a seamless user
+                experience, As a seasoned WordPress developer, I specialize in
+                crafting custom websites and building dynamic plugins tailored
+                to the unique needs of businesses.
+              </p>
+
+
             </div>
           </div>
           <div className="col-span-1">
-            <div class="flex gap-x-3">
-              <div class="w-16 text-end">
-                <span class="text-xs text-gray-500 dark:text-neutral-400">
-                  My Period
-                </span>
-              </div>
-              <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                <div class="relative z-10 size-7 flex justify-center items-center">
-                  <div class="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
-                </div>
-              </div>
-              <div class="grow pt-0.5 pb-8 bg-purple-700 max-w-80 rounded-2xl ">
-                <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
-                  <svg
-                    class="shrink-0 size-4 mt-1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" x2="8" y1="13" y2="13"></line>
-                    <line x1="16" x2="8" y1="17" y2="17"></line>
-                    <line x1="10" x2="8" y1="9" y2="9"></line>
-                  </svg>
-                  Software Engineer
-                </h3>
-                <button
-                  type="button"
-                  class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                >
-                  <img
-                    class="shrink-0 size-4 rounded-full"
-                    src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
-                    alt="Avatar"
-                  />
-                  Daraz
-                </button>
-                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                  little bit information about me expeirenc
-                </p>
-              </div>
-            </div>
+
+          <h2 className="text-white text-2xl font-bold underline underline-offset-4 my-5 ">Experience</h2>
+            {experience.map((exp,index) =>{
+              return(
+                <Timeline key={index} experience={exp} />
+              )
+            })}
           </div>
 
 
@@ -181,3 +162,37 @@ export const About = () => {
     </ContentWrapper >
   );
 };
+
+
+const Timeline = ({experience}) =>{
+  const {name,startDate,endDate,position,imgSrc,description} = experience;
+  return(
+    <div class="flex ">
+    <div class="w-24 text-end mt-5">
+      <span class="text-xs text-gray-500 dark:text-neutral-400">
+        {startDate} - {endDate}
+      </span>
+    </div>
+    <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+      <div class="relative z-10 size-7 flex justify-center items-center">
+        {/* <div class="size-2 rounded-full bg-violet-800 "></div> */}
+                <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-800 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-violet-800"></span>
+        </span>
+      </div>
+    </div>
+    
+    <div class=" bg-[#1F1F1F] text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[100px] relative after:absolute after:bg-white after:right-0 after:rounded-full after:opacity-10 after:top-0">
+      <div>
+        <img src={imgSrc}  className="w-12 mr-5 rounded-full"alt="" />
+      </div>
+      <div>
+         <h3 class=" font-semibold text-gray-800 dark:text-white">{position}</h3>
+         <p>{name}</p>
+      </div>
+
+    </div>
+  </div>
+  )
+}
