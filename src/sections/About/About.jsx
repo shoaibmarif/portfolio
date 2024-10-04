@@ -166,28 +166,28 @@ const Timeline = ({ experience }) => {
   const { name, startDate, endDate, position, imgSrc, description } = experience;
   return (
     <React.Fragment>
-      <div class="flex ">
-        <div class="w-28 text-end mt-[2px]">
-          <span class="text-xs text-white font-semibold">
+      <div className="flex ">
+        <div className="w-28 text-end mt-[2px]">
+          <span className="text-xs text-white font-semibold">
             {startDate} - {endDate}
           </span>
         </div>
-        <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-          <div class="relative z-10 size-7 flex justify-center items-center">
-            {/* <div class="size-2 rounded-full bg-violet-800 "></div> */}
-            <span class="relative flex h-4 w-4">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-800 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-4 w-4 bg-violet-800"></span>
+        <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+          <div className="relative z-10 size-7 flex justify-center items-center">
+            {/* <div className="size-2 rounded-full bg-violet-800 "></div> */}
+            <span className="relative flex h-4 w-4">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-800 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-violet-800"></span>
             </span>
           </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-duration="700" class=" bg-[#1F1F1F] overflow-hidden  transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[200px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-33%] after:right-[-50px] after:transition-all">
+        <div data-aos="fade-left" data-aos-duration="700" className=" bg-[#1F1F1F] overflow-hidden  transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[200px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-33%] after:right-[-50px] after:transition-all">
           <div>
             <img src={imgSrc} className="w-16 mr-5 rounded-full" alt="" />
           </div>
           <div>
-            <h3 class=" font-semibold text-primary-dark text-lg">{position}</h3>
+            <h3 className=" font-semibold text-primary-dark text-lg">{position}</h3>
             <p className="text-sm">{name}</p>
           </div>
 

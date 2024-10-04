@@ -1,21 +1,3 @@
-import {
-    FaFacebookF,
-    FaLinkedinIn,
-    FaGithub,
-    FaTwitter,
-    FaInstagram,
-    FaStackOverflow,
-  } from "react-icons/fa";
-
-const navigationLinks = [
-    "Home",
-    "Services",
-    "About",
-    "Testimonials",
-    "Blog",
-    "NewsLetter",
-    "Contact Us",
-]
 const servicesData = [
     {
         title: "Personalize Solutions",
@@ -69,7 +51,7 @@ const navLinks = [
         href:"testimonials"
     },
     {
-        name:"Contact Us",
+        name:"Contact",
         href:"contact"
     }
 ]

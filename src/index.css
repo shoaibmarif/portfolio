@@ -153,38 +153,33 @@ div {
     border-radius: 50%;
 }
 .line-1{
-    animation: drop 30s  infinite;
+    animation: drop 20s  infinite;
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #EF4444 75%, #EF4444 100%); */
 }
 .line-2{
-    animation: drop 50s  infinite;
+    animation: drop 15s  infinite;
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #6566F1 75%, #6566F1 100%); */
 
 }
-.line-3{
-    animation: drop 80s  infinite;
+.line-4{
+    animation: drop 25s  infinite;
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%); */
 }
-.line-1::after{
-    background-color: #fff;
+.line-5{
+  animation: drop 35s  infinite;
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%); */
+}
 
-    
-}
-.line-2::after{
+/* .line-1::after{
     background-color: #fff;
-    
-}
-.line-3::after{
-    background-color: #fff;
-   
-}
+} */
 
   @keyframes drop {
     0% {
       top: -10%;
     }
     100% {
-      top: 100%;
+      top: 98%;
     }
   }
 
@@ -304,3 +299,9 @@ div {
     animation: bounce 2s ease infinite; /* Change duration as needed */ 
   }
 
+
+
+
+  .overlap{
+    z-index: 50;
+  }
