@@ -95,4 +95,4 @@ const pricing = [
   }
 ]
 
-export {navigationLinks , servicesData , navLinks,pricing }
+export { servicesData , navLinks,pricing }

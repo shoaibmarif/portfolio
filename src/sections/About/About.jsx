@@ -5,27 +5,8 @@ import Daraz from "../../../public/images/companies/Daraz.png";
 import manhattan from "../../../public/images/companies/manhattan.png";
 import softtech from "../../../public/images/companies/softect.png";
 import cipher from "../../../public/images/companies/cipher.png";
-import Slider from "react-slick";
 import { ContentWrapper } from "../../shared/ContentWrapper";
-import Badge1 from "../../../public/images/badges/badge-1.png";
-import Badge2 from "../../../public/images/badges/badge-2.png";
-import Badge3 from "../../../public/images/badges/badge-3.png";
-import Badge4 from "../../../public/images/badges/badge-4.png";
-import Badge5 from "../../../public/images/badges/badge-5.png";
-import Badge6 from "../../../public/images/badges/badge-6.png";
-import Badge7 from "../../../public/images/badges/badge-7.png";
-import Badge8 from "../../../public/images/badges/badge-8.png";
-import { HiArrowLongLeft } from "react-icons/hi2";
-import { HiArrowLongRight } from "react-icons/hi2";
-import FreeCodeCamp from "../../../public/images/certificates/freecodecamp.jpg";
-import Coursera from "../../../public/images/certificates/coursera.jpg";
-import Udemy from "../../../public/images/certificates/udemy.jpg";
-import Ibm from "../../../public/images/certificates/ibm.jpg";
-import Linkedin from "../../../public/images/certificates/linkedin.jpg";
-import Pluralsight from "../../../public/images/certificates/pluralsight.png";
 import { TopHeading } from "../../shared/TopHeading";
-import { MdArrowForwardIos } from "react-icons/md";
-import { Certificates } from "../Certificates/Certificates";
 
 export const About = () => {
   const experience = [

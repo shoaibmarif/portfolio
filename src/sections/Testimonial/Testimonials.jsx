@@ -11,9 +11,9 @@ import Sameer from "../../../public/images/testimonials/sameer.jpg"
 import Sarim from "../../../public/images/testimonials/Sarim.jpg"
 import Talha from "../../../public/images/testimonials/Talha.jpg"
 import Urooba from "../../../public/images/testimonials/Urooba.jpg"
-import Qoute from "../../../public/icons/qoute.svg"
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { HiArrowLongRight } from "react-icons/hi2";
+
 export const Testimonials = () => {
     const sliderRef = useRef(null);
 

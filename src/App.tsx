@@ -1,11 +1,11 @@
-import { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Services, Footer } from "./sections/index.js";
+import { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Services, Certificates, Footer } from "./sections/index.js";
 import React, { useEffect, useState, useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaWhatsapp } from "react-icons/fa";
-import { Certificates } from "./sections/Certificates/Certificates.jsx";
 import { useNavigate } from "react-router-dom";
 import { Loader } from "./shared/Loader/Loader.jsx";
+import {servicesData} from "./config/data.js";
 
 const App = () => {
   const [selectedPlan,setSelectedPlan] = useState("");
@@ -13,7 +13,7 @@ const App = () => {
   const topLayer = useRef();
   const navigate = useNavigate();
   const [loader, setLoader] = useState(true);
-  const [showTopLayer, setShowTopLayer] = useState(true); // New state variable
+  const [showTopLayer, setShowTopLayer] = useState(true); 
 
   useEffect(() => {
     AOS.init();
