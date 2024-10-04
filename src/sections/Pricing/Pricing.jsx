@@ -12,7 +12,7 @@ export const Pricing = () => {
             <div className='grid grid-cols-3 gap-16 z-10 relative '>
                 {pricing.map((price, index) => {
                     return (
-                        <div key={price.plan} className={`relative cols-span-1  rounded-md overflow-hidden bg-[#1f1f1f] text-white   `}>
+                        <div key={price.plan} className={`relative cols-span-1  rounded-lg overflow-hidden bg-[#1f1f1f] text-white  shadow-[inset_0px_0px_3px_0px_#7c3aed] ${index == 1 ? " scale-110": ""}`}>
                             {/* Header  */}
                             <div className='flex bg-white items-center justify-center flex-col p-10'>
                                 <h2 className='text-primary-dark text-5xl font-extrabold '>{price.price}</h2>

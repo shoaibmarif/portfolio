@@ -19,8 +19,6 @@ const App = () => {
       },2000)
   }, []);
 
-
-
   return (
 <React.Fragment>
            

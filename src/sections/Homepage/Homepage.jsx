@@ -23,7 +23,7 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper>
-        <div className="absolute left-8 top-1/2  z-[9999] " >
+        <div className="absolute left-8 top-1/2 translate-y-[-50%]  z-[9999] " >
           <SocialIcon
             color={"#0A66C2"}
             url="https://www.linkedin.com/in/shoaibmarif/"

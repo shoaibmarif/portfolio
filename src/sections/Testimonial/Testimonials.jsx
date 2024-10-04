@@ -90,13 +90,13 @@ export const Testimonials = () => {
             <TopHeading title="Testimonials" />
             <div className="">
                 <span
-                    className="text-white absolute left-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+                    className="text-black bg-white absolute left-0 top-[65%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickPrev()}
                 >
                     <HiArrowLongLeft size={34} />
                 </span>
                 <span
-                    className="text-white absolute right-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+                    className="text-black bg-white absolute right-0 top-[65%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickNext()}
                 >
                     <HiArrowLongRight size={34} />
@@ -107,7 +107,7 @@ export const Testimonials = () => {
                     {testimonials.map((testimonial, index) => {
                         return (
                             <div className='col-span-1 px-2' key={index}>
-                                <div className='  p-8 rounded-lg h-[350px] bg-[#1f1f1f] relative overflow-hidden'>
+                                <div className='p-8 rounded-lg h-[350px] bg-[#1f1f1f] relative overflow-hidden shadow-[inset_0px_0px_3px_0px_#7c3aed]'>
                                     <div className='absolute left-0 top-0 bg-primary-dark'></div>
                                     <div className='flex flex-col items-center justify-center'>
                                         <img src={testimonial.profileIcon} alt="" className='size-24 rounded-full ' />

@@ -8,8 +8,8 @@ export const ContactUs = () => {
     return (
         <ContentWrapper>
             <TopHeading title={"Contact"} />
-            <div className="grid grid-cols-3 gap-16">
-                <div className='col-span-2 dark:text-white text-[#0c0c0c]  pb-10'>
+            <div className="grid grid-cols-5 gap-12 ">
+                <div className='col-span-3 dark:text-white text-[#0c0c0c]  pb-10'>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis dolore, eaque laboriosam excepturi dolorem incidunt rerum est nostrum dolores adipisci repellendus corporis sunt! Ipsum facilis illum optio quis minima.</p>
                     <p className='mt-8'>Lorem ipsum dolor, sit amet consectetur adolor, sit amet consectetur adipisicing elit. Autem ad illo accusamus quos! Eligendi ipsa, magni cum sapiente quidem nihil illum odio quaerat maiores similique sed repellendus vitae consectetur non!</p>
                     <p class="my-8">If you wish to write us an email instead please use</p>
@@ -36,13 +36,12 @@ export const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-1 ml-auto pb-10 '>
-                    <div class="max-w-[450px] items-center bg-[#1f1f1f] justify-center flex flex-col  rounded-xl p-5 sm:p-6 lg:p-8 ">
+                <div className='col-span-2 ml-auto'>
+                    <div class="min-w-[400px] items-center bg-[#1f1f1f] justify-center flex flex-col  rounded-xl py-10 px-8 shadow-[inset_0px_0px_3px_0px_#7c3aed]">
                         <h2 class="mb-8 text-xl font-semibold text-gray-800 dark:text-neutral-200 ">
                             Fill in the form
                         </h2>
-
-                        <form>
+                        <form className='w-full'>
                             <div class="grid gap-4">
                                 <InputField type="text" classes={""} placeholder="First Name" />
                                 <InputField type="email" placeholder="Enter Email" />
@@ -50,7 +49,7 @@ export const ContactUs = () => {
                             </div>
 
                             <div class="mt-4 grid">
-                                <button type="submit" className="w-full py-3 text-primary-dark bg-white rounded-lg">Send Inquiry</button>
+                                <button type="submit" className="w-full py-2 bg-primary-dark text-white rounded-lg">Send Inquiry</button>
                             </div>
 
                             <div class="mt-3 text-center">
@@ -69,6 +68,6 @@ export const ContactUs = () => {
 
 const InputField = ({ type, classes, id, placeholder }) => {
     return (
-        <input placeholder={placeholder} type={type} className={`${classes} py-2 px-4 block w-full rounded-lg text-sm `} id={id} />
+        <input placeholder={placeholder} type={type} className={`${classes} py-3 px-4 block w-full rounded-lg text-sm `} id={id} />
     )
 }
