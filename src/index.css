@@ -4,6 +4,10 @@
 
 *, html, body{
     font-family: "Poppins", sans-serif;
+    /* overflow-x: hidden; */
+}
+body{
+  overflow-x: hidden
 }
 
 @tailwind base;
@@ -141,6 +145,7 @@ div {
 .flow_line {
     background-color: white;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
+    animation-delay: 3s;
 }
 .flow_line::after{
     content: "";
@@ -151,28 +156,28 @@ div {
     transform: translateX(-50%);
     position: absolute;
     border-radius: 50%;
+    animation-delay: 3s;
+    
 }
-.line-1{
-    animation: drop 20s  infinite;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #EF4444 75%, #EF4444 100%); */
+
+.line-2{
+    animation: drop 15s  infinite;
+    animation-delay: 3s;
 }
 .line-2{
     animation: drop 15s  infinite;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #6566F1 75%, #6566F1 100%); */
+    animation-delay: 3s;
 
 }
 .line-4{
     animation: drop 25s  infinite;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%); */
+    animation-delay: 3s;
 }
 .line-5{
   animation: drop 35s  infinite;
-  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%); */
+  animation-delay: 3s;
 }
 
-/* .line-1::after{
-    background-color: #fff;
-} */
 
   @keyframes drop {
     0% {

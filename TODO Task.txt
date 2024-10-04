@@ -1,0 +1,9 @@
+Start Mobile - Convert Design into Mobile Responsive
+Social Icon Should be hidden under where left tab 
+Provide Light Mode Version
+Add Content 
+Add Certifications Links 
+Pricing Methods Clearlity 
+And Form Submit
+Form Submit on Pricing Selection 
+Resume Download Option

@@ -23,7 +23,7 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper classes={"bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]"}>
-        <div className="absolute left-8 top-1/2 translate-y-[-50%]  z-[10]  " >
+        <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10]  " >
           <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
             <span
               className={`w-1 bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full

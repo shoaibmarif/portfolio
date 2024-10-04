@@ -3,8 +3,8 @@ import Horeca from "../../../public/images/companies/horeca.png";
 import CC from "../../../public/images/companies/CC.png";
 import Daraz from "../../../public/images/companies/Daraz.png";
 import manhattan from "../../../public/images/companies/manhattan.png";
-import softtech from "../../../public/images/companies/softect.png";
-import cipher from "../../../public/images/companies/cipher.png";
+import softtech from "../../../public/images/companies/softech.jpg";
+import cipher from "../../../public/images/companies/cipherlabs.jpg";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { TopHeading } from "../../shared/TopHeading";
 
@@ -17,8 +17,7 @@ export const About = () => {
       endDate: "Present",
       position: "Senior Frontend Developer",
       imgSrc: Horeca,
-      description:
-        "Worked on advanced frontend features and optimized performance across web apps.",
+      companyLink:"https://horecastore.ae/"
     },
     {
       id: 2,
@@ -27,8 +26,7 @@ export const About = () => {
       endDate: "March 2024",
       position: "Frontend Developer",
       imgSrc: Daraz,
-      description:
-        "Developed e-commerce solutions and implemented frontend features for Daraz platform.",
+      companyLink:"https://www.daraz.pk/"
     },
     {
       id: 3,
@@ -37,8 +35,8 @@ export const About = () => {
       endDate: "June 2023",
       position: "Software Engineer - Frontend Developer",
       imgSrc: CC,
-      description:
-        "Led frontend development for various client projects, improving scalability and performance.",
+      companyLink:"https://www.cooperativecomputing.com/"
+
     },
     {
       id: 4,
@@ -47,8 +45,8 @@ export const About = () => {
       endDate: "June 2022",
       position: "Frontend Developer",
       imgSrc: manhattan,
-      description:
-        "Implemented responsive designs and built interactive user experiences for marketing campaigns.",
+      companyLink:"https://manhattan-mcl.com/"
+
     },
     {
       id: 5,
@@ -57,8 +55,8 @@ export const About = () => {
       endDate: "March 2021",
       position: "Frontend Developer (Intern)",
       imgSrc: softtech,
-      description:
-        "Internship focused on learning and implementing modern frontend frameworks and tools.",
+      companyLink:"https://manhattan-mcl.com/"
+
     },
     {
       id: 6,
@@ -67,8 +65,8 @@ export const About = () => {
       endDate: "Aug 2020",
       position: "Frontend Developer (Intern)",
       imgSrc: cipher,
-      description:
-        "Worked on small-scale web projects as part of a team, gaining valuable industry experience.",
+      companyLink:"https://cipherlabs.org/"
+
     },
   ];
 

@@ -15,7 +15,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
 
     const element = document.getElementById(href.replace("#", ""));
     if (element) {
-      const offset = 50;
+      const offset = 100;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 

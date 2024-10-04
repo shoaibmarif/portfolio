@@ -23,7 +23,7 @@ const App = () => {
       setLoader(false);
       setTimeout(() => {
         setShowTopLayer(false); // Hide the top layer after 500 ms
-      }, 500); // 500 milliseconds
+      }, 1000); // 500 milliseconds
     }, 2000);
   }, []);
 
