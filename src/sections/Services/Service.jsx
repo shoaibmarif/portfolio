@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export const Service = ({ service, index }) => {
-  const duration = 250 * (index + 1);
+  const duration = 150 * (index + 1);
   return (
     <div
       data-aos="zoom-in"

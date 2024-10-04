@@ -90,13 +90,13 @@ export const Testimonials = () => {
             <TopHeading title="Testimonials" />
             <div className="">
                 <span
-                    className="text-black bg-white absolute left-0 top-[60%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
+                    className="text-black bg-white absolute left-0 top-[55%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickPrev()}
                 >
                     <HiArrowLongLeft size={34} />
                 </span>
                 <span
-                    className="text-black bg-white absolute right-0 top-[60%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
+                    className="text-black bg-white absolute right-0 top-[55%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickNext()}
                 >
                     <HiArrowLongRight size={34} />
@@ -106,21 +106,21 @@ export const Testimonials = () => {
                 <Slider {...settings} ref={sliderRef}>
                     {testimonials.map((testimonial, index) => {
                         return (
-                            <div className='col-span-1 px-4 py-2' key={index}>
-                                <div className='p-8 rounded-lg h-[550px] bg-[#1f1f1f] relative overflow-hidden shadow-[0px_0px_2px_0px_#dedede]'>
+                            <div className='col-span-1 px-4 py-2' key={index} data-aos="fade-up" data-aos-duration="700">
+                                <div className='p-8 rounded-lg h-[500px] relative overflow-hidden border border-[#6d28d9] shadow-[7px_7px_0px_#6d28d9]'>
                                     <div className='absolute left-0 top-0 bg-primary-dark'></div>
                                     <div className='flex flex-col items-center justify-center'>
                                         <img src={testimonial.profileIcon} alt="" className='size-36 rounded-full ' />
-                                        <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark'>{testimonial.name}</h2>
-                                        <p className='text-base text-white  '>{testimonial.designation}</p>
+                                        <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark' > {testimonial.name}</h2>
+                                        <p className='text-lg text-white  '>{testimonial.designation}</p>
                                     </div>
-                                    <p className='line-clamp-[10]	text-white text-sm mt-4'>{testimonial.comments}</p>
+                                    <p className='line-clamp-[8]	text-white text-[15px] mt-4'>{testimonial.comments}</p>
                                 </div>
-                            </div>
+                            </div >
                         )
                     })}
-                </Slider>
-            </div>
-        </ContentWrapper>
+                </Slider >
+            </div >
+        </ContentWrapper >
     )
 }

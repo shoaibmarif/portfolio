@@ -101,12 +101,12 @@ export const Homepage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="1200">
-                <button
+                <a href="#contact"
                   className="flex items-center justify-center mr-4  min-w-48 px-14 transition-all py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[3px_3px_0px_0px_#dedede] duration-500 hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                 >
                   <span className="relative z-[10] font-semibold">Hire Me</span>
-                </button>
+                </a>
               </span>
 
               <span data-aos="fade-left"

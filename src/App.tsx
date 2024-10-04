@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Loader } from "./shared/Loader/Loader.jsx";
 
 const App = () => {
+  const [selectedPlan,setSelectedPlan] = useState("");
   const [darkMode, setDarkMode] = useState(true);
   const topLayer = useRef();
   const navigate = useNavigate();
@@ -49,11 +50,11 @@ const App = () => {
               <div id="certificates"><Certificates /></div>
               <div id="pricing"><Pricing /></div>
               <div id="testimonials"><Testimonials /></div>
-              <div id="contact"><ContactUs /></div>
+              <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div>
               <Footer />
-                <div className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
+                <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
                   <FaWhatsapp color="white" />
-                </div>
+                </a>
             </div>
           </React.Fragment>
         }
