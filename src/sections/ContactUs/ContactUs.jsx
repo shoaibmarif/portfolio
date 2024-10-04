@@ -6,7 +6,7 @@ import { MdOutlinePhone } from "react-icons/md";
 
 export const ContactUs = () => {
     return (
-        <ContentWrapper>
+        <ContentWrapper classes={"py-16"}>
             <TopHeading title={"Contact"} />
             <div className="grid grid-cols-5 gap-12 ">
                 <div className='col-span-3 dark:text-white text-[#0c0c0c]  pb-10'>

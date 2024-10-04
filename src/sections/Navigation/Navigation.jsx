@@ -15,7 +15,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
 
     const element = document.getElementById(href.replace("#", ""));
     if (element) {
-      const offset = 300;
+      const offset = 50;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
@@ -58,7 +58,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
   }, [navLinks]);
 
   return (
-    <ContentWrapper display={"fixed"} classes="w-full z-[999] custom__nav__wrapper transition-all  shadow-[2px_2px_10px_-8px_#a78bfa] " anim={"fade-down"} delay="1000">
+    <ContentWrapper display={"fixed"} classes="w-full z-[999] custom__nav__wrapper transition-all  shadow-[2px_2px_10px_-8px_#a78bfa]  bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010] " anim={"fade-down"} delay="1000">
       <div className="mx-auto  flex items-center justify-between text-white py-3 ">
         <div className="dark:bg-primary-dark bg-primary rounded-full">
           <img

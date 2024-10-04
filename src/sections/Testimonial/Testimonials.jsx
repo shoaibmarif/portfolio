@@ -80,13 +80,13 @@ export const Testimonials = () => {
         arrows: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
     };
     return (
-        <ContentWrapper innerClass={"relative"}>
+        <ContentWrapper innerClass={"relative"} classes={"w-full min-h-[90vh] py-16 bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616]"}>
             <TopHeading title="Testimonials" />
             <div className="">
                 <span
@@ -102,19 +102,19 @@ export const Testimonials = () => {
                     <HiArrowLongRight size={34} />
                 </span>
             </div>
-            <div className='grid grid-cols-1 '>
+            <div className='grid grid-cols-1  '>
                 <Slider {...settings} ref={sliderRef}>
                     {testimonials.map((testimonial, index) => {
                         return (
-                            <div className='col-span-1 px-2 py-2' key={index}>
-                                <div className='p-8 rounded-lg h-[350px] bg-[#1f1f1f] relative overflow-hidden shadow-[0px_0px_2px_0px_#dedede]'>
+                            <div className='col-span-1 px-4 py-2' key={index}>
+                                <div className='p-8 rounded-lg h-[550px] bg-[#1f1f1f] relative overflow-hidden shadow-[0px_0px_2px_0px_#dedede]'>
                                     <div className='absolute left-0 top-0 bg-primary-dark'></div>
                                     <div className='flex flex-col items-center justify-center'>
-                                        <img src={testimonial.profileIcon} alt="" className='size-24 rounded-full ' />
-                                        <h2 className=' font-bold uppercase mt-4 text-primary-dark'>{testimonial.name}</h2>
-                                        <p className='text-white text-sm '>{testimonial.designation}</p>
+                                        <img src={testimonial.profileIcon} alt="" className='size-36 rounded-full ' />
+                                        <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark'>{testimonial.name}</h2>
+                                        <p className='text-base text-white  '>{testimonial.designation}</p>
                                     </div>
-                                    <p className='line-clamp-5	text-white text-sm mt-4'>{testimonial.comments}</p>
+                                    <p className='line-clamp-[10]	text-white text-sm mt-4'>{testimonial.comments}</p>
                                 </div>
                             </div>
                         )

@@ -4,7 +4,7 @@ export const certifcatesSettings = {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: 4,
     rows: 2,
     arrows: false,
     slidesToScroll: 1,

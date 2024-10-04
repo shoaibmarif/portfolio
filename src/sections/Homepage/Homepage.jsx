@@ -22,7 +22,7 @@ export const Homepage = () => {
   }, []);
   return (
     <React.Fragment>
-      <ContentWrapper>
+      <ContentWrapper classes={"bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]"}>
         <div className="absolute left-8 top-1/2 translate-y-[-50%]  z-[10]  " >
           <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
             <span
@@ -62,7 +62,7 @@ export const Homepage = () => {
             />
           </div>
         </div>
-        <div className="relative flex items-center justify-center w-full h-[100vh]" >
+        <div className="relative flex items-center justify-center   w-full min-h-[100vh]" >
           <div className="flex items-center justify-center text-center text-white flex-col">
             <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
               <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
@@ -123,7 +123,7 @@ export const Homepage = () => {
             </div>
 
 
-            <div className="absolute bottom-0 w-full flex items-center justify-between px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
+            <div className="absolute bottom-10 w-full flex items-center justify-between px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
 
               <div className="text-white flex items-center">
                 <ExperienceSvg color={"#fff"} size={"50px"} />

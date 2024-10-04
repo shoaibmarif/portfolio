@@ -5,7 +5,7 @@ import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 import { TopHeading } from "../../shared/TopHeading.jsx";
 export const Services = () => {
     return (
-        <ContentWrapper>
+        <ContentWrapper classes={"w-full min-h-[100vh]  bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616] py-16"}>
             <TopHeading title="Services" />
             <div className="grid grid-cols-3 gap-12 py-6">
                 {servicesData.map((service, index) => {

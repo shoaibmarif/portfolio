@@ -7,7 +7,7 @@ import { BsCheck2Circle } from "react-icons/bs";
 
 export const Pricing = () => {
     return (
-        <ContentWrapper>
+        <ContentWrapper classes={"w-full min-h-[70vh] py-16"}>
             <TopHeading title={"Pricing"} />
             <div className='grid grid-cols-3 gap-16 z-10 relative py-10 '>
                 {pricing.map((price, index) => {
@@ -18,13 +18,13 @@ export const Pricing = () => {
                                 <h2 className='text-white text-5xl font-extrabold '>{price.price}</h2>
                                 <p className='text-white font-bold text-2xl uppercase'>{price.plan}</p>
                             </div>
-                            <div className='px-10 py-5'>
+                            <div className='px-10 py-5 min-h-[400px] flex items-start justify-between flex-col'>
                                 {price.features.map((plan, index2) => {
                                     return (
                                         <div className='flex flex-row items-center mt-4 text-sm' key={index2}><span><BsCheck2Circle size={20} /></span><span className='ml-4'>{plan}</span></div>
                                     )
                                 })}
-                                <button className='block text-center mx-auto bg-[#a78bfa] w-full rounded-md py-3 mt-10'>Choose Plan</button>
+                                <button className='block text-center mx-auto bg-[#a78bfa] w-full rounded-md py-3 my-5'>Choose Plan</button>
                             </div>
                         </div>
                     )

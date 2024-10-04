@@ -120,16 +120,16 @@ export const Certificates = () => {
   ];
 
   return (
-    <ContentWrapper innerClass="relative">
+    <ContentWrapper classes={"w-full py-16 bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616]  "} innerClass="relative">
       <div className="" id="certificates">
         <span
-          className="text-white absolute left-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+          className="text-white absolute left-0 top-[53%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
           onClick={() => sliderRef.current.slickPrev()}
         >
           <HiArrowLongLeft size={34} />
         </span>
         <span
-          className="text-white absolute right-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+          className="text-white absolute right-0 top-[53%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
           onClick={() => sliderRef.current.slickNext()}
         >
           <HiArrowLongRight size={34} />
@@ -140,25 +140,14 @@ export const Certificates = () => {
         {certificates.map((certificate, index) => {
           return (
             <div className="px-2 mt-4 relative" key={index}>
-              <div
-                className={`rounded-lg relative min-h-[250px] p-5 bg-[#1f1f1f] overflow-hidden`} >
-                <div className="z-10 p-5 w-full bg-opacity-50 rounded-lg">
-                  <div style={{
-                    backgroundImage: `url(${certificate.orgImg})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    opacity: .10,
-                  }} className="absolute rounded-full top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] size-24"></div>
-                  <div>
-                    <p className="text-sm text-white  font-semibold">
-                      {certificate.issueDate}
-                    </p>
-                    <p className="text-lg font-semibold text-white mt-5 ">
-                      {certificate.name}
-                    </p>
-                  </div>
-                </div>
+              <div className={`rounded-lg relative min-h-[300px] p-5   pt-8 bg-[#1f1f1f] overflow-hidden`} >
+                <img src={certificate.orgImg} className="rounded-xl mx-auto size-24" alt="" />
+                <p className="text-sm text-primary-dark  font-semibold mt-5">
+                  {certificate.issueDate}
+                </p>
+                <p className="text-lg font-semibold text-white mt-0 ">
+                  {certificate.name}
+                </p>
                 <div className="text-white absolute top-[-60px] right-[-60px] bg-primary-dark size-[120px] rounded-full ">
                   <RiArrowRightDoubleFill color="white" className="absolute top-[60%] left-[20%] z-[1]" size={"22px"} />
                 </div>
