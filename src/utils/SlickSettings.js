@@ -5,7 +5,7 @@ export const certifcatesSettings = {
     infinite: true,
     speed: 1000,
     slidesToShow: 5,
-    rows: 1,
+    rows: 2,
     arrows: false,
     slidesToScroll: 1,
     responsive: [

@@ -157,7 +157,6 @@ export const About = () => {
 
         </div>
       </ContentWrapper >
-      <Certificates />
     </React.Fragment>
   );
 };

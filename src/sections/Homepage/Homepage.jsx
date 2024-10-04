@@ -23,36 +23,48 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper>
-        <div className="absolute left-8 top-1/2 translate-y-[-50%]  z-[9999] " >
-          <SocialIcon
-            color={"#0A66C2"}
-            url="https://www.linkedin.com/in/shoaibmarif/"
-            icon={<FaLinkedinIn size={18} className="dark:text-white " />}
-          />
-          <SocialIcon
-            color={"#4d4d4d"}
-            url="https://github.com/shoaibmarif"
-            icon={<FaGithub size={18} className="dark:text-white " />}
-          />
-          <SocialIcon
-            color={"#E4405F"}
-            url="https://www.instagram.com/shoaibmarif/"
-            icon={<FaInstagram size={18} className="dark:text-white " />}
-          />
-          <SocialIcon
-            color={"#1DA1F2"}
-            url="https://x.com/mshoaibmarif"
-            icon={<FaTwitter size={18} className="dark:text-white " />}
-          />
-          <SocialIcon
-            color={"#E7700D"}
-            url="https://stackoverflow.com/users/7770942/shoaib-arif"
-            icon={<FaStackOverflow size={18} className="dark:text-white " />}
-          />
+        <div className="absolute left-8 top-1/2 translate-y-[-50%]  z-[10]  " >
+          <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
+            <span
+              className={`w-1 bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
+                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+                }`}
+            ></span>
+            <span
+              className={`w-1 bg-white top-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
+                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+                }`}
+            ></span>
+            <SocialIcon
+              color={"#0A66C2"}
+              url="https://www.linkedin.com/in/shoaibmarif/"
+              icon={<FaLinkedinIn size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#4d4d4d"}
+              url="https://github.com/shoaibmarif"
+              icon={<FaGithub size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#E4405F"}
+              url="https://www.instagram.com/shoaibmarif/"
+              icon={<FaInstagram size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#1DA1F2"}
+              url="https://x.com/mshoaibmarif"
+              icon={<FaTwitter size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#E7700D"}
+              url="https://stackoverflow.com/users/7770942/shoaib-arif"
+              icon={<FaStackOverflow size={18} className="dark:text-white " />}
+            />
+          </div>
         </div>
-        <div className="relative flex items-center justify-center w-full" style={{ minHeight: "calc(100vh - 74px)" }}>
+        <div className="relative flex items-center justify-center w-full h-[100vh]" >
           <div className="flex items-center justify-center text-center text-white flex-col">
-            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="fade-down" data-aos-delay={800}>
+            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
               <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
               <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">H</span>
               <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">O</span>
@@ -85,30 +97,33 @@ export const Homepage = () => {
             </p>
 
             <div className="mt-10 flex items-center ">
-              <button
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="1200"
-                className="min-w-48 px-14 py-4 relative rounded-full font-semibold bg-transparent border-2 border-whtie text-white mr-2 overflow-hidden 
-                shadow-[2px_2px_0px_0px_#ddd6fe]"
-              >
-                <span className="relative z-[10] font-semibold">Hire Me</span>
-              </button>
-
-              <button
+              <span
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                data-aos-delay="1200"
-                className="ml-2 flex items-center justify-center mr-4  min-w-48 px-14 py-4 rounded-full  dark:bg-primary-dark bg-primary  text-white  overflow-hidden  
-                shadow-[4px_4px_0px_0px_#ddd6fe]"
-              >
-                <LuDownload size={20} className="relative z-[10]" />{" "}
-                <span className="ml-1 font-semibold relative z-[10]">Resume</span>
-              </button>
+                data-aos-delay="1200">
+                <button
+                  className="flex items-center justify-center mr-4  min-w-48 px-14 transition-all py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                shadow-[3px_3px_0px_0px_#dedede] duration-500 hover:shadow-[5px_5px_0px_0px_#5b21b6]"
+                >
+                  <span className="relative z-[10] font-semibold">Hire Me</span>
+                </button>
+              </span>
+
+              <span data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="1200">
+                <button
+                  className="ml-2 duration-500 flex items-center justify-center mr-4  min-w-48 px-14 transition-all py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                shadow-[3px_3px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
+                >
+                  <LuDownload size={20} className="relative z-[10]" />{" "}
+                  <span className="ml-1 font-semibold relative z-[10]">Resume</span>
+                </button>
+              </span>
             </div>
 
 
-            <div className="absolute bottom-0 w-full flex items-center justify-between px-20  py-8 rounded-xl  bg-[#1f1f1f] transition-all">
+            <div className="absolute bottom-0 w-full flex items-center justify-between px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
 
               <div className="text-white flex items-center">
                 <ExperienceSvg color={"#fff"} size={"50px"} />
@@ -179,27 +194,8 @@ export const Homepage = () => {
                 </div>
               </div>
             </div>
-
-
           </div>
-
         </div>
-
-        {/* <div className="relative min-h-[100vh] w-full">
-          <div className="absolute top-1/2 translate-y-[-40%] left-14">
-            <span
-              className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] top-[-35%] rounded-full 
-                    transition-all duration-700 delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-                }`}
-            ></span>
-
-            <span
-              className={`w-1 bg-white absolute left-1/2 translate-x-[-50%] bottom-[-40%] rounded-full
-                    transition-all duration-700   delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-                }`}
-            ></span>
-          </div>
-        </div> */}
       </ContentWrapper>
     </React.Fragment>
   );
@@ -207,15 +203,12 @@ export const Homepage = () => {
 
 const SocialIcon = ({ icon, color, url }) => {
   return (
-    <React.Fragment>
-      <Link
-        to={url}
-        style={{ "--hover-color": color, }}
-        className={`bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer social__wrapper  transition-all duration-300 `}
-      >
-        {icon}
-      </Link>
-    </React.Fragment>
+    <Link
+      to={url}
+      style={{ "--hover-color": color, }}
+      className={`bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all duration-300 `} >
+      {icon}
+    </Link>
   );
 };
 

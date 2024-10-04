@@ -57,12 +57,12 @@ const navLinks = [
         href:"about"
     },
     {
-        name:"Pricing",
-        href:"pricing"
-    },
-    {
         name:"Certificates",
         href:"certificates"
+    },
+    {
+        name:"Pricing",
+        href:"pricing"
     },
     {
         name:"Testimnonials",

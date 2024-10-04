@@ -7,7 +7,7 @@ export const Services = () => {
     return (
         <ContentWrapper>
             <TopHeading title="Services" />
-            <div className="grid grid-cols-3 gap-12">
+            <div className="grid grid-cols-3 gap-12 py-6">
                 {servicesData.map((service, index) => {
                     return (
                         <div className="col-span-1 " key={index}>

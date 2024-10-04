@@ -205,10 +205,7 @@ div {
 
   /* Custom Animations  */
 
-  .social__wrapper {
-    font-size: 24px;
-    animation: social_anim 0.4s ease-in;
-  }
+
   .main__heading {
     font-size: 6rem;
     animation: main_anim 0.8s ease-in-out;
@@ -217,8 +214,6 @@ div {
   .fixed__button__wrapper{
     font-size: 2rem;
     padding: 16px;
-    animation: whatsAnim 0.3s ease-in;
-    
   }
 
 
@@ -236,14 +231,7 @@ div {
     }
   }
 
-  @keyframes social_anim {
-    0%{
-        font-size: 0px;
-    }
-    100%{
-        font-size: 24px;
-    }
-  }
+
   @keyframes main_anim {
     0%{
         font-size: 1.2rem;
@@ -254,16 +242,7 @@ div {
   }
 
   
-  @keyframes whatsAnim {
-    0%{
-        font-size: 0rem;
-        padding: 0px;
-    }
-    100%{
-        font-size: 2rem;
-        padding: 16px;
-    }
-  }
+
 
 
 
@@ -292,16 +271,16 @@ div {
   }
   
   *::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #651575;
+    border-radius: 10px;
+    background-color: #5b21b6;
   }
   
   *::-webkit-scrollbar-thumb:hover {
-    background-color: #651575;
+    background-color: #5b21b6;
   }
   
   *::-webkit-scrollbar-thumb:active {
-    background-color: #651575;
+    background-color: #5b21b6;
   }
 
 

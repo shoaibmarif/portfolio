@@ -121,15 +121,15 @@ export const Certificates = () => {
 
   return (
     <ContentWrapper innerClass="relative">
-      <div className="">
+      <div className="" id="certificates">
         <span
-          className="text-white absolute left-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+          className="text-white absolute left-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
           onClick={() => sliderRef.current.slickPrev()}
         >
           <HiArrowLongLeft size={34} />
         </span>
         <span
-          className="text-white absolute right-0 top-[65%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
+          className="text-white absolute right-0 top-[55%] z-10 border-2 border-white rounded-full p-3 cursor-pointer transition-all hover:bg-white hover:text-black"
           onClick={() => sliderRef.current.slickNext()}
         >
           <HiArrowLongRight size={34} />

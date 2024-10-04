@@ -18,9 +18,11 @@ export const ContactUs = () => {
                         <div class="flex items-center  dark:text-white text-[#0c0c0c]">
                             <MdOutlineMail className='text-primary-dark' size={"60px"} />
                             <div className='ml-5'>
-                                <h3 class="font-semibold text-primary-dark uppercase text-lg">Contact me by Email</h3>
-                                <a href="mailto:shoaibmuhammadarif@gmail.com" class=" inline-flex items-center gap-x-2 text-sm font-medium ">
-                                    shoaibmuhammadarif@gmail.com
+                                <a href="mailto:shoaibmuhammadarif@gmail.com">
+                                    <h3 class="font-semibold text-primary-dark uppercase text-lg">Contact me by Email</h3>
+                                    <span class=" inline-flex items-center gap-x-2 text-sm font-medium ">
+                                        shoaibmuhammadarif@gmail.com
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -28,16 +30,18 @@ export const ContactUs = () => {
                         <div class="flex items-center justify-start dark:text-white text-[#0c0c0c]">
                             <MdOutlinePhone className='text-primary-dark' size={"60px"} />
                             <div className='ml-5'>
-                                <h3 class="font-semibold text-primary-dark uppercase text-lg">Contact me by Number</h3>
-                                <a href="tel:+923357591625" class=" inline-flex items-center gap-x-2 text-sm font-medium ">
-                                    +92-335-7591625
+                                <a href="tel:+923357591625">
+                                    <h3 class="font-semibold text-primary-dark uppercase text-lg">Contact me by Number</h3>
+                                    <span class=" inline-flex items-center gap-x-2 text-sm font-medium ">
+                                        +92-335-7591625
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='col-span-2 ml-auto'>
-                    <div class="min-w-[400px] items-center bg-[#1f1f1f] justify-center flex flex-col  rounded-xl py-10 px-8 shadow-[inset_0px_0px_3px_0px_#7c3aed]">
+                    <div class="min-w-[400px] items-center bg-[#1f1f1f] justify-center flex flex-col  rounded-xl py-10 px-8 shadow-[0px_0px_2px_0px_#dedede]">
                         <h2 class="mb-8 text-xl font-semibold text-gray-800 dark:text-neutral-200 ">
                             Fill in the form
                         </h2>
@@ -45,7 +49,7 @@ export const ContactUs = () => {
                             <div class="grid gap-4">
                                 <InputField type="text" classes={""} placeholder="First Name" />
                                 <InputField type="email" placeholder="Enter Email" />
-                                <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" class=" py-3 px-4 block w-full rounded-lg text-sm" placeholder="Enter Details"></textarea>
+                                <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" class=" py-3 px-4 block w-full rounded-lg text-sm border-transparent border-[2px] outline-none focus:border-primary-dark" placeholder="Enter Details"></textarea>
                             </div>
 
                             <div class="mt-4 grid">
@@ -68,6 +72,6 @@ export const ContactUs = () => {
 
 const InputField = ({ type, classes, id, placeholder }) => {
     return (
-        <input placeholder={placeholder} type={type} className={`${classes} py-3 px-4 block w-full rounded-lg text-sm `} id={id} />
+        <input placeholder={placeholder} type={type} className={`${classes} py-3 px-4 block w-full rounded-lg border-[2px] border-transparent text-sm outline-none focus:border-2 focus:border-primary-dark`} id={id} />
     )
 }
