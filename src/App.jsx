@@ -5,15 +5,14 @@ import 'aos/dist/aos.css';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { Loader } from "./shared/Loader/Loader.jsx";
-import {servicesData} from "./config/data.js";
 
 const App = () => {
-  const [selectedPlan,setSelectedPlan] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState("");
   const [darkMode, setDarkMode] = useState(true);
   const topLayer = useRef();
   const navigate = useNavigate();
   const [loader, setLoader] = useState(true);
-  const [showTopLayer, setShowTopLayer] = useState(true); 
+  const [showTopLayer, setShowTopLayer] = useState(true);
 
   useEffect(() => {
     AOS.init();
@@ -22,8 +21,8 @@ const App = () => {
     setTimeout(() => {
       setLoader(false);
       setTimeout(() => {
-        setShowTopLayer(false); 
-      }, 1000); 
+        setShowTopLayer(false);
+      }, 1000);
     }, 2000);
   }, []);
 
@@ -47,12 +46,12 @@ const App = () => {
               <div id="home"><Homepage /></div>
               <div id="services"><Services /></div>
               <div id="about"><About /></div>
-             <div id="certificates"><Certificates /></div> 
-             <div id="pricing"><Pricing /></div>
-            <div id="testimonials"><Testimonials /></div>
+              <div id="certificates"><Certificates /></div>
+              <div id="pricing"><Pricing /></div>
+              <div id="testimonials"><Testimonials /></div>
               <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div>
               <Footer />
-                {/* <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
+              {/* <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
                   <FaWhatsapp color="white" />
                 </a> */}
             </div>
