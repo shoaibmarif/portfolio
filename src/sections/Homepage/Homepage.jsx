@@ -23,7 +23,7 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper classes={"bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]"}>
-        <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10] hidden " >
+        <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10] hidden xl:block " >
           <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
             <span
               className={`w-1 bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
@@ -76,7 +76,7 @@ export const Homepage = () => {
                 }}
               /></div>
             <p
-              className="max-w-[800px] text-center text-sm lg:text-base xl:text-lg mt-8 text-black dark:text-[#dbdbdb]  transition-all"
+              className="max-w-[800px] text-center text-sm lg:text-base xl:text-lg mt-8 text-black dark:text-gray-300  transition-all"
               data-aos="fade-up"
               data-aos-delay="900"
             >
@@ -111,10 +111,9 @@ export const Homepage = () => {
                 </button>
               </span>
             </div>
-            {/* data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500" */}
+            {/*  */}
 
-            <div className="hidden  px-8 absolute bottom-6 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]">
-
+            <div className="hidden  px-8 absolute bottom-6 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-lg  bg-[#1f1f1f] shadow-[0px_0px_4px_0px_#8b5cf6]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
               <div className="text-white flex items-center">
                 <span className="hidden lg:block">
                   <ExperienceSvg color={"#fff"} size={"50px"} />

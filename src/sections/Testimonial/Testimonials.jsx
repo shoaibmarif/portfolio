@@ -156,7 +156,7 @@ export const Testimonials = () => {
                                         <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark' > {testimonial.name}</h2>
                                         <p className='text-lg text-white  '>{testimonial.designation}</p>
                                     </div>
-                                    <p className='line-clamp-[8]	text-white text-base lg:text-[15px] mt-4'>{testimonial.comments}</p>
+                                    <p className='line-clamp-[8]	text-gray-300 text-base lg:text-[15px] mt-4'>{testimonial.comments}</p>
                                 </div>
                             </div >
                         )

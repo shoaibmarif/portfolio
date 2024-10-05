@@ -9,7 +9,7 @@ export const ContactUs = () => {
         <ContentWrapper classes={"py-16"}>
             <TopHeading title={"Contact"} />
             <div className="grid grid-cols-6 gap-12 mt-16 ">
-                <div className='col-span-6 lg:col-span-3 text-sm lg:text-[15px] dark:text-white text-[#0c0c0c]  pb-10'>
+                <div className='col-span-6 lg:col-span-3 text-sm lg:text-[15px] dark:text-gray-300 text-[#0c0c0c]  pb-10'>
                     <p data-aos="fade-right" data-aos-duration="700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis dolore, eaque laboriosam excepturi dolorem incidunt rerum est nostrum dolores adipisci repellendus corporis sunt! Ipsum facilis illum optio quis minima.</p>
                     <p className='mt-8' data-aos="fade-right" data-aos-duration="700">Lorem ipsum dolor, sit amet consectetur adolor, sit amet consectetur adipisicing elit. Autem ad illo accusamus quos! Eligendi ipsa, magni cum sapiente quidem nihil illum odio quaerat maiores similique sed repellendus vitae consectetur non!</p>
                     <p className="my-8" data-aos="fade-right" data-aos-duration="700">If you wish to write us an email instead please use</p>
@@ -20,7 +20,7 @@ export const ContactUs = () => {
                             <div className='ml-5'>
                                 <a href="mailto:shoaibmuhammadarif@gmail.com">
                                     <h3 className="font-semibold text-primary-dark uppercase text-lg lg:text-xl ">Contact me by Email</h3>
-                                    <span className=" inline-flex items-center gap-x-2 text-sm lg:text-[15px] font-medium ">
+                                    <span className=" inline-flex items-center gap-x-2 text-sm lg:text-[15px] font-medium text-gray-300 ">
                                         shoaibmuhammadarif@gmail.com
                                     </span>
                                 </a>
@@ -31,8 +31,8 @@ export const ContactUs = () => {
                             <MdOutlinePhone className='text-primary-dark size-[3rem] lg-[4rem]' />
                             <div className='ml-5'>
                                 <a href="tel:+923357591625">
-                                    <h3 className="font-semibold text-primary-dark uppercase text-lg lg:text-xl">Contact me by Number</h3>
-                                    <span className=" inline-flex items-center gap-x-2 text-sm lg:text-[15px]  font-medium ">
+                                    <h3 className="font-semibold text-primary-dark uppercase text-lg lg:text-xl ">Contact me by Number</h3>
+                                    <span className=" inline-flex items-center gap-x-2 text-sm lg:text-[15px]  font-medium text-gray-300 ">
                                         +92-335-7591625
                                     </span>
                                 </a>
@@ -57,7 +57,7 @@ export const ContactUs = () => {
                             </div>
 
                             <div className="mt-3 text-center">
-                                <p className="text-sm lg:text-[15px] text-white">
+                                <p className="text-sm lg:text-[15px] text-gray-300">
                                     We'll get back to you in 1-2 business days.
                                 </p>
                             </div>

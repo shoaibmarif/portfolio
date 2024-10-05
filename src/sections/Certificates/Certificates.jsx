@@ -145,7 +145,7 @@ export const Certificates = () => {
                 <p className="text-sm text-primary-dark  font-semibold mt-5">
                   {certificate.issueDate}
                 </p>
-                <p className="text-lg font-semibold text-white mt-0 ">
+                <p className="text-lg font-semibold text-gray-300 mt-0 ">
                   {certificate.name}
                 </p>
                 <div className="text-white absolute top-[-60px] right-[-60px] bg-primary-dark group-hover:bg-white group-hover:text-primary-dark transition-all  size-[120px] rounded-full ">

@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     AOS.init();
     navigate('/home');
-
+    alert("Website is in Development Process!!")
     setTimeout(() => {
       setLoader(false);
       setTimeout(() => {
@@ -43,7 +43,7 @@ const App = () => {
               </div>
             )}
             <div className="bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]">
-              {/* <Navigation darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+              <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
               <div id="home"><Homepage /></div>
               <div id="services"><Services /></div>
               <div id="about"><About /></div>

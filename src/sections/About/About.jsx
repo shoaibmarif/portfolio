@@ -80,14 +80,14 @@ export const About = () => {
           <div className="col-span-6 lg:col-span-3">
             <div className=" flex  justify-start h-full flex-col ">
               <h2 className="text-primary-dark text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Overview</h2>
-              <p className="text-white text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
-              <p className="text-white mt-5 text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 mt-2 text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
@@ -96,14 +96,14 @@ export const About = () => {
               </p>
 
               <h2 className="text-primary-dark  text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Education</h2>
-              <p className="text-white text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
-              <p className="text-white mt-5 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 mt-2 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
@@ -112,7 +112,7 @@ export const About = () => {
               </p>
               <h2 className="text-primary-dark  text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Hobbies</h2>
 
-              <p className="text-white text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
@@ -166,7 +166,7 @@ const Timeline = ({ experience }) => {
           </div>
           <div className="">
             <h3 className=" font-semibold text-primary-dark text-sm md:text-base lg:text-lg ">{position}</h3>
-            <p className="text-[13px] md:text-md lg:text-[15px]">{name}</p>
+            <p className="text-[13px] text-gray-300 md:text-md lg:text-[15px]">{name}</p>
             <span className="text-xs block md:hidden text-white font-semibold">
               {startDate} - {endDate}
             </span>

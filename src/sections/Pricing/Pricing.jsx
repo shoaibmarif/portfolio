@@ -21,7 +21,7 @@ export const Pricing = () => {
                             <div className='px-10 py-5 min-h-[400px] flex items-start justify-between flex-col'>
                                 {price.features.map((plan, index2) => {
                                     return (
-                                        <div data-aos="fade-right" className='flex flex-row items-center mt-4 text-sm lg:text-[15px]' key={index2}><span><BsCheck2Circle size={20} /></span><span className='ml-4'>{plan}</span></div>
+                                        <div data-aos="fade-right" className='flex flex-row items-center mt-3 text-gray-300 text-sm lg:text-[15px]' key={index2}><span><BsCheck2Circle size={20} /></span><span className='ml-4'>{plan}</span></div>
                                     )
                                 })}
                                 <button data-aos="fade-up" className='block text-center mx-auto bg-primary-dark w-full rounded-md py-3 my-5'>Choose Plan</button>
