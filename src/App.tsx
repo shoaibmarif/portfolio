@@ -44,13 +44,13 @@ const App = () => {
             )}
             <div className="bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]">
               {/* <Navigation darkMode={darkMode} setDarkMode={setDarkMode} /> */}
-              {/* <div id="home"><Homepage /></div>
+              <div id="home"><Homepage /></div>
               <div id="services"><Services /></div>
               <div id="about"><About /></div>
-             <div id="certificates"><Certificates /></div> */}
+             <div id="certificates"><Certificates /></div> 
              <div id="pricing"><Pricing /></div>
-           {/*      <div id="testimonials"><Testimonials /></div>
-              <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div> */}
+            <div id="testimonials"><Testimonials /></div>
+              <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div>
               <Footer />
                 {/* <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
                   <FaWhatsapp color="white" />

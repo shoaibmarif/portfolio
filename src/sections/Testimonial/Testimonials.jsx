@@ -83,12 +83,54 @@ export const Testimonials = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 1536,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+
+                },
+            },
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
         <ContentWrapper innerClass={"relative"} classes={"w-full min-h-[90vh] py-16 bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616]"}>
             <TopHeading title="Testimonials" />
-            <div className="">
+            {/* <div className="">
                 <span
                     className="text-black bg-white absolute left-0 top-[55%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickPrev()}
@@ -101,7 +143,7 @@ export const Testimonials = () => {
                 >
                     <HiArrowLongRight size={34} />
                 </span>
-            </div>
+            </div> */}
             <div className='grid grid-cols-1  '>
                 <Slider {...settings} ref={sliderRef}>
                     {testimonials.map((testimonial, index) => {
@@ -114,7 +156,7 @@ export const Testimonials = () => {
                                         <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark' > {testimonial.name}</h2>
                                         <p className='text-lg text-white  '>{testimonial.designation}</p>
                                     </div>
-                                    <p className='line-clamp-[8]	text-white text-[15px] mt-4'>{testimonial.comments}</p>
+                                    <p className='line-clamp-[8]	text-white text-base lg:text-[15px] mt-4'>{testimonial.comments}</p>
                                 </div>
                             </div >
                         )

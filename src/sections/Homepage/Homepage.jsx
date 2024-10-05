@@ -23,7 +23,7 @@ export const Homepage = () => {
   return (
     <React.Fragment>
       <ContentWrapper classes={"bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]"}>
-        <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10]  " >
+        <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10] hidden " >
           <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
             <span
               className={`w-1 bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
@@ -64,20 +64,10 @@ export const Homepage = () => {
         </div>
         <div className="relative flex items-center justify-center   w-full min-h-[100vh]" >
           <div className="flex items-center justify-center text-center text-white flex-col">
-            <h1 className="font-extrabold uppercase leading-[7rem] text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">S</span>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">H</span>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">O</span>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
-              <span className="  dark:text-primary-dark text-primary  drop-shadow-[4px_4px_0px_#fae8ff]">B</span>
-              <span className=""> </span>
-              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">A</span>
-              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">R</span>
-              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">I</span>
-              <span className="   dark:text-primary-dark text-primary   drop-shadow-[4px_4px_0px_#fae8ff]">F</span>
+            <h1 className="font-extrabold uppercase text-6xl sm:text-7xl md:text-8xl  xl:text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
+              <span className="dark:text-primary-dark  drop-shadow-[4px_4px_0px_#fae8ff]">Shoaib Arif</span>
             </h1>
-            <div className="text-5xl flex font-bold  mt-8 " data-aos="fade-up" data-aos-delay="800">
+            <div className="text-2xl lg:text-4xl flex font-bold  mt-4 lg:mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
                 options={{
                   strings: ['Frontend Developer', 'React Developer', 'Full Stack Developer'],
@@ -86,7 +76,7 @@ export const Homepage = () => {
                 }}
               /></div>
             <p
-              className="max-w-[700px] text-center text-lg mt-8 text-black dark:text-[#dbdbdb]  transition-all"
+              className="max-w-[800px] text-center text-sm lg:text-base xl:text-lg mt-8 text-black dark:text-[#dbdbdb]  transition-all"
               data-aos="fade-up"
               data-aos-delay="900"
             >
@@ -96,16 +86,16 @@ export const Homepage = () => {
               solutions that connect billions of people
             </p>
 
-            <div className="mt-10 flex items-center ">
+            <div className="mt-5 lg:mt-10 flex items-center  ">
               <span
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="1200">
                 <a href="#contact"
-                  className="flex items-center justify-center mr-4  min-w-48 px-14 transition-all py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                  className="flex items-center justify-center mr-4  min-w-[120px] md:min-w-[150px] lg:min-w-48  px-2 transition-all py-2 md:py-3 lg:py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[3px_3px_0px_0px_#dedede] duration-500 hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                 >
-                  <span className="relative z-[10] font-semibold">Hire Me</span>
+                  <span className="relative z-[10] font-semibold text-[13px] lg:text-base">Hire Me</span>
                 </a>
               </span>
 
@@ -113,21 +103,23 @@ export const Homepage = () => {
                 data-aos-duration="1000"
                 data-aos-delay="1200">
                 <button
-                  className="ml-2 duration-500 flex items-center justify-center mr-4  min-w-48 px-14 transition-all py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                  className="ml-2 duration-500 flex items-center justify-center md:min-w-[150px]  min-w-[120px] lg:min-w-48  px-2 transition-all py-2 md:py-3 lg:py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[3px_3px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                 >
-                  <LuDownload size={20} className="relative z-[10]" />{" "}
-                  <span className="ml-1 font-semibold relative z-[10]">Resume</span>
+                  <LuDownload className="relative z-[10] size-4 lg:size-5" />{" "}
+                  <span className="ml-1 font-semibold relative z-[10] text-[13px] lg:text-base">Resume</span>
                 </button>
               </span>
             </div>
+            {/* data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500" */}
 
-
-            <div className="absolute bottom-10 w-full flex items-center justify-between px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
+            <div className="hidden  px-8 absolute bottom-6 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-xl  bg-[#1f1f1f] shadow-[0px_0px_2px_0px_#dedede]">
 
               <div className="text-white flex items-center">
-                <ExperienceSvg color={"#fff"} size={"50px"} />
-                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                <span className="hidden lg:block">
+                  <ExperienceSvg color={"#fff"} size={"50px"} />
+                </span>
+                <div className="flex items-center  lg:items-start  flex-col lg:ml-2 font-semibold uppercase">
                   <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -140,11 +132,13 @@ export const Homepage = () => {
                   Experience
                 </div>
               </div>
-              <span className="bg-white w-[4px] rounded-full counter__line  "></span>
-              <div className="text-white flex items-center  ">
-                <ProjectSvg color={"#fff"} size="50px" />
+              <span className="bg-white w-[3px] rounded-full counter__line  "></span>
+              <div className="text-white flex items-center ">
+                <span className="hidden lg:block">
+                  <ProjectSvg color={"#fff"} size="50px" />
+                </span>
 
-                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
                   <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -157,14 +151,14 @@ export const Homepage = () => {
                   Project Completed
                 </div>
               </div>
-              <span className="bg-white w-[4px] rounded-full counter__line  "></span>
+              <span className="bg-white w-[3px] rounded-full counter__line  "></span>
 
               <div className="text-white flex items-center  ">
-                <div>
+                <span className="hidden lg:block">
                   <HappySvg color="#fff" size="50px" />
-                </div>
+                </span>
 
-                <div className="flex items-start flex-col ml-2 font-semibold uppercase">
+                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
                   <span className="text-2xl font-bold mb-1  ">
                     <CountUp
                       scrollSpyOnce={true}
@@ -179,8 +173,10 @@ export const Homepage = () => {
               </div>
               <span className="bg-white w-[4px] rounded-full counter__line "></span>
               <div className="text-white flex items-center  ">
-                <OpenSourceSvg color={"#fff"} size="50px" />
-                <div className="flex items-start flex-col ml-3 font-semibold uppercase">
+                <span className="hidden lg:block">
+                  <OpenSourceSvg color={"#fff"} size="50px" />
+                </span>
+                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
                   <span className="text-2xl font-bold mb-1 ">
                     <CountUp
                       scrollSpyOnce={true}
