@@ -8,30 +8,39 @@ export default {
   theme: {
     extend: {
       container: {
-        center: true, // Centers the container
+        center: true,
         padding: {
-          DEFAULT: '1rem',  // 16px
-          sm: '2rem',       // 32px
-          md: '3rem',       // 48px
-          lg: '4rem',       // 64px
-          xl: '5rem',       // 80px
-          '2xl': '6rem',    // 96px
+          DEFAULT: '1.5rem',
+          sm: '1.5rem',
+          md: '2rem',
+          lg: '2rem',
+          xl: '2rem',
+          '2xl': '3rem',
+          '3xl': '4rem',
         },
       },
       colors: {
         primary: {
-          DEFAULT: '#1D4ED8', // Light mode primary color
-          dark: '#7c3aed', // Dark mode primary color
+          DEFAULT: '#1D4ED8',
+          dark: '#7c3aed',
         },
         secondary: {
-          DEFAULT: '#1D4ED8', // Light mode secondary color
-          dark: '#7c3aed', // Dark mode secondary color
+          DEFAULT: '#1D4ED8',
+          dark: '#7c3aed',
         },
         ternary: {
-          DEFAULT: '#1D4ED8', // Light mode ternary color
-          dark: '#4F46E5', // Dark mode ternary color
+          DEFAULT: '#1D4ED8',
+          dark: '#4F46E5',
         },
       },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1576px',
     },
   },
   plugins: [],

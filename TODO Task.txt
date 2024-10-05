@@ -6,4 +6,7 @@ Add Certifications Links
 Pricing Methods Clearlity 
 And Form Submit
 Form Submit on Pricing Selection 
-Resume Download Option
+Resume Download OptionAdd
+
+Add Arrow in Bottom 
+

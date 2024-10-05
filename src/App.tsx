@@ -22,8 +22,8 @@ const App = () => {
     setTimeout(() => {
       setLoader(false);
       setTimeout(() => {
-        setShowTopLayer(false); // Hide the top layer after 500 ms
-      }, 1000); // 500 milliseconds
+        setShowTopLayer(false); 
+      }, 1000); 
     }, 2000);
   }, []);
 
@@ -33,28 +33,28 @@ const App = () => {
         {loader ? <Loader /> :
           <React.Fragment>
             {showTopLayer && ( // Conditional rendering for topLayer
-              <div className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-6 top-0 left-0" ref={topLayer}>
+              <div className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-4 lg:grid-cols-6 top-0 left-0" ref={topLayer}>
                 <div className="col-span-1 bg-[#101010] screen_animation"></div>
                 <div className="col-span-1 bg-[#101010] screen_animation"></div>
                 <div className="col-span-1 bg-[#101010] screen_animation"></div>
                 <div className="col-span-1 bg-[#101010] screen_animation"></div>
-                <div className="col-span-1 bg-[#101010] screen_animation"></div>
-                <div className="col-span-1 bg-[#101010] screen_animation"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation hidden lg:block"></div>
+                <div className="col-span-1 bg-[#101010] screen_animation hidden lg:block"></div>
               </div>
             )}
             <div className="bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]">
-              <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
-              <div id="home"><Homepage /></div>
+              {/* <Navigation darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+              {/* <div id="home"><Homepage /></div>
               <div id="services"><Services /></div>
               <div id="about"><About /></div>
-              <div id="certificates"><Certificates /></div>
-              <div id="pricing"><Pricing /></div>
-              <div id="testimonials"><Testimonials /></div>
-              <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div>
+             <div id="certificates"><Certificates /></div> */}
+             <div id="pricing"><Pricing /></div>
+           {/*      <div id="testimonials"><Testimonials /></div>
+              <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div> */}
               <Footer />
-                <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
+                {/* <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
                   <FaWhatsapp color="white" />
-                </a>
+                </a> */}
             </div>
           </React.Fragment>
         }

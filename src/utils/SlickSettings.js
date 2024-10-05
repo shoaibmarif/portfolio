@@ -1,5 +1,3 @@
-
-
 export const certifcatesSettings = {
     dots: false,
     infinite: true,
@@ -10,12 +8,29 @@ export const certifcatesSettings = {
     slidesToScroll: 1,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1536,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true,
+                rows: 2, // Set to 1 row for larger screens
+            },
+        },
+        {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                rows: 2, // Set to 1 row for this breakpoint as well
+            },
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                rows: 1, // Set to 1 row
             },
         },
         {
@@ -23,13 +38,15 @@ export const certifcatesSettings = {
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
+                rows: 1, // Set to 1 row
             },
         },
         {
-            breakpoint: 480,
+            breakpoint: 640,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                rows: 1, // Set to 1 row for mobile
             },
         },
     ],

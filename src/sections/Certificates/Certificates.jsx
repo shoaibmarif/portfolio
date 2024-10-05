@@ -121,26 +121,26 @@ export const Certificates = () => {
 
   return (
     <ContentWrapper classes={"w-full py-16 bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616]  "} innerClass="relative">
-      <div className="">
+      {/* <div className="">
         <span
-          className="text-black bg-white absolute left-0 top-[55%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
+          className="text-primary-dark bg-[#ffffff] absolute left-2 lg:left-0 3xl:left-[-0.5rem] top-[58%] lg:top-[53%] z-50  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
           onClick={() => sliderRef.current.slickPrev()}
         >
-          <HiArrowLongLeft size={34} />
+          <HiArrowLongLeft className="size-[20px] lg:size-[40px]" />
         </span>
         <span
-          className="text-black bg-white absolute right-0 top-[55%] z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
+          className="text-primary-dark bg-white absolute right-2 lg:right-0  3xl:right-[-0.5rem] top-[58%] lg:top-[53%] z-50  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
           onClick={() => sliderRef.current.slickNext()}
         >
-          <HiArrowLongRight size={34} />
+          <HiArrowLongRight className="size-[20px] lg:size-[40px]" />
         </span>
-      </div>
+      </div> */}
       <TopHeading title={"Certifications"} />
       <Slider {...certifcatesSettings} ref={sliderRef}>
         {certificates.map((certificate, index) => {
           return (
             <div className="px-2 py-2 mt-4 relative" data-aos="fade-up" key={index}>
-              <Link to={certificate.redirectLink} target="_blank" className={`block group rounded-lg relative min-h-[300px] p-5 shadow-[0px_0px_2px_#bfbfbf]  hover:shadow-[0px_0px_7px_#bfbfbf] transition-all cursor-pointer  pt-8 bg-[#1f1f1f] overflow-hidden`} >
+              <Link to={certificate.redirectLink} target="_blank" className={`block group rounded-lg relative min-h-[300px] p-10 shadow-[0px_0px_2px_#bfbfbf]  hover:shadow-[0px_0px_7px_#bfbfbf] transition-all cursor-pointer  pt-8 bg-[#1f1f1f] overflow-hidden`} >
                 <img src={certificate.orgImg} className="rounded-xl mx-auto size-24" alt="" />
                 <p className="text-sm text-primary-dark  font-semibold mt-5">
                   {certificate.issueDate}
