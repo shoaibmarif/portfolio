@@ -51,9 +51,9 @@ const App = () => {
               <div id="testimonials"><Testimonials /></div>
               <div id="contact"><ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /></div>
               <Footer />
-              {/* <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[10]" data-aos="fade-left">
+              <a target="_blank" href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..." className="fixed__button__wrapper fixed bottom-10 right-10 dark:bg-primary-dark bg-primary rounded-full cursor-pointer z-[1000]" data-aos="fade-left">
                   <FaWhatsapp color="white" />
-                </a> */}
+                </a>
             </div>
           </React.Fragment>
         }

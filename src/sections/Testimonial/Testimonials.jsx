@@ -153,10 +153,10 @@ export const Testimonials = () => {
                                     <div className='absolute left-0 top-0 bg-primary-dark'></div>
                                     <div className='flex flex-col items-center justify-center'>
                                         <img src={testimonial.profileIcon} alt="" className='size-36 rounded-full ' />
-                                        <h2 className=' font-bold uppercase mt-5 text-2xl text-primary-dark' > {testimonial.name}</h2>
-                                        <p className='text-lg text-white  '>{testimonial.designation}</p>
+                                        <h2 className=' font-bold uppercase mt-5 text-xl md:text-2xl text-primary-dark text-center' > {testimonial.name}</h2>
+                                        <p className='text-base md:text-lg text-white  '>{testimonial.designation}</p>
                                     </div>
-                                    <p className='line-clamp-[8]	text-gray-300 text-base lg:text-[15px] mt-4'>{testimonial.comments}</p>
+                                    <p className='line-clamp-[8]	text-gray-300 text-sm lg:text-[15px] mt-4'>{testimonial.comments}</p>
                                 </div>
                             </div >
                         )
