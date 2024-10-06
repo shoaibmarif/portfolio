@@ -86,7 +86,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             );
           })}
         </ul>
-        <Toggler darkMode={darkMode} setDarkMode={setDarkMode} />
+        {/* <Toggler darkMode={darkMode} setDarkMode={setDarkMode} /> */}
       </div>
     </ContentWrapper>
   );
