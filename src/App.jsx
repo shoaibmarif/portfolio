@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     AOS.init();
-    navigate('/home');
+    navigate('/');
     // alert("Website is in Development Process!!")
     setTimeout(() => {
       setLoader(false);
