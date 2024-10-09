@@ -80,14 +80,14 @@ export const About = () => {
           <div className="col-span-6 lg:col-span-3">
             <div className=" flex  justify-start h-full flex-col ">
               <h2 className="text-primary-dark text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Overview</h2>
-              <p className="text-gray-300 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 leading-7 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
                 crafting custom websites and building dynamic plugins tailored
                 to the unique needs of businesses.
               </p>
-              <p className="text-gray-300 mt-2 text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
+              <p className="text-gray-300 mt-2 leading-7 text-[13px] md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
@@ -95,8 +95,8 @@ export const About = () => {
                 to the unique needs of businesses.
               </p>
 
-              <h2 className="text-primary-dark  text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Education</h2>
-              <p className="text-gray-300 text-[13px] md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
+              <h2 className="text-primary-dark   text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Education</h2>
+              <p className="text-gray-300 text-[13px] leading-7 md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
                 With extensive experience in Elementor and WooCommerce, I ensure
                 that every website is designed to provide a seamless user
                 experience, As a seasoned WordPress developer, I specialize in
