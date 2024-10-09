@@ -132,7 +132,7 @@ export const Testimonials = () => {
             <TopHeading title="Testimonials" />
             <div className="absolute top-1/2">
             
-                <span
+                {/* <span
                     className="text-black bg-white relative  z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
                     onClick={() => sliderRef.current.slickPrev()}
                 >
@@ -143,7 +143,7 @@ export const Testimonials = () => {
                     onClick={() => sliderRef.current.slickNext()}
                 >
                     <HiArrowLongRight size={34} />
-                </span>
+                </span> */}
             </div>
             <div className='grid grid-cols-1  '>
                 <Slider {...settings} ref={sliderRef}>
