@@ -14,13 +14,6 @@ body{
 @tailwind components;
 @tailwind utilities;
 
-/* body{
-    font-family: "Poppins", sans-serif;
-    animation: fadeInAnimation ease 0.9s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-} */
-
 
 .text-stroke {
     -webkit-text-stroke: 2px white; /* Adjust the stroke width and color as needed */
