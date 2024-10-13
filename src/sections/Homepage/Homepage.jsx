@@ -65,7 +65,7 @@ export const Homepage = () => {
         <div className="relative flex items-center justify-center   w-full min-h-[100vh]" >
           <div className="flex items-center justify-center text-center text-white flex-col">
             <h1 className="font-extrabold uppercase text-6xl sm:text-7xl md:text-8xl  xl:text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
-              <span className="dark:text-primary-dark  drop-shadow-[4px_4px_0px_#fae8ff]">Shoaib Arif</span>
+              <span className="dark:text-primary-dark  drop-shadow-[6px_5px_1px_#fae8ff] tracking-wide	">Shoaib Arif</span>
             </h1>
             <div className="text-2xl lg:text-4xl flex font-bold  mt-4 lg:mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
