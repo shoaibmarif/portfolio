@@ -303,3 +303,7 @@ div {
   .overlap{
     z-index: 50;
   }
+
+  .text-stroke-white{
+    -webkit-text-stroke: 0.5px white;
+  }

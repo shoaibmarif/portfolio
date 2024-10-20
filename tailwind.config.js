@@ -10,13 +10,13 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: '1.5rem',
-          sm: '1.5rem',
-          md: '2rem',
-          lg: '2rem',
-          xl: '2rem',
-          '2xl': '3rem',
-          '3xl': '4rem',
+          DEFAULT: '2rem',
+          sm: '2rem',
+          md: '3rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+          '3xl': '7rem',
         },
       },
       colors: {

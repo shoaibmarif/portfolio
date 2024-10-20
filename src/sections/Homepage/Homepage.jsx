@@ -64,10 +64,9 @@ export const Homepage = () => {
         </div>
         <div className="relative flex items-center justify-center   w-full min-h-[100vh]" >
           <div className="flex items-center justify-center text-center text-white flex-col">
-            <h1 className="font-extrabold uppercase text-6xl sm:text-7xl md:text-8xl  xl:text-9xl inline-block bg-white text-white bg-clip-text " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>
-              <span className="dark:text-primary-dark  drop-shadow-[6px_5px_1px_#fae8ff] tracking-wide	">Shoaib Arif</span>
+            <h1 className="text-stroke-white uppercase font-extrabold text-6xl bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>Shoaib Arif
             </h1>
-            <div className="text-2xl lg:text-4xl flex font-bold  mt-4 lg:mt-8 " data-aos="fade-up" data-aos-delay="800">
+            <div className="text-2xl lg:text-3xl flex font-bold  mt-4 lg:mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
                 options={{
                   strings: ['Frontend Developer', 'React Developer', 'Full Stack Developer'],
@@ -76,7 +75,7 @@ export const Homepage = () => {
                 }}
               /></div>
             <p
-              className="max-w-[800px] text-center text-sm lg:text-base xl:text-lg mt-8 text-black dark:text-gray-300  transition-all"
+              className="max-w-[800px] text-center text-base lg:text-base xl:text-lg mt-5 text-black dark:text-gray-300  transition-all"
               data-aos="fade-up"
               data-aos-delay="900"
             >
@@ -86,34 +85,35 @@ export const Homepage = () => {
               solutions that connect billions of people
             </p>
 
-            <div className="mt-5 lg:mt-10 flex items-center  ">
-              <span
+            <div className="mt-7 lg:mt-10 flex items-center  ">
+              {/* <span
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="1200">
                 <a href="#contact"
-                  className="flex items-center justify-center mr-4  min-w-[120px] md:min-w-[150px] lg:min-w-48  px-2 transition-all py-2 md:py-3 lg:py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                  className="flex items-center justify-center mr-4  min-w-[150px] md:min-w-[150px] lg:min-w-48   px-2 transition-all py-4 md:py-3 lg:py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[3px_3px_0px_0px_#dedede] duration-500 hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                 >
-                  <span className="relative z-[10] font-semibold text-[13px] lg:text-base">Hire Me</span>
+                  <span className="relative z-[10] font-semibold text-base lg:text-base">Hire Me</span>
                 </a>
-              </span>
+              </span> */}
 
-              <span data-aos="fade-left"
+              <span data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1200">
                 <button
-                  className="ml-2 duration-500 flex items-center justify-center md:min-w-[150px]  min-w-[120px] lg:min-w-48  px-2 transition-all py-2 md:py-3 lg:py-4 rounded-full  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
-                shadow-[3px_3px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
+                  className="ml-2 duration-500 flex items-center justify-center min-w-[200px]   px-2 transition-all py-4 md:py-3 lg:py-4 rounded-sm  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
+                shadow-[5px_5px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                 >
-                  <LuDownload className="relative z-[10] size-4 lg:size-5" />{" "}
-                  <span className="ml-1 font-semibold relative z-[10] text-[13px] lg:text-base">Resume</span>
+                  <LuDownload size={"20px"} className="relative z-[10]" />{" "}
+                  <span className="ml-1 font-semibold relative z-[10] text-base lg:text-base uppercase">Resume</span>
                 </button>
               </span>
-            </div>
-            {/*  */}
-
-            <div className="hidden  px-8 absolute bottom-6 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-lg  bg-[#1f1f1f] shadow-[0px_0px_4px_0px_#8b5cf6]" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
+            </div>    
+          </div>
+        </div>
+      </ContentWrapper>
+     <div className="px-8 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-lg  bg-[#1f1f1f] " data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
               <div className="text-white flex items-center">
                 <span className="hidden lg:block">
                   <ExperienceSvg color={"#fff"} size={"50px"} />
@@ -189,9 +189,6 @@ export const Homepage = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </ContentWrapper>
     </React.Fragment>
   );
 };

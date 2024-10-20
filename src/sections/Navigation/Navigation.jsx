@@ -58,8 +58,10 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
   }, [navLinks]);
 
   return (
-    <ContentWrapper display={"fixed"} classes="w-full z-[999] custom__nav__wrapper transition-all  shadow-[2px_2px_10px_-8px_#a78bfa]  bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010] " anim={"fade-down"} delay="1000">
-      <div className="mx-auto  flex items-center justify-between text-white py-3 ">
+    <React.Fragment>
+
+    <ContentWrapper display={"fixed"} classes="py-0 w-full z-[999] custom__nav__wrapper transition-all  shadow-[2px_2px_10px_-8px_#a78bfa]  bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010] " anim={"fade-down"} delay="1000">
+      <div className="mx-auto  flex items-center justify-between text-white py-2 ">
         <div className="dark:bg-primary-dark bg-primary rounded-full">
           <img
             className="size-[50px]"
@@ -67,13 +69,13 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             alt="Shoaib Arif Profile"
           />
         </div>
-        <ul className="flex flex-row items-center">
+        <ul className="lg:flex flex-row items-center hidden">
           {navLinks.map((nav, index) => {
             return (
               <li className="mx-2" key={index}>
                 <button
                   onClick={() => handleNavigation(nav.href)}
-                  className={`relative px-4 py-1 active cursor-pointer after:transition-all after:w-[0px] hover:after:w-[80%] 
+                  className={`relative px-4 active cursor-pointer after:transition-all after:w-[0px] hover:after:w-[80%] 
                     hover:after:left-1/2 hover:after:translate-x-[-50%] transition-all after:h-[2px] dark:after:bg-slate-200
                     after:bg-black after:absolute after:left-[50%] after:bottom-0 rounded-sm flex flex-col justify-start
                     ${activeLink === nav.href ? 'text-primary-dark font-bold' : ''}`} // Active class applied here
@@ -86,8 +88,10 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             );
           })}
         </ul>
-        {/* <Toggler darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+
+        <div>asd</div>
       </div>
     </ContentWrapper>
+    </React.Fragment>
   );
 };
