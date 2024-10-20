@@ -30,6 +30,8 @@ const App = () => {
     );
     navigate("/");
 
+    alert("product still in process")
+
     const loadingTimeout = setTimeout(() => {
         setShowTopLayer(false);
     }, 800);
