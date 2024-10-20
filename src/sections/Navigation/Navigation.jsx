@@ -89,7 +89,6 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
           })}
         </ul>
 
-        <div>asd</div>
       </div>
     </ContentWrapper>
     </React.Fragment>
