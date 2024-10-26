@@ -15,7 +15,7 @@ export const ContactUs = () => {
   
       // Use emailjs to send the form data
       emailjs.sendForm(
-        'portfolio_shoaib',    // Replace with your EmailJS Service ID
+        'portfolio',    // Replace with your EmailJS Service ID
         'template_ml32ypq',   // Replace with your EmailJS Template ID
         form.current,         // Reference to the form element
         'AdVjL5rFnkyVHS9mI'     // Replace with your EmailJS Public Key (User ID)
