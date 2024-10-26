@@ -307,3 +307,41 @@ div {
   .text-stroke-white{
     -webkit-text-stroke: 0.5px white;
   }
+
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating-element {
+    animation: spin 8s linear infinite;
+  }
+
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg) translateY(0);
+    }
+    to {
+      transform: rotate(360deg) translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+  }
+  
+  .rotating-bouncing-element {
+    animation: spin 8s linear infinite, bounce 2s ease-in-out infinite;
+  }
+  

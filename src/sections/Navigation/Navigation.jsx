@@ -4,7 +4,7 @@ import Profile from "../../../public/images/profile.png";
 import { navLinks } from "../../config/data.ts";
 import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 import { useNavigate } from "react-router-dom";
-
+import "./Navigation.css"
 export const Navigation = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("/");
@@ -88,7 +88,13 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             );
           })}
         </ul>
-
+        <div><label class="burger" for="burger">
+          <input type="checkbox" id="burger" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        </div>
       </div>
     </ContentWrapper>
     </React.Fragment>

@@ -12,7 +12,7 @@ export const Service = ({ service, index }) => {
         <span className=" text-xl lg:text-2xl font-semibold  uppercase text-center group-hover:text-primary-dark transition-all">
           {service.title}
         </span>
-        <span className="mt-4 lg:mt-8 text-[13px] md:text-[14px] lg:text-[15px] text-gray-300 text-center  inline-block ">{service.text}</span>
+        <span className="mt-4 lg:mt-8 text-sm md:text-[14px] lg:text-[15px] text-gray-300 text-center  inline-block ">{service.text}</span>
         <div className="absolute size-[150px] right-[-75px] top-[-75px]   rounded-full opacity-10 bg-[#fff]  group-hover:size-[200px] transition-all duration-500"></div>
         <div className="absolute size-[150px] bottom-[-75px] left-[-75px]   rounded-full opacity-10 bg-[#fff]  group-hover:size-[200px] transition-all duration-500"></div>
       </div>

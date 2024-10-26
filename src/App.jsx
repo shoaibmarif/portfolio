@@ -29,9 +29,7 @@ const App = () => {
       }
     );
     navigate("/");
-
-    alert("product still in process")
-
+    
     const loadingTimeout = setTimeout(() => {
         setShowTopLayer(false);
     }, 800);
@@ -82,7 +80,7 @@ const App = () => {
                 <ContactUs selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />
               </div>
               <Footer />
-              <a
+              {/* <a
                 target="_blank"
                 data-aos-once="false"
                 href="https://wa.me/923357591625?text=Hello%20Shoaib!%20I%20got%20your%20contact%20number%20from%20your%20website..."
@@ -90,7 +88,7 @@ const App = () => {
                 data-aos="fade-left"
               >
                 <FaWhatsapp color="white" />
-              </a>
+              </a> */}
             </div>
           </React.Fragment>
           </div>

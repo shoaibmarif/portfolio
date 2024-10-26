@@ -7,14 +7,13 @@ import Ibm from "../../../public/images/certificates/ibm.jpg";
 import Linkedin from "../../../public/images/certificates/linkedin.jpg";
 import Pluralsight from "../../../public/images/certificates/pluralsight.png";
 import { TopHeading } from "../../shared/TopHeading";
-import { MdArrowForwardIos } from "react-icons/md";
 import { certifcatesSettings } from "../../utils/SlickSettings.js";
-import { HiArrowLongLeft } from "react-icons/hi2";
-import { HiArrowLongRight } from "react-icons/hi2";
 import { ContentWrapper } from "../../shared/ContentWrapper.jsx"
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { GoArrowLeft ,GoArrowRight  } from "react-icons/go";
+
+
 export const Certificates = () => {
   const sliderRef = useRef(null);
 
@@ -139,11 +138,11 @@ export const Certificates = () => {
       <Slider {...certifcatesSettings} ref={sliderRef}>
         {certificates.map((certificate, index) => {
           return (
-            <div className="px-2 py-2 mt-4 relative" data-aos="fade-up" key={index}>
+            <div className="px-2 py-2  mt-4 relative" data-aos="fade-up" key={index}>
               <Link to={certificate.redirectLink} target="_blank" className={`block group rounded-lg relative min-h-[300px] p-10 shadow-[0px_0px_2px_#bfbfbf]  hover:shadow-[0px_0px_7px_#bfbfbf] transition-all cursor-pointer  pt-8 bg-[#1f1f1f] overflow-hidden`} >
-                <img src={certificate.orgImg} className="rounded-xl mx-auto size-24" alt="" />
+                <img src={certificate.orgImg} className="rounded-xl mx-auto w-[70px]" alt="" />
                 <p className="text-sm text-primary-dark  font-semibold mt-5">
-                  {certificate.issueDate}
+30px                 {certificate.issueDate}
                 </p>
                 <p className="text-lg font-semibold text-gray-300 mt-0 ">
                   {certificate.name}
@@ -152,10 +151,16 @@ export const Certificates = () => {
                   <RiArrowRightDoubleFill className="absolute top-[60%] group-hover:rotate-[-45deg] transition-all left-[20%] z-[1]" size={"24px"} />
                 </div>
               </Link>
+
+          
             </div>
           );
         })}
       </Slider>
+        <div className="absolute left-1/2 translate-x-[-50%] bottom-2 flex items-center">
+          <span className="text-white border-2 rounded-full  mr-1  size-[60px] flex items-center justify-center border-white  "><GoArrowLeft    size={"24px"}/></span>
+          <span className="text-white border-2 rounded-full  ml-1 size-[60px] flex items-center justify-center border-white hover:bg-white transition-all hover:text-black  "><GoArrowRight  size={"24px"}/></span>
+        </div>
     </ContentWrapper >
 
   )

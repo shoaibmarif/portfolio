@@ -62,9 +62,11 @@ export const Homepage = () => {
             />
           </div>
         </div>
-        <div className="relative flex items-center justify-center   w-full min-h-[100vh]" >
-          <div className="flex items-center justify-center text-center text-white flex-col">
-            <h1 className="text-stroke-white uppercase font-extrabold text-6xl bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>Shoaib Arif
+        <div className="relative flex items-center justify-center w-full min-h-[100vh] mt-10" >
+          <div className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"></div>
+          <div className="absolute left-0 rotate-45 bottom-20 z-[0] size-[120px] bg-[#252525] rounded-lg rotating-element "></div>
+          <div className="flex items-center justify-center text-center text-white flex-col z-[10]">
+            <h1 className="mt-8 uppercase font-extrabold text-6xl  bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay={800}>Shoaib Arif
             </h1>
             <div className="text-2xl lg:text-3xl flex font-bold  mt-4 lg:mt-8 " data-aos="fade-up" data-aos-delay="800">
               <Typewriter
@@ -79,10 +81,7 @@ export const Homepage = () => {
               data-aos="fade-up"
               data-aos-delay="900"
             >
-              I break down complex user experinece problems to create integritiy
-              focussed solutions that connect billions of people I break down
-              complex user experinece problems to create integritiy focussed
-              solutions that connect billions of people
+              Bringing Innovative Ideas to Life through Engaging Digital Experiences and Custom Software Solutions that Empower Businesses.
             </p>
 
             <div className="mt-7 lg:mt-10 flex items-center  ">
@@ -109,96 +108,52 @@ export const Homepage = () => {
                   <span className="ml-1 font-semibold relative z-[10] text-base lg:text-base uppercase">Resume</span>
                 </button>
               </span>
-            </div>    
+            </div>   
+            <div className="flex items-center justify-center mt-5">
+            <SocialIcon
+              color={"#0A66C2"}
+              classes="mx-2"
+              url="https://www.linkedin.com/in/shoaibmarif/"
+              icon={<FaLinkedinIn size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#4d4d4d"}
+              url="https://github.com/shoaibmarif"
+              classes="mx-2"
+              icon={<FaGithub size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#E4405F"}
+              url="https://www.instagram.com/shoaibmarif/"
+              classes="mx-2"
+              icon={<FaInstagram size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#1DA1F2"}
+              url="https://x.com/mshoaibmarif"
+              classes="mx-2"
+              icon={<FaTwitter size={18} className="dark:text-white " />}
+            />
+            <SocialIcon
+              color={"#E7700D"}
+              url="https://stackoverflow.com/users/7770942/shoaib-arif"
+              classes="mx-2"
+              icon={<FaStackOverflow size={18} className="dark:text-white " />}
+            />
+            </div> 
           </div>
         </div>
       </ContentWrapper>
-     <div className="px-8 w-full md:flex items-center justify-between xl:px-20  py-10 rounded-lg  bg-[#1f1f1f] " data-aos="fade-up" data-aos-offset="-200" data-aos-delay="1500">
-              <div className="text-white flex items-center">
-                <span className="hidden lg:block">
-                  <ExperienceSvg color={"#fff"} size={"50px"} />
-                </span>
-                <div className="flex items-center  lg:items-start  flex-col lg:ml-2 font-semibold uppercase">
-                  <span className="text-2xl font-bold mb-1  ">
-                    <CountUp
-                      scrollSpyOnce={true}
-                      enableScrollSpy={true}
-                      delay={1}
-                      end={4}
-                    />
-                    +
-                  </span>
-                  Experience
-                </div>
-              </div>
-              <span className="bg-white w-[3px] rounded-full counter__line  "></span>
-              <div className="text-white flex items-center ">
-                <span className="hidden lg:block">
-                  <ProjectSvg color={"#fff"} size="50px" />
-                </span>
-
-                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
-                  <span className="text-2xl font-bold mb-1  ">
-                    <CountUp
-                      scrollSpyOnce={true}
-                      enableScrollSpy={true}
-                      end={50}
-                      delay={1}
-                    />
-                    +
-                  </span>
-                  Project Completed
-                </div>
-              </div>
-              <span className="bg-white w-[3px] rounded-full counter__line  "></span>
-
-              <div className="text-white flex items-center  ">
-                <span className="hidden lg:block">
-                  <HappySvg color="#fff" size="50px" />
-                </span>
-
-                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
-                  <span className="text-2xl font-bold mb-1  ">
-                    <CountUp
-                      scrollSpyOnce={true}
-                      enableScrollSpy={true}
-                      end={20}
-                      delay={1}
-                    />
-                    +
-                  </span>
-                  Happy Clients
-                </div>
-              </div>
-              <span className="bg-white w-[4px] rounded-full counter__line "></span>
-              <div className="text-white flex items-center  ">
-                <span className="hidden lg:block">
-                  <OpenSourceSvg color={"#fff"} size="50px" />
-                </span>
-                <div className="flex items-center  lg:items-start flex-col lg:ml-2 font-semibold uppercase">
-                  <span className="text-2xl font-bold mb-1 ">
-                    <CountUp
-                      scrollSpyOnce={true}
-                      delay={1}
-                      enableScrollSpy={true}
-                      end={25}
-                    />
-                    +
-                  </span>
-                  Open Source
-                </div>
-              </div>
-            </div>
     </React.Fragment>
   );
 };
 
-const SocialIcon = ({ icon, color, url }) => {
+const SocialIcon = ({ icon, color, url , classes}) => {
   return (
     <Link
       to={url}
       style={{ "--hover-color": color, }}
-      className={`bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all duration-300 `} >
+      className={`${classes} bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all duration-300 `} >
       {icon}
     </Link>
   );

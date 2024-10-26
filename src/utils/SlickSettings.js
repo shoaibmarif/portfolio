@@ -3,7 +3,7 @@ export const certifcatesSettings = {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    rows: 2,
+    rows: 1,
     arrows: false,
     slidesToScroll: 1,
     responsive: [
@@ -13,7 +13,6 @@ export const certifcatesSettings = {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
-                rows: 2, // Set to 1 row for larger screens
             },
         },
         {
@@ -22,7 +21,6 @@ export const certifcatesSettings = {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
-                rows: 2, // Set to 1 row for this breakpoint as well
             },
         },
         {
@@ -30,7 +28,6 @@ export const certifcatesSettings = {
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                rows: 1, // Set to 1 row
             },
         },
         {
@@ -38,7 +35,6 @@ export const certifcatesSettings = {
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                rows: 1, // Set to 1 row
             },
         },
         {
@@ -46,7 +42,6 @@ export const certifcatesSettings = {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                rows: 1, // Set to 1 row for mobile
             },
         },
     ],
