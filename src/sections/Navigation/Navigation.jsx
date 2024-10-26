@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Toggler } from "../../shared/Toggler/Toggler.jsx";
 import Profile from "../../../public/images/profile.png";
 import { navLinks } from "../../config/data.ts";
@@ -8,6 +8,8 @@ import "./Navigation.css"
 export const Navigation = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("/");
+  const [panelFlag, setPanelFlag] = useState(false);
+  const checkboxRef = useRef(null);
 
   const handleNavigation = (href) => {
     navigate(href);
@@ -23,6 +25,11 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
         top: offsetPosition,
         behavior: 'smooth',
       });
+    }
+  };
+  const handleClick = () => {
+    if (checkboxRef.current) {
+      setPanelFlag(checkboxRef.current.checked);
     }
   };
 
@@ -88,13 +95,38 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             );
           })}
         </ul>
-        <div><label class="burger" for="burger">
-          <input type="checkbox" id="burger" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        </div>
+        <div onClick={handleClick}>
+      <label className="burger" htmlFor="burger">
+        <input
+          type="checkbox"
+          id="burger"
+          ref={checkboxRef} 
+        />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+      </div>
+      <div className={`fixed w-[300px] h-[100vh] bg-[#1a1a1a] top-0 transition-all duration-700`} style={{left:`${panelFlag ? "0px" : "-300px"}`}}>
+      <ul className="p-5 text-xl ">
+          {navLinks.map((nav, index) => {
+            return (
+              <li className="mx-2 py-5 text-white text-center " key={index}>
+                <button
+                  onClick={() => handleNavigation(nav.href)}
+                  className={`
+                    ${activeLink === nav.href ? 'text-primary-dark font-bold' : ''}`} // Active class applied here
+                >
+                  <span className={`font-semibold transition-all`}>
+                    {nav.name}
+                  </span>
+                  <div className="w-[150px] mx-auto bg-white h-[1px] mt-2"></div>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </ContentWrapper>
     </React.Fragment>
