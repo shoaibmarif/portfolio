@@ -41,31 +41,11 @@ export const About = () => {
     {
       id: 4,
       name: "Manhattan Communication Pvt. Ltd",
-      startDate: "March 2021",
+      startDate: "March 2020",
       endDate: "June 2022",
       position: "Frontend Developer",
       imgSrc: manhattan,
       companyLink: "https://manhattan-mcl.com/"
-
-    },
-    {
-      id: 5,
-      name: "Softtech Worldwide",
-      startDate: "Dec 2020",
-      endDate: "March 2021",
-      position: "Frontend Developer (Intern)",
-      imgSrc: softtech,
-      companyLink: "https://manhattan-mcl.com/"
-
-    },
-    {
-      id: 6,
-      name: "Cipher Labs",
-      startDate: "June 2020",
-      endDate: "Aug 2020",
-      position: "Frontend Developer (Intern)",
-      imgSrc: cipher,
-      companyLink: "https://cipherlabs.org/"
 
     },
   ];

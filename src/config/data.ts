@@ -1,27 +1,39 @@
+import progressive from "../../public/images/services/progressive.svg"
+import Ecommerce from "../../public/images/services/e-commerce.svg"
+import Seo from "../../public/images/services/seo.svg"
+import responsive from "../../public/images/services/responsive.svg"
+import solutions from "../../public/images/services/solutions.svg"
+import admin from "../../public/images/services/admin.svg"
 const servicesData = [
     {
         title: "Personalize Solutions",
-        text: "We provide customized digital solutions tailored to your specific business needs. Our team works closely with you to understand your goals and create personalized strategies that drive growth, efficiency, and innovation.",
+        text: "We provide customized digital solutions tailored to your specific business needs. Our team works cl innovation.",
+        imgUrl:solutions
     },
     {
         title: "E-Commerce Website",
-        text: "Build a seamless online shopping experience with our robust e-commerce solutions. From product catalog management to secure payment gateways, we create user-friendly and responsive websites to enhance customer engagement and boost sales.",
+        text: "Build a seamless online shopping experience with our robust e-commerce solutions. From product catalog managence customer engagement and boost sales.",
+        imgUrl:Ecommerce
     },
     {
         title: "SEO-Friendly Code",
-        text: "Our development process ensures that all code is optimized for search engines, improving your website's visibility and ranking. With clean, efficient, and well-structured code, we help your website achieve better performance and faster load times.",
+        text: "Our development process ensures that all code is optimized for search engines, improving your website's visibi optimized for search engines, litybsite achieve better performance and faster load times.",
+        imgUrl:Seo
     },
     {
         title: "Admin Panel",
-        text: "Manage your website or application effortlessly with our intuitive and powerful admin panels. We create custom admin dashboards that provide comprehensive control, real-time data analytics, and a seamless user experience.",
+        text: "Manage your website or application effortlessly with our intuitive and powerful admin panels. We create custom admin dashbamless user experience.",
+        imgUrl:admin
     },
     {
         title: "Progressive Web App",
-        text: "Experience the best of both worlds with our Progressive Web App (PWA) development. Our PWAs combine the look and feel of an app with the reach and accessibility of the web, offering fast loading, offline functionality, and high performance across all devices.",
+        text: "Experience the best of both worlds with our Progressibine thng fast loading, offline functionality, and high performance across all devices.",
+        imgUrl:progressive
     },
     {
         title: "User-Friendly Design",
-        text: "We focus on creating visually appealing and intuitive designs that enhance the user experience. Our design process prioritizes usability, accessibility, and aesthetics, ensuring that your website or app is easy to navigate and engages your audience effectively.",
+        text: "We focus on creating visually appealing and intuitive designs t your website or app is easy to navigate and engages your audience effectively.",
+        imgUrl:responsive
     }
 ];
 
