@@ -1,10 +1,35 @@
-import React from 'react';
+import React , {useRef} from 'react';
 import { ContentWrapper } from '../../shared/ContentWrapper';
 import { MdOutlineMail } from "react-icons/md";
 import { TopHeading } from "../../shared/TopHeading";
 import { MdOutlinePhone } from "react-icons/md";
+import emailjs from 'emailjs-com';
+
 
 export const ContactUs = () => {
+    const form = useRef();
+
+    // Function to handle sending the email
+    const sendEmail = (e) => {
+      e.preventDefault(); // Prevents the page from refreshing on form submission
+  
+      // Use emailjs to send the form data
+      emailjs.sendForm(
+        'portfolio_shoaib',    // Replace with your EmailJS Service ID
+        'template_ml32ypq',   // Replace with your EmailJS Template ID
+        form.current,         // Reference to the form element
+        'AdVjL5rFnkyVHS9mI'     // Replace with your EmailJS Public Key (User ID)
+      ).then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          alert('An error occurred. Please try again.');
+        }
+      );
+    };
     return (
         <ContentWrapper classes={"py-16"}>
             <TopHeading title={"Contact"} />
@@ -45,11 +70,11 @@ export const ContactUs = () => {
                         <h2 className="mb-8 text-xl font-semibold text-gray-800 dark:text-neutral-200 ">
                             Fill in the form
                         </h2>
-                        <form className='w-full'>
+                        <form className='w-full' ref={form} onSubmit={sendEmail}>
                             <div className="grid gap-4">
-                                <InputField type="text" classes={""} placeholder="First Name" />
-                                <InputField type="email" placeholder="Enter Email" />
-                                <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" className=" py-3 px-4 block w-full rounded-lg text-sm border-transparent border-[2px] outline-none focus:border-primary-dark" placeholder="Enter Details"></textarea>
+                                <InputField name={"name"} type="text" classes={""} placeholder="First Name" />
+                                <InputField name={"email"} type="email" placeholder="Enter Email" />
+                                <textarea  id="details" name="details" rows="4" className=" py-3 px-4 block w-full rounded-lg text-sm border-transparent border-[2px] outline-none focus:border-primary-dark" placeholder="Enter Details"></textarea>
                             </div>
 
                             <div className="mt-4 grid">
@@ -70,8 +95,8 @@ export const ContactUs = () => {
 }
 
 
-const InputField = ({ type, classes, id, placeholder }) => {
+const InputField = ({ type, classes, id, placeholder,name }) => {
     return (
-        <input placeholder={placeholder} type={type} className={`${classes} py-3 px-4 block w-full rounded-lg border-[2px] border-transparent text-sm outline-none focus:border-2 focus:border-primary-dark`} id={id} />
+        <input name={name} placeholder={placeholder} type={type} className={`${classes} py-3 px-4 block w-full rounded-lg border-[2px] border-transparent text-sm outline-none focus:border-2 focus:border-primary-dark`} id={id} />
     )
 }
