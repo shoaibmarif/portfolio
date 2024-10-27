@@ -22,6 +22,8 @@ export const Homepage = () => {
   }, []);
   return (
     <React.Fragment>
+
+      
       <ContentWrapper classes={"bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]"}>
         <div className="absolute left-16 top-1/2 translate-y-[-50%]  z-[10] hidden xl:block " >
           <div data-aos="zoom-in-right" data-aos-delay="1500" data-aos-duration="700" >
@@ -45,6 +47,7 @@ export const Homepage = () => {
               url="https://github.com/shoaibmarif"
               icon={<FaGithub size={18} className="dark:text-white " />}
             />
+            
             <SocialIcon
               color={"#E4405F"}
               url="https://www.instagram.com/shoaibmarif/"
