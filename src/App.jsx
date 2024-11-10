@@ -23,6 +23,7 @@ const App = () => {
   const [showTopLayer, setShowTopLayer] = useState(true);
 
   useEffect(() => {
+    alert("Website still in development")
     AOS.init(
       {once:true,
         disable:"mobile"
