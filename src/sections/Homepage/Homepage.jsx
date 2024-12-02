@@ -79,7 +79,7 @@ export const Homepage = () => {
           <div className="flex lg:basis-1/2">
             <div className="flex items-start justify-start text-white flex-col z-[10]">
               <h1
-                className="mt-8 uppercase font-extrabold text-8xl  bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text"
+                className="mt-8 uppercase font-extrabold text-7xl  bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text"
                 data-aos="zoom-in-right"
                 data-aos-duration="1000"
                 data-aos-delay={800}
@@ -87,7 +87,7 @@ export const Homepage = () => {
                 Shoaib Arif
               </h1>
               <div
-                className="text-2xl lg:text-3xl flex font-bold mt-4 lg:mt-8 "
+                className="text-2xl lg:text-2xl flex font-bold mt-4 lg:mt-8 "
                 data-aos="fade-up"
                 data-aos-delay="800"
               >
@@ -104,7 +104,7 @@ export const Homepage = () => {
                 />
               </div>
               <p
-                className="max-w-[800px]  text-base lg:text-base xl:text-lg mt-5 text-black dark:text-gray-300  transition-all"
+                className="max-w-[800px]  text-base lg:text-base mt-5 text-black dark:text-gray-300  transition-all"
                 data-aos="fade-up"
                 data-aos-delay="900"
               >
@@ -168,16 +168,44 @@ export const Homepage = () => {
           </div>
 
           <div className="flex lg:basis-1/2 items-center justify-center">
-            <img
-              className="rounded-full max-w-[400px]"
-              src={Profile}
-              alt="Shoaib Arif Profile"
-            />
+            <div
+              className="border-4 border-white p-8 rounded-full relative"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay={1200}
+            >
+              <div className="absolute size-[26px] left-[-13px] top-1/2 rounded-full bg-primary-dark "></div>
+              <div className="absolute size-[26px] left-[-13px] top-1/2 rounded-full bg-primary-dark animate-ping  "></div>
+              <div className="absolute size-[26px] right-[9%] top-[80%] rounded-full bg-primary-dark "></div>
+              <div className="absolute size-[26px] right-[9%] top-[80%] rounded-full bg-primary-dark animate-ping "></div>
+              <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark "></div>
+              <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark animate-ping "></div>
+              <img
+                className="rounded-full max-w-[400px]"
+                src={Profile}
+                alt="Shoaib Arif Profile"
+              />
+            </div>
           </div>
-          <div className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"></div>
-          <div className="absolute left-0 rotate-45 bottom-20 z-[0] size-[120px] bg-[#252525] rounded-lg rotating-element "></div>
+          <div
+            className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-delay={1000}
+          ></div>
+          <div
+            className="absolute left-0 rotate-45 bottom-20 z-[0] size-[120px] bg-[#252525] rounded-lg rotating-element "
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-delay={1000}
+          ></div>
         </div>
-        <div className=" h-[170px] w-full absolute z-[999] left-0 bottom-[20px]">
+        <div
+          className=" h-[170px] w-full absolute z-[999] left-0 bottom-[20px] "
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-delay={1000}
+        >
           <div className="container mx-auto h-full">
             <div className="bg-[#181818] rounded-lg h-full flex items-center justify-evenly text-center shadow-lg ">
               <div className="">
