@@ -17,7 +17,7 @@ export const About = () => {
       endDate: "Present",
       position: "Senior Frontend Developer",
       imgSrc: Horeca,
-      companyLink: "https://horecastore.ae/"
+      companyLink: "https://horecastore.ae/",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export const About = () => {
       endDate: "March 2024",
       position: "Frontend Developer",
       imgSrc: Daraz,
-      companyLink: "https://www.daraz.pk/"
+      companyLink: "https://www.daraz.pk/",
     },
     {
       id: 3,
@@ -35,8 +35,7 @@ export const About = () => {
       endDate: "June 2023",
       position: "Frontend Developer",
       imgSrc: CC,
-      companyLink: "https://www.cooperativecomputing.com/"
-
+      companyLink: "https://www.cooperativecomputing.com/",
     },
     {
       id: 4,
@@ -45,12 +44,9 @@ export const About = () => {
       endDate: "June 2022",
       position: "Frontend Developer",
       imgSrc: manhattan,
-      companyLink: "https://manhattan-mcl.com/"
-
+      companyLink: "https://manhattan-mcl.com/",
     },
   ];
-
-
 
   return (
     <React.Fragment>
@@ -60,61 +56,89 @@ export const About = () => {
           <div className="col-span-6 lg:col-span-3">
             <div className=" flex  justify-start h-full flex-col ">
               {/* <h2 className="text-primary-dark text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Overview</h2> */}
-              <p className="text-gray-300  text-sm md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
-                With extensive experience in Elementor and WooCommerce, I ensure
-                that every website is designed to provide a seamless user
-                experience, As a seasoned WordPress developer, I specialize in
-                crafting custom websites and building dynamic plugins tailored
-                to the unique needs of businesses.
+              <p
+                className="text-gray-300  text-sm md:text-sm lg:text-[15px] "
+                data-aos="fade-right"
+                data-aos-duration="700"
+              >
+                I’m an experienced Software Engineer building solutions that
+                reshape how businesses engage with web and mobile platforms,
+                creating interactive experiences that resonate with users and
+                drive results.
               </p>
-              <p className="text-gray-300 mt-5  text-sm md:text-sm lg:text-[15px]" data-aos="fade-right" data-aos-duration="700">
-                With extensive experience in Elementor and WooCommerce, I ensure
-                that every website is designed to provide a seamless user
-                experience, As a seasoned WordPress developer, I specialize in
-                crafting custom websites and building dynamic plugins tailored
-                to the unique needs of businesses.
+              <p
+                className="text-gray-300 mt-5  text-sm md:text-sm lg:text-[15px]"
+                data-aos="fade-right"
+                data-aos-duration="700"
+              >
+                With a Bachelor's degree in Computer Science and a strong
+                foundation in front-end development, I specialize in delivering
+                high-performing, user-friendly, and responsive applications.
               </p>
 
               {/* <h2 className="text-primary-dark text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Education</h2> */}
-              <p className="text-gray-300 mt-5 text-sm md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
-                With extensive experience in Elementor and WooCommerce, I ensure
-                that every website is designed to provide a seamless user
-                experience, As a seasoned WordPress developer, I specialize in
-                crafting custom websites and building dynamic plugins tailored
-                to the unique needs of businesses.
+              <p
+                className="text-gray-300 mt-5 text-sm md:text-sm lg:text-[15px] "
+                data-aos="fade-right"
+                data-aos-duration="700"
+              >
+                Technical Skills:
               </p>
-              <p className="text-gray-300 mt-5 text-sm md:text-sm lg:text-[15px] " data-aos="fade-right" data-aos-duration="700">
-                With extensive experience in Elementor and WooCommerce, I ensure
-                that every website is designed to provide a seamless user
-                experience, As a seasoned WordPress developer, I specialize in
-                crafting custom websites and building dynamic plugins tailored
-                to the unique needs of businesses.
-              </p>
-
-
-
+              <div className="flex items-center flex-wrap text-white  mt-8 gap-4">
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  HTML
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  CSS
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Javascript
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Jquery
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  React JS
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Node JS
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Bootstrap
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Next JS
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Redux
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Azure
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Material UI
+                </span>
+                <span className="bg-gray-700 px-6 rounded-full py-1 text-base">
+                  Tailwind
+                </span>
+              </div>
             </div>
           </div>
           <div className="col-span-6 lg:col-span-3">
-
             {/* <h2 className="text-primary-dark  text-2xl font-bold underline underline-offset-4 my-5" data-aos="fade-up">Experience</h2> */}
             {experience.map((exp, index) => {
-              return (
-                <Timeline key={index} experience={exp} />
-              )
+              return <Timeline key={index} experience={exp} />;
             })}
           </div>
-
-
         </div>
-      </ContentWrapper >
+      </ContentWrapper>
     </React.Fragment>
   );
 };
 
-
 const Timeline = ({ experience }) => {
-  const { name, startDate, endDate, position, imgSrc, description } = experience;
+  const { name, startDate, endDate, position, imgSrc, description } =
+    experience;
   return (
     <React.Fragment>
       <div className="flex ">
@@ -132,21 +156,27 @@ const Timeline = ({ experience }) => {
           </div>
         </div>
 
-        <div data-aos="fade-right" data-aos-duration="700" className=" bg-[#1F1F1F] overflow-hidden  transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[400px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-50%] after:right-[-300px] after:transition-all">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          className=" bg-[#1F1F1F] overflow-hidden  transition-all text-white w-full rounded-lg mt-5 flex items-center px-4 py-7 after:size-[400px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-50%] after:right-[-300px] after:transition-all"
+        >
           <div>
             <img src={imgSrc} className="w-16 mr-5 rounded-full" alt="" />
           </div>
           <div className="">
-            <h3 className=" font-semibold text-primary-dark text-sm md:text-base lg:text-lg ">{position}</h3>
-            <p className="text-[13px] text-gray-300 md:text-md lg:text-[15px]">{name}</p>
+            <h3 className=" font-semibold text-primary-dark text-sm md:text-base lg:text-lg ">
+              {position}
+            </h3>
+            <p className="text-[13px] text-gray-300 md:text-md lg:text-[15px]">
+              {name}
+            </p>
             <span className="text-xs block md:hidden text-white font-semibold">
               {startDate} - {endDate}
             </span>
           </div>
         </div>
       </div>
-
     </React.Fragment>
-
-  )
-}
+  );
+};

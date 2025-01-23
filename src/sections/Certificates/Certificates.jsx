@@ -171,7 +171,7 @@ export const Certificates = () => {
                   alt=""
                 />
                 <p className="text-sm text-primary-dark  font-semibold mt-8">
-                  30px {certificate.issueDate}
+                  {certificate.issueDate}
                 </p>
                 <p className="text-lg font-semibold text-gray-300 mt-0 ">
                   {certificate.name}

@@ -6,33 +6,33 @@ import solutions from "../../public/images/services/solutions.svg"
 import admin from "../../public/images/services/admin.svg"
 const servicesData = [
     {
-        title: "Personalize Solutions",
-        text: "We provide customized digital solutions tailored to your specific business needs. Our team works cl innovation.",
+        title: "Custom-Tailored Solutions",
+        text: "A bespoke approach that goes beyond generic templates, enabling us to create solutions as unique as your vision.",
         imgUrl:solutions
     },
     {
         title: "E-Commerce Website",
-        text: "Build a seamless online shopping experience with our robust e-commerce solutions. From product catalog managence customer engagement and boost sales.",
+        text: "Create intuitive online stores with streamlined catalog management and tools to engage customers and boost sales effortlessly.",
         imgUrl:Ecommerce
     },
     {
         title: "SEO-Friendly Code",
-        text: "Our development process ensures that all code is optimized for search engines, improving your website's visibi optimized for search engines, litybsite achieve better performance and faster load times.",
+        text: "Craft clean, efficient code designed to enhance your website's SEO performance, improve visibility, and drive organic traffic.",
         imgUrl:Seo
     },
     {
         title: "Admin Panel",
-        text: "Manage your website or application effortlessly with our intuitive and powerful admin panels. We create custom admin dashbamless user experience.",
+        text: "Develop a custom user-friendly admin panel that offers seamless management, real-time analytics, and full control over your digital platform with ease.",
         imgUrl:admin
     },
     {
         title: "Progressive Web App",
-        text: "Experience the best of both worlds with our Progressibine thng fast loading, offline functionality, and high performance across all devices.",
+        text: "Design fast, reliable web apps with offline functionality, offering a native app-like experience accessible on any platform with a compliant browser.",
         imgUrl:progressive
     },
     {
         title: "User-Friendly Design",
-        text: "We focus on creating visually appealing and intuitive designs t your website or app is easy to navigate and engages your audience effectively.",
+        text: "Build interfaces that are simple to navigate and optimized for user satisfaction, creating seamless experiences across all devices and platforms.",
         imgUrl:responsive
     }
 ];
