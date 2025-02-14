@@ -34,11 +34,14 @@ export default {
       },
     },
     screens: {
-      "sm": '640px',
-      "md": '768px',
-      "lg": '1024px',
-      "xl": '1280px',
-      '2xl': '1480px',
+      "xs": "360px", // Small mobile devices
+      "sm": "480px", // Large mobile devices
+      "md": "768px", // Tablets
+      "lg": "1024px", // Laptops
+      "xl": "1280px", // Desktops
+      "2xl": "1536px", // Large screens
+      "3xl": "1920px", // 1080p Full HD
+      "4xl": "2560px", // 2K monitors
     },
   },
   plugins: [],

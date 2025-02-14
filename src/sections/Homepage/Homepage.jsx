@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { Link } from "react-router-dom";
+import { SlCloudDownload } from "react-icons/sl";
 import {
   FaLinkedinIn,
   FaGithub,
@@ -75,8 +76,8 @@ export const Homepage = () => {
           </div>
         </div>
 
-        <div className="relative flex items-center  w-full min-h-[100vh] ">
-          <div className="flex lg:basis-1/2">
+        <div className="relative flex items-center xs:flex-col lg:flex-row w-full min-h-[100vh] ">
+          <div className="flex lg:basis-1/2 order-1">
             <div className="flex items-start justify-start text-white flex-col z-[10]">
               <h1
                 className="mt-8 uppercase font-extrabold text-7xl  bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text"
@@ -119,7 +120,13 @@ export const Homepage = () => {
                   data-aos-duration="1000"
                   data-aos-delay="1200"
                 >
-                  <button
+
+                <button className="w-[200px] duration-500 h-[50px] bg-violet-800 rounded-md flex items-center relative group transition-all">
+                  <span className="absolute top-50 left-5 ">Resume</span>
+                  <span className="flex items-center justify-center absolute right-0 bg-violet-900 duration-500 h-full w-[50px] group-hover:w-full group-hover:rounded-l-md transition-all rounded-r-md"><SlCloudDownload className="size-6 duration-500 transition-all group-hover:size-8" /></span>
+                </button>
+
+                  {/* <button
                     className=" duration-500 flex items-center justify-center min-w-[200px] px-2 transition-all py-4 md:py-3 lg:py-4 rounded-sm  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[5px_5px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                   >
@@ -127,7 +134,7 @@ export const Homepage = () => {
                     <span className="ml-1 font-semibold relative z-[10] text-base lg:text-base uppercase">
                       Resume
                     </span>
-                  </button>
+                  </button> */}
                 </span>
               </div>
               <div className="flex items-center justify-center mt-5 lg:hidden">
@@ -167,7 +174,7 @@ export const Homepage = () => {
             </div>
           </div>
 
-          <div className="flex lg:basis-1/2 items-center justify-center">
+          <div className="flex lg:basis-1/2  items-center justify-center lg:order-2">
             <div
               className="border-4 border-white p-8 rounded-full relative"
               data-aos="zoom-in"
@@ -181,7 +188,7 @@ export const Homepage = () => {
               <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark "></div>
               <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark animate-ping "></div>
               <img
-                className="rounded-full max-w-[400px]"
+                className="rounded-full xs:max-w-full max-w-[400px]"
                 src={Profile}
                 alt="Shoaib Arif Profile"
               />
