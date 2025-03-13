@@ -10,15 +10,7 @@ import { TopHeading } from "../../shared/TopHeading";
 
 export const About = () => {
   const experience = [
-    {
-      id: 1,
-      name: "Horeca Store",
-      startDate: "March 2024",
-      endDate: "Present",
-      position: "Senior Frontend Developer",
-      imgSrc: Horeca,
-      companyLink: "https://horecastore.ae/",
-    },
+
     {
       id: 2,
       name: "Daraz",
