@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { Link } from "react-router-dom";
 import { SlCloudDownload } from "react-icons/sl";
+import Particles from "../../components/Particles";
+import GradientText from "../../components/GradientText";
 import {
   FaLinkedinIn,
   FaGithub,
@@ -13,6 +15,8 @@ import {
 import { LuDownload } from "react-icons/lu";
 import CountUp from "react-countup";
 import Profile from "../../../public/images/profile.png";
+import SplitText from "../../components/SplitText";
+import RotatingText from "../../components/RotatingText"
 
 export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,109 +28,144 @@ export const Homepage = () => {
   }, []);
   return (
     <React.Fragment>
-      <ContentWrapper
-        classes={
-          "bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010] relative "
-        }
-      >
+
+      <ContentWrapper classes={" relative"}>
+        {/* <div style={{ left:0,top:0, width: '100%', height: '100%', position: 'absolute', zIndex:1,overflow:"hidden"}}>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={1000}
+          particleSpread={15}
+          speed={.2}
+          particleBaseSize={50}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+    </div> */}
         <div className="absolute left-16 top-1/2 translate-y-[-50%] z-[10] hidden xl:block ">
-          <div
+          {/* <div
             data-aos="zoom-in-right"
             data-aos-delay="1500"
             data-aos-duration="700"
-          >
-            <span
-              className={`w-[2px] bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
-                    transition-all duration-700  delay-1000 ease-out ${
-                      isVisible ? "h-24" : "h-0"
-                    }`}
-            ></span>
-            <span
-              className={`w-[2px] bg-white top-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
-                    transition-all duration-700  delay-1000 ease-out ${
-                      isVisible ? "h-24" : "h-0"
-                    }`}
-            ></span>
-            <SocialIcon
-              color={"#0A66C2"}
-              url="https://www.linkedin.com/in/shoaibmarif/"
-              icon={<FaLinkedinIn size={18} className="dark:text-white " />}
-            />
-            <SocialIcon
-              color={"#4d4d4d"}
-              url="https://github.com/shoaibmarif"
-              icon={<FaGithub size={18} className="dark:text-white " />}
-            />
+          > */}
+          <span
+            className={`w-[2px] bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
+                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+              }`}
+          ></span>
+          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white top-[-44%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
+          <span
+            className={`w-[2px] bg-white top-[-40%] left-1/2 translate-x-[-50%] absolute rounded-full
+                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
+              }`}
+          ></span>
+          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white bottom-[-48%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
 
-            <SocialIcon
-              color={"#E4405F"}
-              url="https://www.instagram.com/shoaibmarif/"
-              icon={<FaInstagram size={18} className="dark:text-white " />}
-            />
-            <SocialIcon
-              color={"#1DA1F2"}
-              url="https://x.com/mshoaibmarif"
-              icon={<FaTwitter size={18} className="dark:text-white " />}
-            />
-            <SocialIcon
-              color={"#E7700D"}
-              url="https://stackoverflow.com/users/7770942/shoaib-arif"
-              icon={<FaStackOverflow size={18} className="dark:text-white " />}
-            />
-          </div>
+          <SocialIcon
+          delay={500}
+            color={"#0A66C2"}
+            url="https://www.linkedin.com/in/shoaibmarif/"
+            icon={<FaLinkedinIn size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+          delay={700}
+            color={"#4d4d4d"}
+            url="https://github.com/shoaibmarif"
+            icon={<FaGithub size={18} className="dark:text-white " />}
+          />
+
+          <SocialIcon
+          delay={900}
+            color={"#E4405F"}
+            url="https://www.instagram.com/shoaibmarif/"
+            icon={<FaInstagram size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+          delay={1100}
+            color={"#1DA1F2"}
+            url="https://x.com/mshoaibmarif"
+            icon={<FaTwitter size={18} className="dark:text-white " />}
+          />
+          <SocialIcon
+          delay={1300}
+            color={"#E7700D"}
+            url="https://stackoverflow.com/users/7770942/shoaib-arif"
+            icon={<FaStackOverflow size={18} className="dark:text-white " />}
+          />
+          {/* </div> */}
         </div>
 
-        <div className="relative flex items-center xs:flex-col lg:flex-row w-full min-h-[100vh] ">
-          <div className="flex lg:basis-1/2 order-1">
-            <div className="flex items-start justify-start text-white flex-col z-[10]">
-              <h1
-                className="mt-8 uppercase font-extrabold text-7xl  bg-gradient-to-r bg-indigo-500 from-violet-800 via-secondary-dark to-purple-500 inline-block text-transparent bg-clip-text"
-                data-aos="zoom-in-right"
+        <div className="relative flex items-center justify-center text-center w-full min-h-[100vh]" > 
+
+          {<div className="flex items-center justify-center text-white flex-col z-[10]">
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+          <GradientText
+            colors={["#962cff", "#df5dff", "#6407f9ff", "#df5dff","#962cff"]}
+            animationSpeed={5}
+            showBorder={false}
+            loop={true}
+            className="text-8xl uppercase !font-extrabold" 
+            // style={{textShadow: "0px 0px 20px #CE5937"}} 
+          >
+            Shoaib Arif
+          </GradientText>
+            </div>
+            <div
+              className="text-2xl lg:text-4xl flex font-bold mt-6 "
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="1100"
+            >
+              <Typewriter
+                options={{
+                  strings: [
+                    "Frontend Developer",
+                    "React Developer",
+                    "Full Stack Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+            <p
+              className="max-w-[600px]  lg:text-lg mt-6 text-black dark:text-gray-300  transition-all"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="1300"
+            >
+              Bringing Innovative Ideas to Life through Engaging Digital
+              Experiences and Custom Software Solutions that Empower
+              Businesses.
+            </p>
+
+            <button
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="1500" type="button" class="btn mt-12">
+            <span className="font-semibold">Download Resume</span>
+
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</button>
+
+               
+            <div className="mt-7 lg:mt-10 flex items-center  ">
+              <span
+                data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay={800}
+                data-aos-delay="1200"
               >
-                Shoaib Arif
-              </h1>
-              <div
-                className="text-2xl lg:text-2xl flex font-bold mt-4 lg:mt-8 "
-                data-aos="fade-up"
-                data-aos-delay="800"
-              >
-                <Typewriter
-                  options={{
-                    strings: [
-                      "Frontend Developer",
-                      "React Developer",
-                      "Full Stack Developer",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-              <p
-                className="max-w-[800px]  text-base lg:text-base mt-5 text-black dark:text-gray-300  transition-all"
-                data-aos="fade-up"
-                data-aos-delay="900"
-              >
-                Bringing Innovative Ideas to Life through Engaging Digital
-                Experiences and Custom Software Solutions that Empower
-                Businesses.
-              </p>
 
-              <div className="mt-7 lg:mt-10 flex items-center  ">
-                <span
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="1200"
-                >
-
-                <button className="w-[200px] duration-500 h-[50px] bg-violet-800 rounded-md flex items-center relative group transition-all">
+                {/* <button className="w-[200px] duration-500 h-[50px] bg-violet-800 rounded-md flex items-center relative group transition-all">
                   <span className="absolute top-50 left-5 ">Resume</span>
                   <span className="flex items-center justify-center absolute right-0 bg-violet-900 duration-500 h-full w-[50px] group-hover:w-full group-hover:rounded-l-md transition-all rounded-r-md"><SlCloudDownload className="size-6 duration-500 transition-all group-hover:size-8" /></span>
-                </button>
+                </button> */}
 
-                  {/* <button
+                {/* <button
                     className=" duration-500 flex items-center justify-center min-w-[200px] px-2 transition-all py-4 md:py-3 lg:py-4 rounded-sm  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
                 shadow-[5px_5px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
                   >
@@ -135,9 +174,9 @@ export const Homepage = () => {
                       Resume
                     </span>
                   </button> */}
-                </span>
-              </div>
-              <div className="flex items-center justify-center mt-5 lg:hidden">
+              </span>
+            </div>
+            {/* <div className="flex items-center justify-center mt-5 lg:hidden">
                 <SocialIcon
                   color={"#0A66C2"}
                   classes="mx-2"
@@ -170,11 +209,10 @@ export const Homepage = () => {
                     <FaStackOverflow size={18} className="dark:text-white " />
                   }
                 />
-              </div>
-            </div>
-          </div>
+              </div> */}
+          </div>}
 
-          <div className="flex lg:basis-1/2  items-center justify-center lg:order-2">
+          {/* <div className="flex lg:basis-1/2  items-center justify-center lg:order-2">
             <div
               className="border-4 border-white p-8 rounded-full relative"
               data-aos="zoom-in"
@@ -193,7 +231,7 @@ export const Homepage = () => {
                 alt="Shoaib Arif Profile"
               />
             </div>
-          </div>
+          </div> */}
           <div
             className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"
             data-aos="zoom-in-up"
@@ -207,7 +245,10 @@ export const Homepage = () => {
             data-aos-delay={1000}
           ></div>
         </div>
-        <div
+
+       
+
+        {/* <div
           className=" h-[170px] w-full absolute z-[999] left-0 bottom-[20px] "
           data-aos="zoom-in-up"
           data-aos-duration="1000"
@@ -254,21 +295,29 @@ export const Homepage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </ContentWrapper>
     </React.Fragment>
   );
 };
 
-const SocialIcon = ({ icon, color, url, classes }) => {
+const SocialIcon = ({ icon, color, url, classes, delay }) => {
   return (
-    <Link
-      to={url}
-      style={{ "--hover-color": color }}
-      className={`${classes} bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all duration-300 `}
+    <div
+      data-aos="zoom-in-right"
+      data-aos-delay={delay}
+      data-aos-duration="700"
+       data-aos-offset="-100"
     >
-      {icon}
-    </Link>
+
+      <Link
+        to={url}
+        style={{ "--hover-color": color ,boxShadow:"0px 0px 15px 1px  rgba(255,255,255,0.22)"}}
+        className={`${classes}  bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all  duration-300 `}
+      >
+        {icon}
+      </Link>
+    </div>
   );
 };
 

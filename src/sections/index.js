@@ -7,6 +7,7 @@ import { Testimonials } from "./Testimonial/Testimonials";
 import { Services } from "./Services/Services";
 import { Footer } from "./Footer/Footer"
 import { Certificates } from "./Certificates/Certificates";
+import "../index.css"
 
 
 export { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Services, Certificates, Footer }

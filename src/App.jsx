@@ -14,7 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import Particles from "./components/Particles.jsx";
 const App = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
   const [darkMode, setDarkMode] = useState(true);
@@ -23,13 +23,12 @@ const App = () => {
   const [showTopLayer, setShowTopLayer] = useState(true);
 
   useEffect(() => {
-    alert("Website still in development")
     AOS.init({ once: true, disable: "mobile" });
     navigate("/");
 
     const loadingTimeout = setTimeout(() => {
       setShowTopLayer(false);
-    }, 1500);
+    },1000);
 
     return () => {
       clearTimeout(loadingTimeout);
@@ -38,22 +37,47 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <div className={`${darkMode ? "dark" : ""}`}>
-        <React.Fragment>
-          {showTopLayer && (
+         {/* {showTopLayer && (
             <div
-              className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-4 lg:grid-cols-6 top-0 left-0"
+              className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-2 top-0 left-0 z-50"
               ref={topLayer}
             >
-              <div className="col-span-1 bg-[#101010] screen_animation"></div>
-              <div className="col-span-1 bg-[#101010] screen_animation"></div>
-              <div className="col-span-1 bg-[#101010] screen_animation"></div>
-              <div className="col-span-1 bg-[#101010] screen_animation"></div>
-              <div className="col-span-1 bg-[#101010] screen_animation hidden lg:block"></div>
-              <div className="col-span-1 bg-[#101010] screen_animation hidden lg:block"></div>
+              <div className="col-span-1 bg-orange-400 z-50 screen_animation"></div>
+              <div className="col-span-1 bg-orange-400 z-50 screen_animation"></div>
             </div>
-          )}
-          <div className="bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010]">
+          )} */}
+
+          {showTopLayer && (<div ref={topLayer}>
+            <div className="fixed w-1/2 h-[100vh] bg-[#181818] animate_left" style={{zIndex:"999"}}></div>
+            <div className="fixed w-1/2 right-0 h-[100vh] bg-[#181818] animate_right" style={{zIndex:"999"}}></div>
+          </div>)}
+      <div className="absolute w-full h-full z-[1] bg-[#101010]">
+                <Particles
+                  particleColors={['#ffffff', '#ffffff']}
+                  particleCount={4000}
+                  particleSpread={10}
+                  speed={.1}
+                  particleBaseSize={120}
+                  moveParticlesOnHover={false}
+                  alphaParticles={false}
+                  disableRotation={false}
+                  cameraDistance={20}
+                  
+                />
+      </div>
+      
+      <div className={`${darkMode ? "dark" : ""}`}>
+        <React.Fragment>
+          {/* {showTopLayer && (
+            <div
+              className="h-[100vh] w-[100vw] z-[9999] fixed grid grid-cols-2 top-0 left-0 z-50"
+              ref={topLayer}
+            >
+              <div className="col-span-1 bg-orange-400 z-50 screen_animation"></div>
+              <div className="col-span-1 bg-orange-400 z-50 screen_animation"></div>
+            </div>
+          )} */}
+          <div className="">
             <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
             <div id="home">
               <Homepage />

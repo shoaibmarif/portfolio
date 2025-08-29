@@ -5,11 +5,22 @@ import { navLinks } from "../../config/data.ts";
 import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoHome } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { IoPricetagsSharp } from "react-icons/io5";
+import { GrServices } from "react-icons/gr";
+import { MdOutlineRateReview } from "react-icons/md";
+
+
 export const Navigation = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("/");
   const [panelFlag, setPanelFlag] = useState(false);
   const checkboxRef = useRef(null);
+  const [navShow, setNavShow] = useState(false);
 
   const handleNavigation = (href) => {
     navigate(href);
@@ -67,20 +78,43 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
 
   return (
     <React.Fragment>
-      <ContentWrapper
+      <div className={`animate-nav bg-gradient-to-r from-[#962cff] via-[#df5dff] to-[#962cff] absolute top-0 right-0 translate-x-1/2 -translate-y-1/2  transition-all z-[20] w-[220px] h-[220px] rounded-full duration-500 ${navShow ? "w-[600px] h-[600px]" :""}`}></div>
+      <div className="w-[51px] h-[51px] rounded-full flex items-center justify-center text-white absolute top-5 right-5 bg-[#222]  z-50 cursor-pointer" onClick={() => setNavShow(!navShow)}>
+        <RxHamburgerMenu size={24} />
+      </div>
+      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute top-5 bg-[#222] ${navShow ? "right-28" : "right-5"}  transition-all z-40 `}>
+        <IoHome size={24} />
+      </div>
+      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222]  ${navShow ? "top-[83px]" : "top-5"} ${navShow ? "right-20" : "right-5"}  transition-all z-40 `}>
+        <GrServices size={24} />
+      </div>
+     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222] ${navShow ? "top-[120px]" : "top-5"} ${navShow ? "right-5" : "right-5"}  transition-all z-40 `}>
+        <FaUser size={24} />
+      </div>
+
+      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] top-5 ${navShow ? "right-[180px]" : "right-5"}  transition-all z-40 `}>
+        <LiaCertificateSolid size={24} />
+      </div>
+
+     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-24" : "top-5"} ${navShow ? "right-[150px]" : "right-5"}  transition-all z-40 `}>
+        <MdOutlineRateReview size={24} />
+      </div>
+ 
+      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-40" : "top-5"} ${navShow ? "right-24" : "right-5"}  transition-all z-40 `}>
+        <RiCustomerService2Line size={24} />
+      </div>
+
+     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] ${navShow ? "top-[200px]" : "top-5"} right-5  transition-all z-40 `}>
+        <RiCustomerService2Line size={24} />
+      </div>
+      {/* <ContentWrapper
         display={"fixed"}
-        classes="py-4 w-full z-[999] custom__nav__wrapper transition-all   bg-gradient-to-r from-[#101010] via-[#161616] dark:to-[#101010] "
+        classes="py-4 w-full z-[999] transition-all  "
         anim={"fade-down"}
         delay="1000"
       >
-        <div className="mx-auto  flex items-center justify-between text-white py-2 ">
-          <div className="dark:bg-primary-dark bg-primary rounded-full">
-            <img
-              className="size-[50px]"
-              src={Profile}
-              alt="Shoaib Arif Profile"
-            />
-          </div>
+        <div className="mx-auto flex items-center justify-center py-3.5 rounded-full text-white bg-[#252525] ">
+     
           <ul className="lg:flex flex-row items-center hidden">
             {navLinks.map((nav, index) => {
               return (
@@ -140,7 +174,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
             })}
           </ul>
         </div>
-      </ContentWrapper>
+      </ContentWrapper> */}
     </React.Fragment>
   );
 };
