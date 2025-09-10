@@ -23,7 +23,7 @@ const App = () => {
   const [showTopLayer, setShowTopLayer] = useState(true);
 
   useEffect(() => {
-    AOS.init({ once: true, disable: "mobile" });
+    AOS.init({ once: false, disable: "mobile" });
     navigate("/");
 
     const loadingTimeout = setTimeout(() => {
@@ -47,19 +47,19 @@ const App = () => {
             </div>
           )} */}
 
-          {showTopLayer && (<div ref={topLayer}>
+          {/* {showTopLayer && (<div ref={topLayer}>
             <div className="fixed w-1/2 h-[100vh] bg-[#181818] animate_left" style={{zIndex:"999"}}></div>
             <div className="fixed w-1/2 right-0 h-[100vh] bg-[#181818] animate_right" style={{zIndex:"999"}}></div>
-          </div>)}
-      <div className="absolute w-full h-full z-[1] bg-[#101010]">
+          </div>)} */}
+      <div className="absolute w-full h-full z-[1] ">
                 <Particles
                   particleColors={['#ffffff', '#ffffff']}
-                  particleCount={4000}
+                  particleCount={2000}
                   particleSpread={10}
                   speed={.1}
                   particleBaseSize={120}
                   moveParticlesOnHover={false}
-                  alphaParticles={false}
+                  alphaParticles={true}
                   disableRotation={false}
                   cameraDistance={20}
                   
@@ -91,9 +91,9 @@ const App = () => {
             <div id="certificates">
               <Certificates />
             </div>
-            <div id="pricing">
+            {/* <div id="pricing">
               <Pricing />
-            </div>
+            </div> */}
             <div id="testimonials">
               <Testimonials />
             </div>

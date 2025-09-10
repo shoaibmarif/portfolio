@@ -137,11 +137,11 @@ export const Testimonials = () => {
     <ContentWrapper
       innerClass={"relative"}
       classes={
-        "w-full min-h-[90vh] py-16 bg-gradient-to-r from-[#161616] via-[#222] dark:to-[#161616]"
+        "w-full min-h-[100vh] bg-[#1b1b1b] py-16"
       }
     >
       <TopHeading title="Testimonials" />
-      <div className="absolute top-1/2">
+      <div className="absolute top-1/2 z-[100]">
         {/* <span
           className="text-black bg-white relative  z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
           onClick={() => sliderRef.current.slickPrev()}
@@ -155,12 +155,12 @@ export const Testimonials = () => {
           <HiArrowLongRight size={34} />
         </span> */}
       </div>
-      <div className="grid grid-cols-1  ">
+      <div className="grid grid-cols-1 z-[100]">
         <Slider {...settings} ref={sliderRef}>
           {testimonials.map((testimonial, index) => {
             return (
               <div
-                className="col-span-1 px-4 py-2"
+                className="col-span-1 px-4 py-2 "
                 key={index}
                 data-aos="fade-up"
                 data-aos-duration="700"

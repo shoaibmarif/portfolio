@@ -5,9 +5,10 @@ export const Service = ({ service, index }) => {
   return (
     <div
       data-aos="zoom-in"
-      data-aos-duration={duration}>
+      // data-aos-duration={duration}
+      data-aos-delay={duration}>
       <div
-        className="mt-4 shadow-[0px_0px_0px_#fff] hover:shadow-[5px_5px_0px_#ffffff] duration-500 transition-all z-10 dark:bg-[#1f1f1f] text-white min-h-[250px] md:min-h-[300] lg:min-h-[250px]  flex items-center relative  justify-center overflow-hidden flex-col p-8 rounded-xl cursor-pointer group "
+        className="mt-4 shadow-[0px_0px_0px_#fff] shadow-[4px_4px_0px_#fff] hover:shadow-[7px_7px_0px_#ffffff] duration-500 transition-all z-10 dark:bg-[#282828] text-white min-h-[250px] md:min-h-[300] lg:min-h-[250px]  flex items-center relative  justify-center overflow-hidden flex-col p-8 rounded-xl cursor-pointer group "
       >
         {/* <img src={service.imgUrl} className="size-[130px]" alt="" /> */}
         <span className="mt-5 text-xl lg:text-2xl font-bold  capitalize text-white  text-center text-primary-dark transition-all">

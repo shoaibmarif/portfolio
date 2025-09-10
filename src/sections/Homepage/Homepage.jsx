@@ -29,7 +29,7 @@ export const Homepage = () => {
   return (
     <React.Fragment>
 
-      <ContentWrapper classes={" relative"}>
+      <ContentWrapper classes={" relative bg-[#1b1b1b]"}>
         {/* <div style={{ left:0,top:0, width: '100%', height: '100%', position: 'absolute', zIndex:1,overflow:"hidden"}}>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
@@ -49,17 +49,17 @@ export const Homepage = () => {
             data-aos-duration="700"
           > */}
           <span
-            className={`w-[2px] bg-white bottom-[-45%] left-1/2 translate-x-[-50%] absolute rounded-full
+            className={`w-[2px] bg-white bottom-[-55%] left-1/2 translate-x-[-50%] absolute rounded-full
                     transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
               }`}
           ></span>
-          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white top-[-44%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
+          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white top-[-54%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
           <span
-            className={`w-[2px] bg-white top-[-40%] left-1/2 translate-x-[-50%] absolute rounded-full
+            className={`w-[2px] bg-white top-[-50%] left-1/2 translate-x-[-50%] absolute rounded-full
                     transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
               }`}
           ></span>
-          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white bottom-[-48%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
+          <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white bottom-[-58%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
 
           <SocialIcon
           delay={500}
@@ -80,12 +80,7 @@ export const Homepage = () => {
             url="https://www.instagram.com/shoaibmarif/"
             icon={<FaInstagram size={18} className="dark:text-white " />}
           />
-          <SocialIcon
-          delay={1100}
-            color={"#1DA1F2"}
-            url="https://x.com/mshoaibmarif"
-            icon={<FaTwitter size={18} className="dark:text-white " />}
-          />
+      
           <SocialIcon
           delay={1300}
             color={"#E7700D"}
@@ -142,7 +137,7 @@ export const Homepage = () => {
             <button
               data-aos="fade-up"
               data-aos-duration="600"
-              data-aos-delay="1500" type="button" class="btn mt-12">
+              data-aos-delay="1500" type="button" className="btn mt-12">
             <span className="font-semibold">Download Resume</span>
 
 
@@ -232,7 +227,7 @@ export const Homepage = () => {
               />
             </div>
           </div> */}
-          <div
+          {/* <div
             className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"
             data-aos="zoom-in-up"
             data-aos-duration="1000"
@@ -243,60 +238,19 @@ export const Homepage = () => {
             data-aos="zoom-in-up"
             data-aos-duration="1000"
             data-aos-delay={1000}
-          ></div>
+          ></div> */}
         </div>
 
        
+             <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] ">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+          <path fill="#2b2b2b" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,218.7C384,192,480,160,576,165.3C672,171,768,213,864,202.7C960,192,1056,128,1152,122.7C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
 
-        {/* <div
-          className=" h-[170px] w-full absolute z-[999] left-0 bottom-[20px] "
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          data-aos-delay={1000}
-        >
-          <div className="container mx-auto h-full">
-            <div className="bg-[#181818] rounded-lg h-full flex items-center justify-evenly text-center shadow-lg ">
-              <div className="">
-                <h1 className="text-xl font-semibold text-primary-dark">
-                  Happy Clients
-                </h1>
-                <span className="text-4xl font-bold mt-3 block text-white">
-                  20+
-                </span>
-              </div>
-              <span className="block h-[40%] bg-white w-[3px] rounded-full "></span>
-              <div>
-                <h1 className="text-xl font-semibold text-primary-dark">
-                  Projects
-                </h1>
-                <span className="text-4xl font-bold mt-3 block text-white">
-                  50+
-                </span>
-              </div>
-              <span className="block h-[40%] bg-white w-[3px] rounded-full"></span>
-
-              <div>
-                <h1 className="text-xl font-semibold text-primary-dark">
-                  Experience
-                </h1>
-                <span className="text-4xl font-bold mt-3 block text-white">
-                  5+
-                </span>
-              </div>
-              <span className="block h-[40%] bg-white w-[3px] rounded-full"></span>
-
-              <div>
-                <h1 className="text-xl font-semibold text-primary-dark">
-                  Certifications
-                </h1>
-                <span className="text-4xl font-bold mt-3 block text-white">
-                  25+
-                </span>
-              </div>
-            </div>
-          </div>
-        </div> */}
+      
       </ContentWrapper>
+
     </React.Fragment>
   );
 };

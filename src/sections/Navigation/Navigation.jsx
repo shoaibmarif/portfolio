@@ -10,7 +10,7 @@ import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
-import { IoPricetagsSharp } from "react-icons/io5";
+import { GoProjectRoadmap } from "react-icons/go";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineRateReview } from "react-icons/md";
 
@@ -101,7 +101,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
       </div>
  
       <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-40" : "top-5"} ${navShow ? "right-24" : "right-5"}  transition-all z-40 `}>
-        <RiCustomerService2Line size={24} />
+        <GoProjectRoadmap size={24} />
       </div>
 
      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] ${navShow ? "top-[200px]" : "top-5"} right-5  transition-all z-40 `}>

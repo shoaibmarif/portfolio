@@ -32,7 +32,7 @@ export const ContactUs = () => {
       );
   };
   return (
-    <ContentWrapper classes={"py-16"}>
+    <ContentWrapper classes={"py-16 z-[100] bg-[#1b1b1b]"}>
       <TopHeading title={"Contact"} />
       <div className="grid grid-cols-6 gap-12 mt-16 ">
         <div className="col-span-6 lg:col-span-3 text-sm lg:text-[15px] dark:text-gray-300 text-[#0c0c0c]  pb-10">
