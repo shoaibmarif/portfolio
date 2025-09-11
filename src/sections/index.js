@@ -7,7 +7,8 @@ import { Testimonials } from "./Testimonial/Testimonials";
 import { Services } from "./Services/Services";
 import { Footer } from "./Footer/Footer"
 import { Certificates } from "./Certificates/Certificates";
+import { Projects } from "./Projects/Projects";
 import "../index.css"
 
 
-export { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Services, Certificates, Footer }
+export { Navigation, About, ContactUs, Homepage, Pricing, Testimonials, Services, Certificates, Projects, Footer }

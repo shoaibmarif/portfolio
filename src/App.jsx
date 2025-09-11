@@ -8,6 +8,7 @@ import {
   Services,
   Certificates,
   Footer,
+  Projects
 } from "./sections/index.js";
 import React, { useEffect, useState, useRef } from "react";
 import AOS from "aos";
@@ -94,6 +95,9 @@ const App = () => {
             {/* <div id="pricing">
               <Pricing />
             </div> */}
+            <div id="projects">
+              <Projects />
+            </div>
             <div id="testimonials">
               <Testimonials />
             </div>

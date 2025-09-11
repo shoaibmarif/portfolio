@@ -91,7 +91,7 @@ export const About = () => {
         <div className="grid grid-cols-12 gap-6  xl:gap-20 mt-16">
           <div className="col-span-12 lg:col-span-6">
             <div className=" flex justify-start h-full flex-col">
-              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5" >Summary</h2>
+              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5" data-aos="zoom-in-up">Summary</h2>
               <p
                 className="text-gray-300  text-lg mt-4"
                 data-aos="fade-right"
@@ -112,12 +112,12 @@ export const About = () => {
                 high-performing, user-friendly, and responsive applications.
               </p>
 
-              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5">Skills</h2>
+              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5" data-aos="zoom-in-up">Skills</h2>
 
               {/* <h2 className="text-primary-dark text-2xl font-bold underline underline-offset-4 my-5 mb-2" data-aos="fade-up">Technical Skills</h2> */}
               <div className="flex items-center flex-wrap text-white  mt-5 gap-4">
                 {frontendSkills.map((skill, index) => (
-                  <span key={index} className="bg-gray-700 px-4 rounded-full py-2 text-sm">
+                  <span key={index} className="bg-gray-700 px-4 rounded-full py-2 text-sm" data-aos-delay={(index + 1) * 100} data-aos="zoom-in">
                     {skill}
                   </span>
                 ))}
@@ -128,10 +128,10 @@ export const About = () => {
           <div className="col-span-12 lg:col-span-6  z-[50] relative">
 
             <div className="grid grid-cols-4 gap-x-5  h-full">
-              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5 col-span-4">Education & Journey</h2>
+              <h2 className="uppercase text-primary-dark text-2xl font-bold mt-5 col-span-4 mb-3" data-aos="zoom-in-up">Education & Journey</h2>
               <div
-                data-aos="fade-right"
-                data-aos-duration="700"
+                 data-aos="zoom-in-up"
+                
                 className="col-span-4 bg-[#1F1F1F] overflow-hidden  transition-all text-white w-full rounded-lg   px-8 py-10 after:size-[400px] relative after:absolute after:bg-white  after:rounded-full after:opacity-10  after:top-[-50%] after:right-[-300px] after:transition-all">
                 <div className="flex items-center">
                   <div>
