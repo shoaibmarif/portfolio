@@ -11,8 +11,6 @@ import Sameer from "../../../public/images/testimonials/sameer.jpg";
 import Sarim from "../../../public/images/testimonials/Sarim.jpg";
 import Talha from "../../../public/images/testimonials/Talha.jpg";
 import Urooba from "../../../public/images/testimonials/Urooba.jpg";
-import { HiArrowLongLeft } from "react-icons/hi2";
-import { HiArrowLongRight } from "react-icons/hi2";
 
 export const Testimonials = () => {
   const sliderRef = useRef(null);
@@ -134,14 +132,27 @@ export const Testimonials = () => {
     ],
   };
   return (
+    <div className="relative">
+      <div className="absolute -top-1 left-0 z-10  w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1b1b1b" fill-opacity="1" d="M0,224L48,208C96,192,192,160,288,160C384,160,480,192,576,176C672,160,768,96,864,106.7C960,117,1056,203,1152,240C1248,277,1344,267,1392,261.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      </svg>
+     </div>
+       <div className="absolute -bottom-1 left-0 z-10  w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#1b1b1b" fill-opacity="1" d="M0,288L48,282.7C96,277,192,267,288,224C384,181,480,107,576,106.7C672,107,768,181,864,202.7C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+     </div>
     <ContentWrapper
       innerClass={"relative"}
       classes={
-        "w-full min-h-[100vh] bg-[#1b1b1b] py-16"
+        "w-full min-h-[120vh] bg-[#2b2b2b] py-16"
       }
     >
+        
+      
       <TopHeading title="Testimonials" />
-      <div className="absolute top-1/2 z-[100]">
+      {/* <div className="absolute top-1/2 z-[100]"> */}
         {/* <span
           className="text-black bg-white relative  z-10  rounded-full p-3 cursor-pointer transition-all hover:bg-primary-dark hover:text-white"
           onClick={() => sliderRef.current.slickPrev()}
@@ -154,13 +165,13 @@ export const Testimonials = () => {
         >
           <HiArrowLongRight size={34} />
         </span> */}
-      </div>
-      <div className="grid grid-cols-1 z-[100]">
+      {/* </div> */}
+      <div className="grid grid-cols-1 relative z-50 ">
         <Slider {...settings} ref={sliderRef}>
           {testimonials.map((testimonial, index) => {
             return (
               <div
-                className="col-span-1 px-4 py-2 "
+                className="col-span-1 px-4 py-2"
                 key={index}
                 data-aos="fade-up"
                 data-aos-duration="700"
@@ -191,5 +202,6 @@ export const Testimonials = () => {
         </Slider>
       </div>
     </ContentWrapper>
+    </div>
   );
 };

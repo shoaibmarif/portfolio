@@ -241,28 +241,32 @@ export const Certificates = () => {
 
 
   return (
-    <ContentWrapper classes="relative bg-[#2b2b2b] pt-8 pb-16">
+    <ContentWrapper classes="relative bg-[#2b2b2b] pt-8 pb-16 ">
        <TopHeading title="Certificates" />
-      <div style={{ height: '300px',   position: 'relative', overflow: 'hidden' }} className="rounded-lg flex items-center justify-center">
+      <div style={{    position: 'relative', overflow: 'auto' }} className="rounded-lg  flex items-center justify-center z-10">
         <LogoLoop
           logos={certificatesData1}
           speed={120}
           direction="left"
           gap={0}
-          pauseOnHover={false}
-          // scaleOnHover
+          pauseOnHover={true}
         />
       </div>
-        <div style={{ height: '300px',  position: 'relative', overflow: 'hidden' }} className="mt-3 rounded-lg flex items-center justify-center">
+        <div style={{   position: 'relative', overflow: 'hidden' }} className="z-10 rounded-lg flex items-center justify-center">
         <LogoLoop
           logos={certificatesData2}
           speed={120}
           direction="right"
           gap={0}
-          pauseOnHover={false}
+          pauseOnHover={true}
           // scaleOnHover
         />
       </div>
+      <div className="w-full absolute -bottom-1 left-0 z-[1]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1b1b1b" fill-opacity="1" d="M0,160L48,186.7C96,213,192,267,288,261.3C384,256,480,192,576,176C672,160,768,192,864,224C960,256,1056,288,1152,298.7C1248,309,1344,299,1392,293.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+                  </div>
     </ContentWrapper>
   );
 };
@@ -275,36 +279,25 @@ export const CertificateCard = ({name,
   redirectLink
 }) => {
   return (
-    <div className="w-[300px]">
-          <div
-            className="px-2 py-2 relative z-[999] "
-            data-aos="fade-up"
-          >
-            <Link
-              to={redirectLink}
-              target="_blank"
-              className={`group relative z-50 flex flex-col justify-center items-center block  rounded-lg relative min-h-[350px] p-7 shadow-md  hover:shadow-lg transition-all cursor-pointer  pt-8 bg-[#1f1f1f] overflow-hidden`}
-            >
-              <img
-                src={orgImg}
-                className="rounded-full h-[90px]  w-[90px] mb-3 opacity-20 transition-all group-hover:opacity-100"
-                alt=""
-              />
-              <p className="text-sm text-primary-dark  font-semibold mt-2">
-                {issueDate}
-              </p>
-              <p className="text-sm font-semibold text-gray-300 mt-0 ">
-                {name}
-              </p>
-              {/* <div className="text-white absolute top-[-60px] right-[-60px] bg-primary-dark group-hover:bg-white group-hover:text-primary-dark transition-all  size-[120px] rounded-full ">
-                <RiArrowRightDoubleFill
-                  className="absolute top-[60%] group-hover:rotate-[-45deg] transition-all left-[20%] z-[1]"
-                  size={"24px"}
-                />
-              </div> */}
-            </Link>
-          </div>
-
+  <div className="w-[300px]">
+      <div className="px-2 py-2" data-aos="fade-up">
+        <Link
+          to={redirectLink}
+          target="_blank"
+          className="group/card z-[50] relative flex  hover:bg-[#962cff] flex-col justify-center items-center block rounded-lg min-h-[280px] px-7 shadow-md hover:shadow-lg transition-all cursor-pointer bg-[#1f1f1f] overflow-hidden"
+        >
+          <img
+            src={orgImg}
+            alt=""
+            className="rounded-full h-[70px] w-[70px] mb-3 opacity-40 transition-all group-hover/card:opacity-100"
+          />
+          <p className="text-base text-primary-dark font-semibold mt-2 group-hover/card:text-[#1b1b1b]">{issueDate}</p>
+          <p className="text-base font-semibold text-gray-300 text-center mt-1 capitalize">
+            {name}
+          </p>
+        </Link>
+      </div>
+      
     </div>
   )
 }

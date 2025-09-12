@@ -659,3 +659,6 @@ strong {
       top:0%;
   }
 }
+.abc:hover .abc img{
+  opacity: 1!important;
+}

@@ -107,7 +107,7 @@ const App = () => {
                 setSelectedPlan={setSelectedPlan}
               />
             </div>
-            <Footer />
+            {/* <Footer /> */}
             {/* <a
                 target="_blank"
                 data-aos-once="false"

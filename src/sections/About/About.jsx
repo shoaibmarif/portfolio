@@ -3,8 +3,7 @@ import Horeca from "../../../public/images/companies/horeca.png";
 import CC from "../../../public/images/companies/CC.png";
 import Daraz from "../../../public/images/companies/Daraz.png";
 import manhattan from "../../../public/images/companies/manhattan.png";
-import softtech from "../../../public/images/companies/softech.jpg";
-import cipher from "../../../public/images/companies/cipherlabs.jpg";
+import disrupt from "../../../public/images/companies/disrupt.jpeg";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { TopHeading } from "../../shared/TopHeading";
 import { Link } from "react-router-dom";
@@ -40,20 +39,30 @@ export const About = () => {
     {
       id: 1,
       name: "Disrupt Labs",
-      startDate: "June 2023",
-      endDate: "March 2024",
-      position: "Frontend Developer",
-      imgSrc: Daraz,
-      companyLink: "https://www.daraz.pk/",
+      startDate: "Dec 2024",
+      endDate: "Jun 2024",
+      position: "Senior Frontend Developer",
+      imgSrc: disrupt,
+      companyLink: "https://www.disrupt.com/",
+      contribution: [
+        "Developed and launched two key projects for an AI-based startup, enhancing user engagement and product visibility.",
+        "Designed and implemented the main product interface at RelveHQ, focusing on user experience and functionality.",
+        "Created an engaging landing page that effectively communicated the product's value proposition, driving initial user sign-ups."
+      ],
     },
     {
       id: 2,
       name: "Daraz",
       startDate: "June 2023",
       endDate: "March 2024",
-      position: "Frontend Developer",
+      position: "Senior Frontend Developer",
       imgSrc: Daraz,
       companyLink: "https://www.daraz.pk/",
+      contribution: [
+        "As a Frontend Developer at Daraz, I contributed to the success of one of the largest e-commerce platforms in Pakistan, shaping the digital experience for millions of users",
+        "Successfully created and implemented the ICMS (Content Management System) for Daraz.",
+        "Developed and optimized frontend components using React.js, ensuring high performance and seamless user interactions."
+      ]
     },
     {
       id: 3,
@@ -63,6 +72,12 @@ export const About = () => {
       position: "Frontend Developer",
       imgSrc: CC,
       companyLink: "https://www.cooperativecomputing.com/",
+      contribution: [
+        "Contributed to an AI-based translation solution for live translation of web pages and content.",
+        "Designed and implemented the front-end for an e-commerce website targeting Dubai-based clients.",
+        "Developed a mobile e-receipt solution for generating modern receipts and bills.",
+        "Designed and developed dynamic email templates to enhance client communication and engagement."
+      ]
     },
 
     {
@@ -73,6 +88,11 @@ export const About = () => {
       position: "Frontend Developer",
       imgSrc: manhattan,
       companyLink: "https://manhattan-mcl.com/",
+      contribution: [
+        "Developed responsive interactive in-app ads, such as Piano Tiles and Cricket Game, to engage users and enhance brand visibility",
+        "Applied responsive design principles to ensure accessibility and usability of critical healthcare information for patients and medical professionals.",
+        "Collaborated with UX/UI designers, backend developers, and project managers to ensure seamless integration of front-end components with backend systems."
+      ]
     },
 
 
@@ -177,12 +197,14 @@ export const About = () => {
         <div className="mt-20 grid grid-cols-4 gap-6">
           {experience.map((exp, index) => {
             return (
-              <Link to={exp.companyLink} key={index} className="h-[450px] col-span-1 text-white flex items-center flex-col p-7 rounded-lg bg-[#1f1f1f]">
+              <Link to={exp.companyLink} key={index} className="min-h-[450px] col-span-1 text-white flex items-center flex-col p-7 rounded-lg bg-[#1f1f1f]">
                 <img className="rounded-full w-[100px]" src={exp.imgSrc} alt={exp.name} />
                 <h2 className="text-primary-dark font-bold text-lg text-center mt-4">{exp.name}</h2>
                 <h3 className="text-white font-semibold text-base">{exp.position}</h3>
                 <p className=" mt-1 text-xs italic">{exp.startDate} - {exp.endDate}</p>
-                <p className="mt-5 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi expedita cumque sint et amet earum magnam esse neque. Ducimus obcaecati similique corrupti mollitia fugiat! Doloremque temporibus explicabo iure et maiores.</p>
+                {exp.contribution.map((point, idx) => (
+                  <li key={idx} className="text-xs text-gray-300 mt-3 list-disc ml-5">{point}</li>
+                ))}
               </Link>
             )
           })}
@@ -198,19 +220,76 @@ export const About = () => {
   );
 };
 
+const CounterText = ({ title, count, duration = 1500, once = true, threshold = 0.4 }) => {
+  const [value, setValue] = React.useState(0);
+  const ref = React.useRef(null);
+  const hasAnimatedRef = React.useRef(false);
 
-const CounterText = ({ title, count }) => {
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Respect reduced motion preferences
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      setValue(count);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        if (once && hasAnimatedRef.current) {
+          observer.unobserve(el);
+          return;
+        }
+
+        animate();
+        if (once) {
+          hasAnimatedRef.current = true;
+          observer.unobserve(el);
+        }
+      },
+      { threshold }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [count, duration, threshold, once]);
+
+  function animate() {
+    const start = performance.now();
+    const end = Number(count) || 0;
+
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);      // 0..1
+      const eased = 1 - Math.pow(1 - t, 3);                 // easeOutCubic
+      const current = Math.floor(end * eased);
+      setValue(current);
+      if (t < 1) requestAnimationFrame(step);
+      else setValue(end);
+    }
+
+    requestAnimationFrame(step);
+  }
+
   return (
-    <div className="col-span-2 bg-[#1f1f1f] flex items-center justify-center flex-col p-4 py-5 rounded-lg mt-5">
-      <h1 className="text-lg font-semibold text-primary-dark ">
-        {title}
-      </h1>
+    <div
+      ref={ref}
+      className="col-span-2 bg-[#1f1f1f] flex items-center justify-center flex-col p-4 py-5 rounded-lg mt-5"
+    >
+      <h1 className="text-lg font-semibold text-primary-dark">{title}</h1>
       <span className="text-4xl font-bold mt-5 block text-white">
-        {count}+
+        {value}+
       </span>
     </div>
-  )
-}
+  );
+};
 
 const Timeline = ({ experience }) => {
   const { name, startDate, endDate, position, imgSrc, description } =
