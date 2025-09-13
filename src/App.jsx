@@ -23,9 +23,11 @@ const App = () => {
   const navigate = useNavigate();
   const [showTopLayer, setShowTopLayer] = useState(true);
 
+
+
   useEffect(() => {
     AOS.init({ once: false, disable: "mobile" });
-    navigate("/");
+    // navigate("/");
 
     const loadingTimeout = setTimeout(() => {
       setShowTopLayer(false);
@@ -92,9 +94,6 @@ const App = () => {
             <div id="certificates">
               <Certificates />
             </div>
-            {/* <div id="pricing">
-              <Pricing />
-            </div> */}
             <div id="projects">
               <Projects />
             </div>

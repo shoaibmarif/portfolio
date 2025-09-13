@@ -10,7 +10,7 @@ import { LiaCertificateSolid } from "react-icons/lia";
 import { GoProjectRoadmap } from "react-icons/go";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineRateReview } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 
 export const Navigation = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
 
     const element = document.getElementById(href.replace("#", ""));
     if (element) {
-      const offset = 100;
+      const offset = 0;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
@@ -79,31 +79,32 @@ export const Navigation = ({ darkMode, setDarkMode }) => {
       <div className="w-[51px] h-[51px] rounded-full flex items-center justify-center text-white absolute top-5 right-5 bg-[#222]  z-50 cursor-pointer" onClick={() => setNavShow(!navShow)}>
         <RxHamburgerMenu size={24} />
       </div>
-      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute top-5 bg-[#222] ${navShow ? "right-28" : "right-5"}  transition-all z-40 `}>
+      <button  onClick={() => handleNavigation("#home")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute top-5 bg-[#222] ${navShow ? "right-28" : "right-5"}  transition-all z-40 `}>
         <IoHome size={24} />
-      </div>
-      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222]  ${navShow ? "top-[83px]" : "top-5"} ${navShow ? "right-20" : "right-5"}  transition-all z-40 `}>
+      </button>
+      <button onClick={() => handleNavigation("#services")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222]  ${navShow ? "top-[83px]" : "top-5"} ${navShow ? "right-20" : "right-5"}  transition-all z-40 `}>
         <GrServices size={24} />
-      </div>
-     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222] ${navShow ? "top-[120px]" : "top-5"} ${navShow ? "right-5" : "right-5"}  transition-all z-40 `}>
+      </button>
+     <button onClick={() => handleNavigation("#about")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-200  absolute  bg-[#222] ${navShow ? "top-[120px]" : "top-5"} ${navShow ? "right-5" : "right-5"}  transition-all z-40 `}>
         <FaUser size={24} />
-      </div>
+      </button>
 
-      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] top-5 ${navShow ? "right-[180px]" : "right-5"}  transition-all z-40 `}>
+      <button  onClick={() => handleNavigation("#certificates")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] top-5 ${navShow ? "right-[180px]" : "right-5"}  transition-all z-40 `}>
         <LiaCertificateSolid size={24} />
-      </div>
+      </button>
 
-     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-24" : "top-5"} ${navShow ? "right-[150px]" : "right-5"}  transition-all z-40 `}>
+
+     <button onClick={() => handleNavigation("#testimonials")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-40" : "top-5"} ${navShow ? "right-24" : "right-5"}  transition-all z-40 `} >
         <MdOutlineRateReview size={24} />
-      </div>
- 
-      <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-40" : "top-5"} ${navShow ? "right-24" : "right-5"}  transition-all z-40 `}>
-        <GoProjectRoadmap size={24} />
-      </div>
+      </button>
 
-     <div className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] ${navShow ? "top-[200px]" : "top-5"} right-5  transition-all z-40 `}>
+            <button onClick={() => handleNavigation("#projects")} className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400 absolute  bg-[#222] ${navShow ? "top-24" : "top-5"} ${navShow ? "right-[150px]" : "right-5"}  transition-all z-40 `} >
+        <GoProjectRoadmap size={24} />
+      </button>
+
+     <button onClick={() => handleNavigation("#contact")}  className={`w-[50px] h-[50px] rounded-full flex items-center justify-center text-white duration-500 delay-400  absolute  bg-[#222] ${navShow ? "top-[200px]" : "top-5"} right-5  transition-all z-40 `}>
         <RiCustomerService2Line size={24} />
-      </div>
+      </button>
       {/* <ContentWrapper
         display={"fixed"}
         classes="py-4 w-full z-[999] transition-all  "

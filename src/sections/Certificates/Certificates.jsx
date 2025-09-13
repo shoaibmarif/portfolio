@@ -241,7 +241,7 @@ export const Certificates = () => {
 
 
   return (
-    <ContentWrapper classes="relative bg-[#2b2b2b] pt-8 pb-16 ">
+    <ContentWrapper classes="relative bg-[#2b2b2b] pt-8 pb-8 ">
        <TopHeading title="Certificates" />
       <div style={{    position: 'relative', overflow: 'auto' }} className="rounded-lg  flex items-center justify-center z-10">
         <LogoLoop
