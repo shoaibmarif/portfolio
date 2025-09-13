@@ -600,6 +600,6 @@ strong {
   opacity: 1!important;
 }
 
-.animated__button:hover {
+/* .animated__button:hover {
   transform: scale(1.5)!important;
-}
+} */

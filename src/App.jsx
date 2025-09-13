@@ -21,21 +21,21 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(true);
   const topLayer = useRef();
   const navigate = useNavigate();
-  const [showTopLayer, setShowTopLayer] = useState(true);
+  // const [showTopLayer, setShowTopLayer] = useState(true);
 
 
 
   useEffect(() => {
-    AOS.init({ once: false, disable: "mobile" });
+    AOS.init({ once: true, disable: "mobile" });
     // navigate("/");
 
-    const loadingTimeout = setTimeout(() => {
-      setShowTopLayer(false);
-    },1000);
+    // const loadingTimeout = setTimeout(() => {
+    //   setShowTopLayer(false);
+    // },1000);
 
-    return () => {
-      clearTimeout(loadingTimeout);
-    };
+    // return () => {
+    //   clearTimeout(loadingTimeout);
+    // };
   }, []);
 
   return (

@@ -20,21 +20,12 @@ export const Homepage = () => {
   }, []);
   return (
     <React.Fragment>
-
       <ContentWrapper classes={" relative bg-[#1b1b1b]"}>
         <div className="absolute left-16 top-1/2 translate-y-[-50%] z-[10] hidden xl:block ">
-
           <span
-            className={`w-[2px] bg-white bottom-[-55%] left-1/2 translate-x-[-50%] absolute rounded-full
-                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-              }`}
-          ></span>
+            className={`w-[2px] bg-white bottom-[-55%] left-1/2 translate-x-[-50%] absolute rounded-full transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"}`}></span>
           <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white top-[-54%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
-          <span
-            className={`w-[2px] bg-white top-[-50%] left-1/2 translate-x-[-50%] absolute rounded-full
-                    transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
-              }`}
-          ></span>
+          <span className={`w-[2px] bg-white top-[-50%] left-1/2 translate-x-[-50%] absolute rounded-full transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"}`}></span>
           <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white bottom-[-58%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
 
           <SocialIcon
@@ -75,14 +66,13 @@ export const Homepage = () => {
                 animationSpeed={5}
                 showBorder={false}
                 loop={true}
-                className="text-8xl uppercase !font-extrabold"
-              // style={{textShadow: "0px 0px 20px #CE5937"}} 
+                className="text-4xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase !font-extrabold"
               >
                 Shoaib Arif
               </GradientText>
             </div>
             <div
-              className="text-2xl lg:text-4xl flex font-bold mt-6 "
+              className="text-2xl md:text-3xl lg:text-4xl flex font-bold mt-2 lg:mt-5 "
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="1100"
@@ -100,7 +90,7 @@ export const Homepage = () => {
               />
             </div>
             <p
-              className="max-w-[600px]  lg:text-lg mt-6 text-black dark:text-gray-300  transition-all"
+              className="max-w-[600px] xs:text-sm md:text-base mt-7 text-black dark:text-gray-300  transition-all"
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="1300"
@@ -113,19 +103,13 @@ export const Homepage = () => {
             <button
               data-aos="fade-up"
               data-aos-duration="600"
-              data-aos-delay="1500" type="button" className="animated__button btn mt-12">
+              data-aos-delay="1500"
+               className="btn mt-7 md:mt-10">
               <span className="font-semibold">Download Resume</span>
             </button>
 
 
-            <div className="mt-7 lg:mt-10 flex items-center  ">
-              <span
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="1200"
-              >
-              </span>
-            </div>
+   
           </div>}
 
 
