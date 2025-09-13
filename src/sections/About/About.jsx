@@ -1,5 +1,4 @@
 import React from "react";
-import Horeca from "../../../public/images/companies/horeca.png";
 import CC from "../../../public/images/companies/CC.png";
 import Daraz from "../../../public/images/companies/Daraz.png";
 import manhattan from "../../../public/images/companies/manhattan.png";
@@ -8,6 +7,7 @@ import { ContentWrapper } from "../../shared/ContentWrapper";
 import { TopHeading } from "../../shared/TopHeading";
 import { Link } from "react-router-dom";
 import EducationLogo from "../../../public/images/paf-logo.png"
+
 export const About = () => {
   const frontendSkills = [
     "HTML",
@@ -47,7 +47,6 @@ export const About = () => {
       contribution: [
         "Developed and launched two key projects for an AI-based startup, enhancing user engagement and product visibility.",
         "Designed and implemented the main product interface at RelveHQ, focusing on user experience and functionality.",
-        "Created an engaging landing page that effectively communicated the product's value proposition, driving initial user sign-ups."
       ],
     },
     {
@@ -61,7 +60,6 @@ export const About = () => {
       contribution: [
         "As a Frontend Developer at Daraz, I contributed to the success of one of the largest e-commerce platforms in Pakistan, shaping the digital experience for millions of users",
         "Successfully created and implemented the ICMS (Content Management System) for Daraz.",
-        "Developed and optimized frontend components using React.js, ensuring high performance and seamless user interactions."
       ]
     },
     {
@@ -74,9 +72,7 @@ export const About = () => {
       companyLink: "https://www.cooperativecomputing.com/",
       contribution: [
         "Contributed to an AI-based translation solution for live translation of web pages and content.",
-        "Designed and implemented the front-end for an e-commerce website targeting Dubai-based clients.",
         "Developed a mobile e-receipt solution for generating modern receipts and bills.",
-        "Designed and developed dynamic email templates to enhance client communication and engagement."
       ]
     },
 
@@ -91,7 +87,6 @@ export const About = () => {
       contribution: [
         "Developed responsive interactive in-app ads, such as Piano Tiles and Cricket Game, to engage users and enhance brand visibility",
         "Applied responsive design principles to ensure accessibility and usability of critical healthcare information for patients and medical professionals.",
-        "Collaborated with UX/UI designers, backend developers, and project managers to ensure seamless integration of front-end components with backend systems."
       ]
     },
 
@@ -160,9 +155,9 @@ export const About = () => {
                   <div className="ml-4">
                     <p className="italic text-sm">Aug 2016 - Dec 2020</p>
                     <h3 className=" font-semibold text-primary-dark capitalize  md:text-base lg:text-lg">
-                      karachi institute of economics and technology
+                      karachi institute of economics & technology
                     </h3>
-                    <p className="text-[13px] text-gray-300 md:text-md text-base mt-1">
+                    <p className="text-[13px] text-gray-300 md:text-sm font-semibold text-base">
                       Bachelor's in Computer Sciences
                     </p>
                     <span className="text-xs block md:hidden text-white font-semibold">
@@ -197,11 +192,15 @@ export const About = () => {
         <div className="mt-20 grid grid-cols-4 gap-6">
           {experience.map((exp, index) => {
             return (
-              <Link to={exp.companyLink} key={index} className="min-h-[450px] col-span-1 text-white flex items-center flex-col p-7 rounded-lg bg-[#1f1f1f]">
-                <img className="rounded-full w-[100px]" src={exp.imgSrc} alt={exp.name} />
+              <Link to={exp.companyLink} 
+                data-aos="fade-up"
+                data-aos-delay={(index + 1) * 200}
+                data-aos-duration="700" key={index} className="relative hover:scale-110  transition-all min-h-[450px] col-span-1 text-white overflow-hidden flex items-center flex-col p-7 rounded-lg bg-[#1f1f1f]">
+                <div className="absolute bg-white opacity-10 top-[-45%] left-0 z-10 w-full h-full rounded-full "></div>
+                <img className="rounded-full w-[80px]" src={exp.imgSrc} alt={exp.name} />
                 <h2 className="text-primary-dark font-bold text-lg text-center mt-4">{exp.name}</h2>
                 <h3 className="text-white font-semibold text-base">{exp.position}</h3>
-                <p className=" mt-1 text-xs italic">{exp.startDate} - {exp.endDate}</p>
+                <p className=" mt-1 text-xs italic mb-5">{exp.startDate} - {exp.endDate}</p>
                 {exp.contribution.map((point, idx) => (
                   <li key={idx} className="text-xs text-gray-300 mt-3 list-disc ml-5">{point}</li>
                 ))}

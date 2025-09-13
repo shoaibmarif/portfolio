@@ -1,8 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Toggler } from "../../shared/Toggler/Toggler.jsx";
-import Profile from "../../../public/images/profile.png";
 import { navLinks } from "../../config/data.ts";
-import { ContentWrapper } from "../../shared/ContentWrapper.jsx";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { RxHamburgerMenu } from "react-icons/rx";

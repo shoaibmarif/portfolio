@@ -280,7 +280,7 @@ export const CertificateCard = ({name,
 }) => {
   return (
   <div className="w-[300px]">
-      <div className="px-2 py-2" data-aos="fade-up">
+      <div className="px-2 py-2">
         <Link
           to={redirectLink}
           target="_blank"

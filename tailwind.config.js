@@ -20,8 +20,8 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: '#1D4ED8',
-          dark: '#7c3aed',
+          DEFAULT: '#962cff',
+          dark: '#962cff',
         },
         secondary: {
           DEFAULT: '#1D4ED8',

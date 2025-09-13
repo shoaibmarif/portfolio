@@ -2,21 +2,13 @@ import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { ContentWrapper } from "../../shared/ContentWrapper";
 import { Link } from "react-router-dom";
-import { SlCloudDownload } from "react-icons/sl";
-import Particles from "../../components/Particles";
 import GradientText from "../../components/GradientText";
 import {
   FaLinkedinIn,
   FaGithub,
-  FaTwitter,
   FaInstagram,
   FaStackOverflow,
 } from "react-icons/fa";
-import { LuDownload } from "react-icons/lu";
-import CountUp from "react-countup";
-import Profile from "../../../public/images/profile.png";
-import SplitText from "../../components/SplitText";
-import RotatingText from "../../components/RotatingText"
 
 export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,24 +22,8 @@ export const Homepage = () => {
     <React.Fragment>
 
       <ContentWrapper classes={" relative bg-[#1b1b1b]"}>
-        {/* <div style={{ left:0,top:0, width: '100%', height: '100%', position: 'absolute', zIndex:1,overflow:"hidden"}}>
-        <Particles
-          particleColors={['#ffffff', '#ffffff']}
-          particleCount={1000}
-          particleSpread={15}
-          speed={.2}
-          particleBaseSize={50}
-          moveParticlesOnHover={false}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-    </div> */}
         <div className="absolute left-16 top-1/2 translate-y-[-50%] z-[10] hidden xl:block ">
-          {/* <div
-            data-aos="zoom-in-right"
-            data-aos-delay="1500"
-            data-aos-duration="700"
-          > */}
+
           <span
             className={`w-[2px] bg-white bottom-[-55%] left-1/2 translate-x-[-50%] absolute rounded-full
                     transition-all duration-700  delay-1000 ease-out ${isVisible ? "h-24" : "h-0"
@@ -62,27 +38,27 @@ export const Homepage = () => {
           <span className={` w-0 h-0 ${isVisible ? "!w-4 !h-4" : ""}  duration-300 delay-500 transition-all absolute bg-white bottom-[-58%] left-1/2  translate-x-[-50%] absolute rounded-full`}></span>
 
           <SocialIcon
-          delay={500}
+            delay={500}
             color={"#0A66C2"}
             url="https://www.linkedin.com/in/shoaibmarif/"
             icon={<FaLinkedinIn size={18} className="dark:text-white " />}
           />
           <SocialIcon
-          delay={700}
+            delay={700}
             color={"#4d4d4d"}
             url="https://github.com/shoaibmarif"
             icon={<FaGithub size={18} className="dark:text-white " />}
           />
 
           <SocialIcon
-          delay={900}
+            delay={900}
             color={"#E4405F"}
             url="https://www.instagram.com/shoaibmarif/"
             icon={<FaInstagram size={18} className="dark:text-white " />}
           />
-      
+
           <SocialIcon
-          delay={1300}
+            delay={1300}
             color={"#E7700D"}
             url="https://stackoverflow.com/users/7770942/shoaib-arif"
             icon={<FaStackOverflow size={18} className="dark:text-white " />}
@@ -90,20 +66,20 @@ export const Homepage = () => {
           {/* </div> */}
         </div>
 
-        <div className="relative flex items-center justify-center text-center w-full min-h-[100vh]" > 
+        <div className="relative flex items-center justify-center text-center w-full min-h-[100vh]" >
 
           {<div className="flex items-center justify-center text-white flex-col z-[10]">
             <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
-          <GradientText
-            colors={["#962cff", "#df5dff", "#6407f9ff", "#df5dff","#962cff"]}
-            animationSpeed={5}
-            showBorder={false}
-            loop={true}
-            className="text-8xl uppercase !font-extrabold" 
-            // style={{textShadow: "0px 0px 20px #CE5937"}} 
-          >
-            Shoaib Arif
-          </GradientText>
+              <GradientText
+                colors={["#962cff", "#df5dff", "#6407f9ff", "#df5dff", "#962cff"]}
+                animationSpeed={5}
+                showBorder={false}
+                loop={true}
+                className="text-8xl uppercase !font-extrabold"
+              // style={{textShadow: "0px 0px 20px #CE5937"}} 
+              >
+                Shoaib Arif
+              </GradientText>
             </div>
             <div
               className="text-2xl lg:text-4xl flex font-bold mt-6 "
@@ -137,118 +113,32 @@ export const Homepage = () => {
             <button
               data-aos="fade-up"
               data-aos-duration="600"
-              data-aos-delay="1500" type="button" className="btn mt-12">
-            <span className="font-semibold">Download Resume</span>
+              data-aos-delay="1500" type="button" className="animated__button btn mt-12">
+              <span className="font-semibold">Download Resume</span>
+            </button>
 
 
-  <div id="glow">
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-</button>
-
-               
             <div className="mt-7 lg:mt-10 flex items-center  ">
               <span
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1200"
               >
-
-                {/* <button className="w-[200px] duration-500 h-[50px] bg-violet-800 rounded-md flex items-center relative group transition-all">
-                  <span className="absolute top-50 left-5 ">Resume</span>
-                  <span className="flex items-center justify-center absolute right-0 bg-violet-900 duration-500 h-full w-[50px] group-hover:w-full group-hover:rounded-l-md transition-all rounded-r-md"><SlCloudDownload className="size-6 duration-500 transition-all group-hover:size-8" /></span>
-                </button> */}
-
-                {/* <button
-                    className=" duration-500 flex items-center justify-center min-w-[200px] px-2 transition-all py-4 md:py-3 lg:py-4 rounded-sm  dark:bg-primary-dark hover:dark:bg-transparent bg-primary  text-white  overflow-hidden  
-                shadow-[5px_5px_0px_0px_#dedede] hover:shadow-[5px_5px_0px_0px_#5b21b6]"
-                  >
-                    <LuDownload size={"20px"} className="relative z-[10]" />{" "}
-                    <span className="ml-1 font-semibold relative z-[10] text-base lg:text-base uppercase">
-                      Resume
-                    </span>
-                  </button> */}
               </span>
             </div>
-            {/* <div className="flex items-center justify-center mt-5 lg:hidden">
-                <SocialIcon
-                  color={"#0A66C2"}
-                  classes="mx-2"
-                  url="https://www.linkedin.com/in/shoaibmarif/"
-                  icon={<FaLinkedinIn size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#4d4d4d"}
-                  url="https://github.com/shoaibmarif"
-                  classes="mx-2"
-                  icon={<FaGithub size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#E4405F"}
-                  url="https://www.instagram.com/shoaibmarif/"
-                  classes="mx-2"
-                  icon={<FaInstagram size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#1DA1F2"}
-                  url="https://x.com/mshoaibmarif"
-                  classes="mx-2"
-                  icon={<FaTwitter size={18} className="dark:text-white " />}
-                />
-                <SocialIcon
-                  color={"#E7700D"}
-                  url="https://stackoverflow.com/users/7770942/shoaib-arif"
-                  classes="mx-2"
-                  icon={
-                    <FaStackOverflow size={18} className="dark:text-white " />
-                  }
-                />
-              </div> */}
           </div>}
 
-          {/* <div className="flex lg:basis-1/2  items-center justify-center lg:order-2">
-            <div
-              className="border-4 border-white p-8 rounded-full relative"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              data-aos-delay={1200}
-            >
-              <div className="absolute size-[26px] left-[-13px] top-1/2 rounded-full bg-primary-dark "></div>
-              <div className="absolute size-[26px] left-[-13px] top-1/2 rounded-full bg-primary-dark animate-ping  "></div>
-              <div className="absolute size-[26px] right-[9%] top-[80%] rounded-full bg-primary-dark "></div>
-              <div className="absolute size-[26px] right-[9%] top-[80%] rounded-full bg-primary-dark animate-ping "></div>
-              <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark "></div>
-              <div className="absolute size-[26px] right-[20%] top-[5%] rounded-full bg-primary-dark animate-ping "></div>
-              <img
-                className="rounded-full xs:max-w-full max-w-[400px]"
-                src={Profile}
-                alt="Shoaib Arif Profile"
-              />
-            </div>
-          </div> */}
-          {/* <div
-            className="absolute right-0 top-40 z-[0] size-[150px] bg-[#252525] rounded-full rotating-bouncing-element"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay={1000}
-          ></div>
-          <div
-            className="absolute left-0 rotate-45 bottom-20 z-[0] size-[120px] bg-[#252525] rounded-lg rotating-element "
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay={1000}
-          ></div> */}
+
         </div>
 
-       
-             <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] ">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
-          <path fill="#2b2b2b" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,218.7C384,192,480,160,576,165.3C672,171,768,213,864,202.7C960,192,1056,128,1152,122.7C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>
 
-      
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <path fill="#2b2b2b" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,218.7C384,192,480,160,576,165.3C672,171,768,213,864,202.7C960,192,1056,128,1152,122.7C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+
+
       </ContentWrapper>
 
     </React.Fragment>
@@ -261,12 +151,12 @@ const SocialIcon = ({ icon, color, url, classes, delay }) => {
       data-aos="zoom-in-right"
       data-aos-delay={delay}
       data-aos-duration="700"
-       data-aos-offset="-100"
+      data-aos-offset="-100"
     >
 
       <Link
         to={url}
-        style={{ "--hover-color": color ,boxShadow:"0px 0px 15px 1px  rgba(255,255,255,0.22)"}}
+        style={{ "--hover-color": color, boxShadow: "0px 0px 15px 1px  rgba(255,255,255,0.22)" }}
         className={`${classes}  bg-[--hover-color] hover:scale-125 mt-4 block rounded-full p-3 cursor-pointer   transition-all  duration-300 `}
       >
         {icon}

@@ -272,20 +272,20 @@ div {
   }
   *::-webkit-scrollbar-track {
     border-radius: 5px;
-    background-color: #B9B9B9;
+    background-color: #fff;
   }
   
   *::-webkit-scrollbar-track:hover {
-    background-color: #B8C0C2;
+    background-color: #fff;
   }
   
   *::-webkit-scrollbar-track:active {
-    background-color: #BFBFC2;
+    background-color: #fff;
   }
   
   *::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #5b21b6;
+    background-color: #962cff;
   }
   
   *::-webkit-scrollbar-thumb:hover {
@@ -448,69 +448,6 @@ strong {
   background-color: #212121;
 }
 
-
-
-#stars {
-  position: relative;
-  background: transparent;
-  width: 200rem;
-  height: 200rem;
-}
-/* .btn:hover {
-  transform: scale(1.4)!important;  
-} */
-
-#stars::after {
-  content: "";
-  position: absolute;
-  top: -10rem;
-  left: -100rem;
-  width: 100%;
-  height: 100%;
-  animation: animStarRotate 90s linear infinite;
-}
-
-#stars::after {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-}
-
-#stars::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 170%;
-  height: 500%;
-  animation: animStar 60s linear infinite;
-}
-
-#stars::before {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-  opacity: 0.5;
-}
-
-@keyframes animStar {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-135rem);
-  }
-}
-
-@keyframes animStarRotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0);
-  }
-}
-
 @keyframes gradient_301 {
   0% {
     background-position: 0% 50%;
@@ -661,4 +598,8 @@ strong {
 }
 .abc:hover .abc img{
   opacity: 1!important;
+}
+
+.animated__button:hover {
+  transform: scale(1.5)!important;
 }
