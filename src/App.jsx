@@ -27,6 +27,7 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({ once: true, disable: "mobile" });
+    alert("The Website is in Development Process.")
     // navigate("/");
 
     // const loadingTimeout = setTimeout(() => {
